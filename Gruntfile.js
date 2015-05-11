@@ -25,6 +25,15 @@ module.exports = function (grunt) {
                 jekyllBuild: {
                     command: 'jekyll build'
                 }
+            },
+            concat: {
+                options: {
+                    separator: '\n;'
+                },
+                main: {
+                    src: [jsInput],
+                    dest: jsOutput_dev
+                }
             }
         }
     );
