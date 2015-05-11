@@ -103,7 +103,9 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('production', [
-
+        'uglify',
+        'less:production',
+        'autoprefixer:production'
     ]);
 
 };
