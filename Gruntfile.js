@@ -42,6 +42,26 @@ module.exports = function (grunt) {
                         dest: jsOutput_production
                     }]
                 }
+            },
+            less: {
+                dev: {
+                    files: [{
+                        src: lessInput,
+                        dest: lessOutput_dev
+                    }],
+                    options: {
+                        compress: false
+                    }
+                },
+                production: {
+                    files: [{
+                        src: lessInput,
+                        dest: lessOutput_production
+                    }],
+                    options: {
+                        compress: true
+                    }
+                }
             }
         }
     );
