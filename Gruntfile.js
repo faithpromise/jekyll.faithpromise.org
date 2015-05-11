@@ -36,7 +36,7 @@ module.exports = function (grunt) {
 
     ]);
 
-    grunt.registerTask('dist', [
+    grunt.registerTask('production', [
 
     ]);
 
