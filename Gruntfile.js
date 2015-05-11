@@ -9,7 +9,11 @@ module.exports = function (grunt) {
     // Project configuration.
     grunt.initConfig(
         {
-
+            shell: {
+                jekyllBuild: {
+                    command: 'jekyll build'
+                }
+            }
         }
     );
 
