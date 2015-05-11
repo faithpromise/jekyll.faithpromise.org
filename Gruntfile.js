@@ -31,8 +31,16 @@ module.exports = function (grunt) {
                     separator: '\n;'
                 },
                 main: {
-                    src: [jsInput],
+                    src: jsInput,
                     dest: jsOutput_dev
+                }
+            },
+            uglify: {
+                main: {
+                    files: [{
+                        src: jsInput,
+                        dest: jsOutput_production
+                    }]
                 }
             }
         }
