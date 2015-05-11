@@ -1,0 +1,23 @@
+@media (max-width: (@Nav-showDesktopVersion - 1)) {
+
+  .Layout {
+    overflow-x: hidden;
+  }
+
+  .Layout-contentWrap {
+    position:                    relative;
+    z-index:                     2;
+    left:                        0;
+    clear:                       both;
+    overflow:                    hidden;
+    background-color:            #fff;
+    transition:                  transform 350ms ease;
+    -webkit-transform:           translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+
+    body.is-navOpen & {
+      transform: translate3d(17em, 0, 0);
+    }
+  }
+
+}
