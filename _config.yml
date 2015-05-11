@@ -9,3 +9,4 @@ github_username:  faithpromise
 
 # Build settings
 markdown: kramdown
+exclude: [bower.json, bower_components, Gruntfile.js, node_modules, package.json]
