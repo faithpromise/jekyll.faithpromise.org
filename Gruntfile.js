@@ -79,6 +79,16 @@ module.exports = function (grunt) {
                 production: {
                     src: lessOutput_production
                 }
+            },
+            watch: {
+                less: {
+                    files: lessDir + '/**/*.less',
+                    tasks: ['less:dev', 'autoprefixer:dev']
+                },
+                js: {
+                    files: jsInput,
+                    tasks: ['concat:js']
+                }
             }
         }
     );
