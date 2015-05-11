@@ -97,7 +97,9 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['dev']);
 
     grunt.registerTask('dev', [
-
+        'concat',
+        'less:dev',
+        'autoprefixer:dev'
     ]);
 
     grunt.registerTask('production', [
