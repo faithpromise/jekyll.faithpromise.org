@@ -8,5 +8,6 @@ twitter_username: faithpromise
 github_username:  faithpromise
 
 # Build settings
+destination: ./public
 markdown: kramdown
 exclude: [bower.json, bower_components, Gruntfile.js, node_modules, package.json]
