@@ -11,3 +11,4 @@ github_username:  faithpromise
 destination: ./public
 markdown: kramdown
 exclude: [bower.json, bower_components, Gruntfile.js, node_modules, package.json]
+include: ['_pages']
