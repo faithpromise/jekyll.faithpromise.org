@@ -17,15 +17,43 @@
 
   <body>
 
-    {% include header.html %}
+    <div class="Nav">
+      <div class="Nav-container">
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+        <a class="Nav-logoWrap" href="/"> <img src="/images/logo-faith-promise.svg"> </a>
+
+        <ul class="Nav-menu">
+          {% for topnav in site.data.nav %}
+          <li class="Nav-item">
+            {% if topnav.subnav == null %}
+              <a class="Nav-link" href="{{ topnav.url }}">{{ topnav.title }}</a>
+              {% else %}
+              <span class="Nav-link Nav-link--dropdown">{{ topnav.title }}</span>
+              <ul>
+                {% for subnav in topnav.subnav %}
+                <li class="SubNav-item">
+                  <a class="SubNav" href="{{ subnav.url }}">{{ subnav.title }}</a>
+                </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+
       </div>
     </div>
 
-    {% include footer.html %}
+    <div class="Nav-background"></div>
+    <div class="Nav-dismiss"></div>
+
+    <div class="Layout-contentWrap">
+      <div class="MobileBar">
+        <span class="MobileBar-navToggle"><i class="icon-navicon" fp-nav-toggle></i></span>
+        <a href="/"><img class="MobileBar-logo" ng-src="{{ layout.logoUrl }}"></a>
+      </div>
+      {{ content }}
+    </div>
 
   </body>
 
