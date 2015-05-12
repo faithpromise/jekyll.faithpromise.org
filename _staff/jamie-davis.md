@@ -1,0 +1,22 @@
+---
+layout: staff-profile
+page_title: 'Jamie Davis'
+ident: jamie-davis
+first_name: Jamie
+last_name: Davis
+display_name: 'Jamie Davis'
+email: JamieD@faithpromise.org
+phone_ext: '1203'
+title: 'fpKids Team Administrator'
+teams: [family]
+sort: 10
+number_photos: 1
+---
+
+All of my life, God has been pulling and pushing me toward living a life centered on Him. It has been a life-long dream of mine to be part of a children's ministry. When God led me to Faith Promise, my family and I were willing and ready to go wherever He wanted us to be. I am thrilled, blessed, and so very grateful to be a part of this wonderful church family.
+
+My family's motto is to trust an unknown future to an all-knowing God.
+
+We have another love at our house, and it is our love for adoption. My wife and I traveled to China in 2008 to bring home our beautiful daughter, Lily Grace. Since that time, my love for Asian missions has grown tremendously. I have been on one mission trip to Asia, and I am preparing to lead my second one within the next few months.
+
+I love serving all of our children at Faith Promise. It is my desire to guide each child into the beginning of the biggest, most important love story of their lives - their relationship with Christ.

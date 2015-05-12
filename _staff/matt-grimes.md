@@ -1,0 +1,20 @@
+---
+layout: staff-profile
+page_title: 'Matt Grimes'
+ident: matt-grimes
+first_name: Matt
+last_name: Grimes
+display_name: 'Matt Grimes'
+email: MattG@faithpromise.org
+phone_ext: '1706'
+title: 'Blount Campus Pastor'
+teams: [blount]
+sort: 1
+number_photos: 2
+---
+
+Matt grew up in Alabama and went to college at Samford University in Birmingham, where he graduated with a degree in religious studies. He also holds a Master's degree in Christian Education from New Orleans Seminary. Matt has served in student ministry at Faith Promise Church since 2005 where he established and built the middle school ministry before taking over all students in 2013. 
+
+In addition to his work at Faith Promise and his time traveling and speaking at conferences and events, Matt also serves on staff with Ken Davis and Michael Hyatt as a Communication Coach for Dynamic Communicators International.
+
+Matt is married to Carmen, and they have a beautiful daughter, Elin who was born in 2011.

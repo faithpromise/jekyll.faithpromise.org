@@ -1,0 +1,30 @@
+---
+layout: staff-profile
+page_title: 'Michele Stephens'
+ident: michele-stephens
+first_name: Michele
+last_name: Stephens
+display_name: 'Michele Stephens'
+email: MicheleS@faithpromise.org
+phone_ext: '1501'
+title: 'Worship and Creative Arts Leader'
+teams: [executive, worship]
+sort: 4
+number_photos: 3
+---
+
+My name is Michele but I often answer to "Shay", "Coach", "Mich" and "Mom". These names come from relationships with my husband, co-workers, team members and my children.
+
+I have been married to my best friend, Chris (who happens to be the Sr. Pastor), for 25 years, and we have 3 awesome children Faith, Micah, and Zac as well as a brand new son-in-law, Frankie.
+
+<strong>When I Met Jesus:</strong> I grew up in a godly home where my parents taught me how to study and memorize God?s word, share my faith, and most of all, worship. I began my relationship with Jesus at the age of 8 years old, and what a ride it has been!
+
+<strong>My Calling:</strong> As far as a calling to be a worship leader ? that one kind of snuck up on me. I had grown up in a musical home where both of my parents lead in worship through singing and playing the guitar. My dad would make me play the piano and sing (at the time I hated it ? I was scared to death!) in church, during mission trips, or anywhere else he could find. After all those experiences, I guess I should have seen what was coming down the pike.
+
+I met my sweetheart at what was then called the BSU at UT-Chattanooga. He was going to be a preacher ? me a preacher?s wife?! But now I know that God had prepared me my whole life to be Chris? helpmate and ministry partner. I loved working in different areas as we began our ministry, but it seemed no matter what ministry it was, worship was at the heart.
+
+As the ministry assistant to the Worship Pastor at Faith Promise Church, they asked me to fill in when he left until they could find someone. Well, that was almost 9 years ago. God has confirmed to me over and over that He called me and put me where I am today ? I would have never believed it, and there is no way I could do what I do without the anointing and favor of the Lord.
+
+<strong>Favorite Music:</strong> Anything Hillsong, anything Chris Tomlin, and ?clean? classic rock. (I am an ?80s girl.)
+
+<strong>Hobbies:</strong> Anything with my family, scrapbooking, and photography.

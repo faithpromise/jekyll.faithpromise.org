@@ -1,0 +1,18 @@
+---
+layout: staff-profile
+page_title: 'Kelsey Arnold'
+ident: kelsey-arnold
+first_name: Kelsey
+last_name: Arnold
+display_name: 'Kelsey Arnold'
+email: KelseyA@faithpromise.org
+phone_ext: '1408'
+title: 'Assistant to the Pastor of Outreach and Missions'
+teams: [groups]
+sort: 50
+number_photos: 3
+---
+
+Hi! My name is Kelsey. My husband and I have been attending Faith Promise for a little over a year now. In April of this year I was granted an amazing opportunity to come on staff as the Assistant to the Pastor of Outreach and Missions. I have always had a passion for serving others and absolutely LOVE what I do. I love to laugh and have a good time.
+
+When I am not in the office, I enjoy spending time with my friends and family. I also like to spend time outdoors, whether I am kayaking, riding my bike (which I'm terrible at), or sitting down to read a good book, there's nothing better than the warmth of the sun beaming down on my skin.

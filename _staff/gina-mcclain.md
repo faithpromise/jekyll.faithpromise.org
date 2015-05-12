@@ -1,0 +1,24 @@
+---
+layout: staff-profile
+page_title: 'Gina McClain'
+ident: gina-mcclain
+first_name: Gina
+last_name: McClain
+display_name: 'Gina McClain'
+email: GinaM@faithpromise.org
+phone_ext: '1204'
+title: 'Pastor of Children''s Ministries'
+teams: [family]
+sort: 7
+number_photos: 1
+---
+
+Gina is originally from Broken Arrow, Oklahoma. A graduate of the University of Central Oklahoma, she worked in International Banking before God interrupted her career goals. Gina began working for LifeChurch.tv in 1999. Compelled to work with kids and families, Gina found her rhythm in leveraging what happens at church to impact what happens at home.
+
+Gina is driven by the idea of equipping parents for the journey of teaching their kids how to follow Christ. Based upon her experience as a mom, she identifies with the everyday challenges parents wade through. Most of which seem more messy than spiritual. And yet, in the midst of the mess we have the opportunity to demonstrate Jesus to our kids. It's the most difficult, challenging & rewarding thing we will ever do.
+
+Gina and Kyle were married in 1994 and have three kids, Keegan Josie & Connor. Following the call to join the Faith Promise family, Kyle and Gina packed up their family in February 2010 and moved to Knoxville.
+
+Gina is a writer, a speaker, a mentor and a coffee snob. If you're looking to grease her palm, a double-shot Americano will do the trick.
+
+You can read more about Gina on <a href="http://www.ginamcclain.com/">her blog</a>, follow her on <a href="http://twitter.com/gina_mcclain">Twitter</a>, or "friend"  on <a href="http://www.facebook.com/gina.mcclain">Facebook</a>.

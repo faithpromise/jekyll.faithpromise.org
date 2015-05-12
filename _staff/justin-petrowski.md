@@ -1,0 +1,23 @@
+---
+layout: staff-profile
+page_title: 'Justin Petrowski'
+ident: justin-petrowski
+first_name: Justin
+last_name: Petrowski
+display_name: 'Justin Petrowski'
+email: JustinP@faithpromise.org
+phone_ext: '1502'
+title: 'Worship Ministry Associate'
+teams: [worship]
+sort: 30
+number_photos: 5
+---
+
+<strong>ABOUT ME:</strong>
+I've been a follower of Christ since 1987 and can say with confidence that it's the best decision I've ever made. I have been a member of Faith Promise Church since its inception in 1995. I have always enjoyed serving here - so when the opportunity arose to serve here full-time I took it! I have been on staff at Faith Promise since 2001 as an intern in the Worship Ministry and have served on full-time staff since 2003. Since then I've had the unique privilege of ministering to thousands of my brothers and sisters each week through my gift of music. I attended Oak Ridge High School in Oak Ridge, TN and graduated there in 1999. I attended the University of Tennessee after that and graduated in 2003 with an honors degree in mathematics. I have been married to my beautiful wife Kara since October 2006.
+
+<strong>FAVES:</strong>
+I love to read, watch and play sports, and make music. I enjoy spending time with my wife and with friends. As far as music goes, I love it all...you'll find me listening to anything from Coltrane to Coldplay, Sigur Ros to Sergei Rachmaninoff, U2 to the David Crowder Band and Hillsong. I'm always into something different. I love to read as well and I love exploring the Bible through fresh sets of eyes. Some of my favorite books include Velvet Elvis by Rob Bell, Blue Like Jazz by Donald Miller, and A Generous Orthodoxy by Brian McLaren. Check them out! I'm also a HUGE fan of the Green Bay Packers, the Boston Red Sox, NASCAR, and University of Tennessee athletics. Go VOLS!
+
+God bless you!
+Hebrews 12:1-3
