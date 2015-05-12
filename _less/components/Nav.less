@@ -31,19 +31,19 @@
 
   // TODO: Mobile nav styles
   .Nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 17em;
-    min-height: 100%;
-    padding-bottom: 70px;
-    background-color: #2e2e2e;
-    color: #cac9c9;
+    position:                    absolute;
+    top:                         0;
+    left:                        0;
+    z-index:                     1;
+    width:                       17em;
+    min-height:                  100%;
+    padding-bottom:              70px;
+    background-color:            #2e2e2e;
+    color:                       #cac9c9;
 
     // Transition
-    -webkit-transform: scale(1.1);
-    -webkit-transition: -webkit-transform 350ms ease;
+    -webkit-transform:           scale(1.1);
+    -webkit-transition:          -webkit-transform 350ms ease;
     -webkit-backface-visibility: hidden;
 
     body.is-navOpen & {
@@ -52,14 +52,14 @@
 
     // Nav background
     &:before {
-      content: " ";
-      display: block;
-      position: fixed;
-      top: 0;
-      right: 17em;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
+      content:          " ";
+      display:          block;
+      position:         fixed;
+      top:              0;
+      right:            17em;
+      bottom:           0;
+      left:             0;
+      z-index:          -1;
       background-color: #2e2e2e;
     }
   }
@@ -69,48 +69,48 @@
   }
 
   .is-navOpen .Nav-background {
-    display: block;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 0;
-    width: 17em;
+    display:          block;
+    position:         fixed;
+    top:              0;
+    bottom:           0;
+    left:             0;
+    z-index:          0;
+    width:            17em;
     background-color: #2e2e2e;
   }
 
   .is-navOpen .Nav-dismiss {
     position: fixed;
-    z-index: 1002;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 17em;
-    cursor: pointer;
+    z-index:  1002;
+    top:      0;
+    right:    0;
+    bottom:   0;
+    left:     17em;
+    cursor:   pointer;
   }
 
   .Nav-menu {
-    margin: 0;
+    margin:  0;
     padding: 0;
   }
 
   .Nav-link {
-    display: block;
-    height: 48px;
-    line-height: 48px;
-    padding: 0 15px;
-    border-bottom: 1px solid #262626;
-    font-size: 14px;
-    font-weight: bold;
+    display:        block;
+    height:         48px;
+    line-height:    48px;
+    padding:        0 15px;
+    border-bottom:  1px solid #262626;
+    font-size:      14px;
+    font-weight:    bold;
     text-transform: uppercase;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    box-shadow: 0 1px 0 0 #363636;
+    overflow:       hidden;
+    text-overflow:  ellipsis;
+    white-space:    nowrap;
+    box-shadow:     0 1px 0 0 #363636;
 
     &,
     &:hover {
-      color: #cac9c9;
+      color:           #cac9c9;
       text-decoration: none;
     }
   }
@@ -128,13 +128,13 @@
   .Nav {
     #gradient> .vertical(rgba(0, 0, 0, 0.34), transparent, 0%, 100%);
     position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: (@Nav-logoHeight-lg + @Nav-vPadding-lg + @Nav-vPadding-lg);
-    width: 100%;
-    padding: @Nav-vPadding-lg @Nav-hPadding-lg;
+    z-index:  1;
+    top:      0;
+    left:     0;
+    right:    0;
+    height:   (@Nav-logoHeight-lg + @Nav-vPadding-lg + @Nav-vPadding-lg);
+    width:    100%;
+    padding:  @Nav-vPadding-lg @Nav-hPadding-lg;
   }
 
   .Nav-menu {
@@ -142,43 +142,43 @@
   }
 
   .Nav-container {
-    position: relative;
+    position:  relative;
     max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
+    margin:    0 auto;
+    padding:   0 20px;
   }
 
   .Nav-logo {
-    float: left;
-    display: inline-block;
-    height: @Nav-logoHeight-lg;
+    float:        left;
+    display:      inline-block;
+    height:       @Nav-logoHeight-lg;
     margin-right: 12px;
   }
 
   .Nav-menu {
-    float: right;
-    margin: 0;
-    padding: 0;
+    float:      right;
+    margin:     0;
+    padding:    0;
     list-style: none;
   }
 
   .Nav-item {
-    position: relative;
-    float: left;
+    position:    relative;
+    float:       left;
     margin-left: 25px;
-    cursor: pointer;
+    cursor:      pointer;
   }
 
   .Nav-link {
-    display: block;
-    line-height: @Nav-logoHeight-lg;
-    font-size: 14px;
+    display:        block;
+    line-height:    @Nav-logoHeight-lg;
+    font-size:      14px;
     text-transform: uppercase;
 
     &,
     &:hover {
       text-decoration: none;
-      color: #fff; // TODO: .link-color();
+      color:           #fff; // TODO: .link-color();
     }
   }
 
