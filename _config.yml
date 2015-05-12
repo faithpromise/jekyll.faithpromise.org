@@ -12,3 +12,20 @@ destination: ./public
 markdown: kramdown
 exclude: [bower.json, bower_components, Gruntfile.js, node_modules, package.json]
 include: ['_pages']
+
+collections:
+  campuses:
+    output: false
+  teams:
+    output: false
+  missions:
+    output: false
+  staff:
+    output: true
+    permalink: /staff/:path/
+  events:
+    output: true
+    permalink: /events/:path/
+  series:
+    output: true
+    permalink: /series/:path/
