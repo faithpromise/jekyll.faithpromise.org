@@ -2,7 +2,14 @@
 layout: default
 ---
 
-<h1>{{ page.display_name }}</h1>
-<h2>{{ page.title }}</h2>
+{% capture imgUrl %}/images/staff/{{ page.ident }}-1.jpg{% endcapture %}
+{% if page.number_photos == null or page.number_photos == 0 %}
+{% assign imgUrl = 'https://placekitten.com/g/200/300' %}
+{% endif %}
+
+<div class="Featured" style="background-image: url('{{ imgUrl }}');">
+  <h1>{{ page.display_name }}</h1>
+  <h2>{{ page.title }}</h2>
+</div>
 
 {{ content }}
