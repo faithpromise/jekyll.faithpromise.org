@@ -1,5 +1,9 @@
+@ContainerMaxWidth: 1140px;
+@ContainerHorizontalPadding: 40px;
+@ContainerMaxInnerWidth: (@ContainerMaxWidth - (@ContainerHorizontalPadding * 2));
+
 .Container {
-  max-width: 1140px;
+  max-width: @ContainerMaxWidth;
   margin:    0 auto;
-  padding:   0 40px;
+  padding:   0 @ContainerHorizontalPadding;
 }
