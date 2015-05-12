@@ -14,9 +14,11 @@ module.exports = function (grunt) {
     var jsOutput_dev = 'build/main.dev.js',
         jsOutput_production = 'build/main.min.js',
         jsInput = [
+            'bower_components/waypoints/lib/noframework.waypoints.js',
             'bower_components/angular-ui-bootstrap/src/position/position.js',
             'bower_components/angular-ui-bootstrap/src/dropdown/dropdown.js',
-            jsDir + '/app.module.js'
+            jsDir + '/app.module.js',
+            jsDir + '/**/*.js'
         ];
 
     // Source LESS files

@@ -16,6 +16,7 @@
   "dependencies": {
     "cardinal": "~3.1.0",
     "suit": "~0.6.0",
-    "angular-ui-bootstrap": "https://github.com/angular-ui/bootstrap.git#master"
+    "angular-ui-bootstrap": "https://github.com/angular-ui/bootstrap.git#master",
+    "waypoints": "~3.1.1"
   }
 }
