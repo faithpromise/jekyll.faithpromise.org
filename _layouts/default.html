@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 
   <head>
     <meta charset="utf-8">
@@ -22,18 +22,19 @@
       <div class="Nav">
         <div class="Nav-container">
 
-          <a class="Nav-logo" href="/"> <img src="/images/logo-faith-promise.svg"> </a>
+          <a class="Nav-logo" href="/"><img src="/images/logo-faith-promise.svg"></a>
 
           <ul class="Nav-menu">
             {% for topnav in site.data.nav %}
-            <li class="Nav-item">
-              {% if topnav.NavDropdown == null %}
-              <a class="Nav-link" href="{{ topnav.url }}">{{ topnav.title }}</a> {% else %}
-              <span class="Nav-link Nav-link--dropdown">{{ topnav.title }}</span>
-              <ul>
-                {% for NavDropdown in topnav.NavDropdown %}
+            <li class="Nav-item" dropdown>
+              {% if topnav.subnav == null %}
+              <a class="Nav-link" href="{{ topnav.url }}">{{ topnav.title }}</a>
+              {% else %}
+              <span class="Nav-link Nav-link--dropdown" dropdown-toggle>{{ topnav.title }}</span>
+              <ul class="NavDropdown">
+                {% for subnav in topnav.subnav %}
                 <li class="NavDropdown-item">
-                  <a class="NavDropdown" href="{{ NavDropdown.url }}">{{ NavDropdown.title }}</a>
+                  <a class="NavDropdown-link" href="{{ subnav.url }}">{{ subnav.title }}</a>
                 </li>
                 {% endfor %}
               </ul>
