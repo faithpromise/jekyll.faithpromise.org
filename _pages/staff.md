@@ -20,7 +20,7 @@ banner_image: /images/banner-placeholder.png
                         {% if member.number_photos == null or member.number_photos == 0 %}
                             {% assign imgUrl = 'https://placekitten.com/g/200/300' %}
                         {% endif %}
-                        <a class="StaffGallery-block" href="/staff/{{ member.ident }}/">
+                        <a class="StaffGallery-infoWrap" href="/staff/{{ member.ident }}/">
                             <span class="StaffGallery-photo" style="background-image:url('{{ imgUrl }}');"></span>
                             <span class="StaffGallery-name">{{ member.display_name }}</span>
                             <span class="StaffGallery-title">{{ member.title }}</span>
