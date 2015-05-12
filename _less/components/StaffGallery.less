@@ -1,0 +1,42 @@
+@StaffGalleryPadding: 30;
+
+.StaffGallery {
+  .to-rem(margin, 0 0 0 -@StaffGalleryPadding);
+  padding:    0;
+  list-style: none;
+  font-size:  0;
+}
+
+.StaffGallery-item {
+  .to-rem(font-size, @font-size);
+  .to-rem(padding-left, @StaffGalleryPadding);
+  .to-rem(margin, 0 0 60);
+  display:        inline-block;
+  width:          50%;
+  max-width:      (@ContainerMaxInnerWidth / 4);
+  vertical-align: top;
+}
+
+.StaffGallery-infoWrap:hover {
+  text-decoration: none;
+}
+
+.StaffGallery-photo {
+  display:             block;
+  width:               100%;
+  height:              0;
+  padding-top:         100%;
+  background-position: center;
+  background-size:     cover;
+}
+
+.StaffGallery-name {
+  .to-rem(font-size, 20);
+  display: block;
+}
+
+.StaffGallery-title {
+  .to-rem(font-size, 18);
+  display:     block;
+  font-weight: 400;
+}

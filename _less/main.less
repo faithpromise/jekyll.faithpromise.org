@@ -1,11 +1,27 @@
-// Fonts
+/*
+  Fonts
+*/
 @import "fonts";
-
-// Third party
+/*
+  Third party
+*/
 @import "../bower_components/cardinal/cardinal";
 @import "../bower_components/bootstrap/less/mixins/gradients";
-
-// Components
+/*
+  Components
+*/
+@import "components/Container";
+@import "components/Content";
+@import "components/Featured";
 @import "components/Layout";
+@import "components/MobileBar";
 @import "components/Nav";
 @import "components/NavDropdown";
+@import "components/StaffGallery";
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}

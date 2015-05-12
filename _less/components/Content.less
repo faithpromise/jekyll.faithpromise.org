@@ -1,0 +1,14 @@
+.Content {
+
+  background-color: #fff;
+
+  .Featured + & {
+    position: relative;
+    top:      350px;
+    z-index:  3;
+
+    @media (min-width: @Nav-showDesktopVersion) {
+      top: @FeaturedHeight;
+    }
+  }
+}
