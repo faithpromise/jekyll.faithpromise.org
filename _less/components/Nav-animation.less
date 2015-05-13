@@ -1,0 +1,45 @@
+/**
+  CSS classes are added by a directive that monitors the scroll position of .Content
+**/
+
+/*
+  ===================================
+  Nav enter
+  ===================================
+*/
+
+.Nav.sticky-enter {
+  z-index:          4;
+  background-color: #333;
+}
+
+// From
+.Nav.sticky-enter-add {
+  transition: top .5s ease-in-out;
+  top:        -@NavDesktopHeight;
+}
+
+// To
+.Nav.sticky-enter-add.sticky-enter-add-active {
+  top: 0;
+}
+
+/*
+  ===================================
+  Nav leave
+  ===================================
+*/
+.Nav.sticky-leave {
+  background-color: transparent;
+}
+
+// From
+.Nav.sticky-leave-add {
+  transition:       background-color .5s ease-in-out;
+  background-color: #333;
+}
+
+// To
+.Nav.sticky-leave-add.sticky-leave-add-active {
+  background-color: transparent;
+}
