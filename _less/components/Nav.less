@@ -123,23 +123,18 @@
  * ==========================================================
  */
 
+@NavDesktopHeight: (@Nav-logoHeight-lg + @Nav-vPadding-lg + @Nav-vPadding-lg);
+
 @media (min-width: @Nav-showDesktopVersion) {
 
   .Nav {
-    #gradient> .vertical(rgba(0, 0, 0, 0.34), transparent, 0%, 100%);
-    position:   fixed;
-    z-index:    4;
-    top:        0;
-    left:       0;
-    right:      0;
-    height:     (@Nav-logoHeight-lg + @Nav-vPadding-lg + @Nav-vPadding-lg);
-    width:      100%;
-    padding:    @Nav-vPadding-lg @Nav-hPadding-lg;
-    transition: background-color .5s ease-in-out;
-
-    .sticky-nav & {
-      background-color: #333;
-    }
+    position: fixed;
+    z-index:  2;
+    left:     0;
+    right:    0;
+    height:   @NavDesktopHeight;
+    width:    100%;
+    padding:  @Nav-vPadding-lg @Nav-hPadding-lg;
   }
 
   .Nav-menu {

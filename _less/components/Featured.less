@@ -12,4 +12,14 @@
   @media (min-width: @Nav-showDesktopVersion) {
     height: @FeaturedHeight;
   }
+
+  &:after {
+    #gradient> .vertical(rgba(0, 0, 0, 0.34), transparent, 0%, 100%);
+    content:  " ";
+    position: absolute;
+    left:     0;
+    top:      0;
+    height:   100%;
+    width:    100%;
+  }
 }
