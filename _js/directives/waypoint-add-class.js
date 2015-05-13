@@ -3,35 +3,61 @@
 
     module.directive('waypointAddClass', directive);
 
-    function directive() {
+    directive.$inject = ['$animate'];
+
+    function directive($animate) {
+
         return {
             restrict: 'A',
             link: Link
         };
-    }
 
-    function Link(scope, elem, attr) {
+        function Link(scope, elem, attr) {
 
-        var params = {
-            element: elem[0],
-            target: elem[0],
-            addDirection: 'down',
-            handler: function(direction) {
-                if (direction === params.addDirection) {
-                    angular.element(params.target).addClass(params.class);
-                } else {
-                    angular.element(params.target).removeClass(params.class);
-                }
+            var params = scope.$eval(attr.waypointAddClass);
+
+            if (params.constructor !== Array) {
+                addWaypoint(elem[0], params);
+                return;
             }
-        };
 
-        angular.extend(params, scope.$eval(attr.waypointAddClass));
+            for (var i = 0; i < params.length; i++) {
+                addWaypoint(elem[0], params[i]);
+            }
 
-        if (params.target === 'body') {
-            params.target = document.body;
+            function addWaypoint(elem, params) {
+
+                var options = {
+                    element: elem,
+                    target: elem,
+                    addDirection: 'down',
+                    handler: function (direction) {
+                        if (direction === options.addDirection) {
+                            console.log('options.target', options.target);
+                            console.log('options.class', options.class);
+                            scope.$apply(function () {
+                                $animate.addClass(angular.element(options.target), options.class);
+                            });
+                        } else {
+                            scope.$apply(function () {
+                                $animate.removeClass(angular.element(options.target), options.class);
+                            });
+                        }
+                    }
+                };
+
+                angular.extend(options, params);
+
+                if (options.target.substring(0, 1) === '#') {
+                    options.target = document.getElementById(options.target.substring(1));
+                } else if (options.target === 'body') {
+                    options.target = document.body;
+                }
+
+                new Waypoint(options);
+            }
+
         }
-
-        new Waypoint(params);
 
     }
 
