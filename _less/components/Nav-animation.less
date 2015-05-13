@@ -4,44 +4,47 @@
 
 @NavStickyBackgroundColor: rgba(0, 0, 0, 0.9);
 
-/*
-  ===================================
-  Nav enter
-  ===================================
-*/
+@media (min-width: @Nav-showDesktopVersion) {
 
-.Nav.sticky-enter {
-  z-index:          4;
-  background-color: @NavStickyBackgroundColor;
-}
+  /*
+    ===================================
+    Nav enter
+    ===================================
+  */
+  .Nav.sticky-enter {
+    z-index:          4;
+    background-color: @NavStickyBackgroundColor;
+  }
 
-// From
-.Nav.sticky-enter-add {
-  transition: top .5s ease-in-out;
-  top:        -@NavDesktopHeight;
-}
+  // From
+  .Nav.sticky-enter-add {
+    transition: top .5s ease-in-out;
+    top:        -@NavDesktopHeight;
+  }
 
-// To
-.Nav.sticky-enter-add.sticky-enter-add-active {
-  top: 0;
-}
+  // To
+  .Nav.sticky-enter-add.sticky-enter-add-active {
+    top: 0;
+  }
 
-/*
-  ===================================
-  Nav leave
-  ===================================
-*/
-.Nav.sticky-leave {
-  background-color: transparent;
-}
+  /*
+    ===================================
+    Nav leave
+    ===================================
+  */
+  .Nav.sticky-leave {
+    background-color: transparent;
+  }
 
-// From
-.Nav.sticky-leave-add {
-  transition:       background-color .5s ease-in-out;
-  background-color: @NavStickyBackgroundColor;
-}
+  // From
+  .Nav.sticky-leave-add {
+    transition:       background-color .5s ease-in-out;
+    background-color: @NavStickyBackgroundColor;
+  }
 
-// To
-.Nav.sticky-leave-add.sticky-leave-add-active {
-  background-color: transparent;
+  // To
+  .Nav.sticky-leave-add.sticky-leave-add-active {
+    background-color: transparent;
+  }
+
 }
