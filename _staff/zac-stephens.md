@@ -1,7 +1,7 @@
 ---
 layout: staff-profile
 page_title: 'Zac Stephens'
-ident: 'zac-stephens '
+ident: 'zac-stephens'
 first_name: Zac
 last_name: Stephens
 display_name: 'Zac Stephens'
