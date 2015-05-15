@@ -4,6 +4,3 @@ bower_components
 node_modules
 build
 temp
-assets/images/temp
-# TODO: Remove this when we have new photos
-assets/images/staff
