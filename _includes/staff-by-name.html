@@ -2,15 +2,19 @@
 
 <h2 class="Section-title">Staff Directory</h2>
 
-<ul class="StaffList">
+<table class="StaffList">
+  <tbody>
   {% for member in members %}
-  <li class="StaffList-item">
+  <tr class="StaffList-row" onclick="window.document.location='{{ site.urls.staff }}{{ member.ident }}/';">
     {% capture imgUrl %}/assets/images/staff/{{ member.ident }}-1.jpg{% endcapture %} {% if member.number_photos == null or member.number_photos == 0 %} {% assign imgUrl = 'https://placekitten.com/g/200/300' %} {% endif %}
-    <span class="StaffList-photo" style="background-image:url('{{ imgUrl }}');"></span>
-    <a class="StaffList-infoWrap" href="/staff/{{ member.ident }}/">
+    <td class="StaffList-column StaffList-column--photo">
+      <span class="StaffList-photo" style="background-image:url('{{ imgUrl }}');"></span>
+    </td>
+    <td class="StaffList-column">
       <span class="StaffList-name">{{ member.display_name }}</span>
       <span class="StaffList-title">{{ member.title }}</span>
-    </a>
-  </li>
+    </td>
+  </tr>
   {% endfor %}
-</ul>
+  </tbody>
+</table>
