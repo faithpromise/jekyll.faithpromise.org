@@ -8,7 +8,9 @@ display_name: 'Mike Baker'
 email: MikeB@faithpromise.org
 phone_ext: '1708'
 title: 'North Knoxville Campus Pastor'
-teams: [north]
+campuses: [north]
+teams: [pastors]
+ministries: ['']
 sort: 3
 number_photos: 0
 ---

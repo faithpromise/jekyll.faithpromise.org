@@ -8,7 +8,9 @@ display_name: 'Sid Spiva'
 email: SidS@faithpromise.org
 phone_ext: null
 title: 'Anderson Campus Pastor'
-teams: [anderson]
+campuses: [anderson]
+teams: [pastors]
+ministries: ['']
 sort: 1
 number_photos: 3
 ---

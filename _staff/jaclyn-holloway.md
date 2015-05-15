@@ -8,7 +8,9 @@ display_name: 'Jaclyn Holloway'
 email: JaclynH@faithpromise.org
 phone_ext: '1503'
 title: 'Assistant to the Worship and Creative Arts Leader'
+campuses: [pel]
 teams: [worship]
+ministries: [worship]
 sort: 6
 number_photos: 4
 ---

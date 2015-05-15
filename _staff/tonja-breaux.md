@@ -8,7 +8,9 @@ display_name: 'Tonja Breaux'
 email: TonjaB@faithpromise.org
 phone_ext: '1305'
 title: 'Student Ministry Assistant'
-teams: [family]
+campuses: [pel]
+teams: [students]
+ministries: [students]
 sort: 61
 number_photos: 0
 ---

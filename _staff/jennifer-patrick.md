@@ -8,7 +8,9 @@ display_name: 'Jennifer Patrick'
 email: JenniferP@faithpromise.org
 phone_ext: '1403'
 title: 'Group Assimilation Coordinator'
+campuses: [pel]
 teams: [groups]
+ministries: [groups]
 sort: 35
 number_photos: 1
 ---

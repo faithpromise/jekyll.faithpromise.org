@@ -8,7 +8,9 @@ display_name: 'Gloria Petrowski'
 email: GloriaP@faithpromise.org
 phone_ext: '2000'
 title: 'Assistant to the Senior Pastor'
+campuses: [pel]
 teams: [administration]
+ministries: ['']
 sort: 6
 number_photos: 1
 ---

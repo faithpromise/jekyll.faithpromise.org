@@ -8,7 +8,9 @@ display_name: 'Rob Patrick'
 email: RobP@faithpromise.org
 phone_ext: '1005'
 title: 'Pellissippi Campus Groups Pastor'
+campuses: [pel]
 teams: [groups]
+ministries: [groups]
 sort: 38
 number_photos: 0
 ---

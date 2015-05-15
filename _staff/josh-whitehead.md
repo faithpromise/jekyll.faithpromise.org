@@ -8,7 +8,9 @@ display_name: 'Dr. Josh Whitehead'
 email: JoshW@faithpromise.org
 phone_ext: '1701'
 title: 'Executive Pastor'
+campuses: ['']
 teams: [executive, administration]
+ministries: ['']
 sort: 2
 number_photos: 6
 ---

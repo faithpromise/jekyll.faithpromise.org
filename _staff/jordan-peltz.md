@@ -8,7 +8,9 @@ display_name: 'Jordan Peltz'
 email: JordanP@faithpromise.org
 phone_ext: null
 title: 'Video Project Support'
+campuses: ['']
 teams: [worship]
+ministries: [worship]
 sort: 12
 number_photos: 0
 ---

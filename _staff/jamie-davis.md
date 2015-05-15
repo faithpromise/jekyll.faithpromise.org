@@ -8,7 +8,9 @@ display_name: 'Jamie Davis'
 email: JamieD@faithpromise.org
 phone_ext: '1203'
 title: 'fpKids Team Administrator'
-teams: [family]
+campuses: [pel]
+teams: [kids]
+ministries: [kids]
 sort: 10
 number_photos: 1
 ---

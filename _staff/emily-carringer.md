@@ -8,7 +8,9 @@ display_name: 'Emily Carringer'
 email: EmilyC@faithpromise.org
 phone_ext: '1500'
 title: 'Worship Programming Director'
+campuses: [pel]
 teams: [worship]
+ministries: [worship]
 sort: 28
 number_photos: 2
 ---

@@ -8,7 +8,9 @@ display_name: 'Michelle Hearon'
 email: MichelleH@faithpromise.org
 phone_ext: null
 title: 'Blount Campus Administrative Assistant'
-teams: [blount]
+campuses: [blount]
+teams: ['']
+ministries: ['']
 sort: 50
 number_photos: 0
 ---

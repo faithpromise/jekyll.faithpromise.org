@@ -8,7 +8,9 @@ display_name: 'Aimee Fair'
 email: AimeeF@faithpromise.org
 phone_ext: null
 title: 'fpKids Preschool Director'
-teams: [blount]
+campuses: [blount]
+teams: [kids]
+ministries: [kids]
 sort: 41
 number_photos: 0
 ---

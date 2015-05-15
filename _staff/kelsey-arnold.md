@@ -8,7 +8,9 @@ display_name: 'Kelsey Arnold'
 email: KelseyA@faithpromise.org
 phone_ext: '1408'
 title: 'Assistant to the Pastor of Outreach and Missions'
+campuses: ['']
 teams: [groups]
+ministries: [missions]
 sort: 50
 number_photos: 3
 ---

@@ -8,7 +8,9 @@ display_name: 'Travis Spiva'
 email: TravisS@faithpromise.org
 phone_ext: null
 title: 'Campbell Worship Pastor'
-teams: [campbell]
+campuses: [campbell]
+teams: [worship]
+ministries: [worship]
 sort: 2
 number_photos: 0
 ---

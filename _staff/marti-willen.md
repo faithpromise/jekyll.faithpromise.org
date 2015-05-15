@@ -8,7 +8,9 @@ display_name: 'Marti Willen'
 email: MartiW@faithpromise.org
 phone_ext: '1700'
 title: 'Assistant to the Executive Pastor & First Impressions Director'
+campuses: [pel]
 teams: [administration]
+ministries: ['']
 sort: 7
 number_photos: 3
 ---

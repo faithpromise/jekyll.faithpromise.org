@@ -8,7 +8,9 @@ display_name: 'Hope Hall'
 email: HopeH@faithpromise.org
 phone_ext: null
 title: 'fpKids Elementary Director'
-teams: [blount]
+campuses: [blount]
+teams: [kids]
+ministries: [kids]
 sort: 40
 number_photos: 2
 ---

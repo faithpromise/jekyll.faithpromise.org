@@ -8,7 +8,9 @@ display_name: 'Jennifer Spencer'
 email: JenniferS@faithpromise.org
 phone_ext: '1402'
 title: 'Volunteer Coordinator of Support Teams'
-teams: [family]
+campuses: [pel]
+teams: [kids]
+ministries: [kids]
 sort: 12
 number_photos: 0
 ---

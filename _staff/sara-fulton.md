@@ -8,7 +8,9 @@ display_name: 'Sara Fulton'
 email: SaraF@faithpromise.org
 phone_ext: null
 title: 'Staff Counselor'
+campuses: ['']
 teams: [administration]
+ministries: [care]
 sort: 201
 number_photos: 1
 ---

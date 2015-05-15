@@ -8,7 +8,9 @@ display_name: 'Dr. Chuck Carringer'
 email: ChuckC@faithpromise.org
 phone_ext: '1101'
 title: 'Pastor of Leadership Development & Stewardship'
+campuses: [pel]
 teams: [executive, leadership]
+ministries: ['']
 sort: 5
 number_photos: 4
 ---

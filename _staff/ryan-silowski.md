@@ -8,7 +8,9 @@ display_name: 'Ryan Silowski'
 email: RyanS@faithpromise.org
 phone_ext: null
 title: 'Anderson Campus Student Pastor'
-teams: [anderson]
+campuses: [anderson]
+teams: [students]
+ministries: [students]
 sort: 10
 number_photos: 1
 ---

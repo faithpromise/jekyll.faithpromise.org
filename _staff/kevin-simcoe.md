@@ -8,7 +8,9 @@ display_name: 'Kevin Simcoe'
 email: KevinS@faithpromise.org
 phone_ext: '1411'
 title: 'North Knox Groups Pastor'
-teams: [north]
+campuses: [north]
+teams: [groups]
+ministries: [groups, celebrate]
 sort: 100
 number_photos: 1
 ---

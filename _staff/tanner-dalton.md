@@ -8,7 +8,9 @@ display_name: 'Tanner Dalton'
 email: TannerD@faithpromise.org
 phone_ext: '1507'
 title: 'Central Worship Associate'
+campuses: ['']
 teams: [worship]
+ministries: [worship]
 sort: 31
 number_photos: 0
 ---

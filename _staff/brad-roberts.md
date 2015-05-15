@@ -8,7 +8,9 @@ display_name: 'Brad Roberts'
 email: BradR@faithpromise.org
 phone_ext: null
 title: 'Web Developer'
+campuses: ['']
 teams: [administration]
+ministries: ['']
 sort: 34
 number_photos: 0
 ---

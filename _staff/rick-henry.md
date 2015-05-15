@@ -8,7 +8,9 @@ display_name: 'Rick Henry'
 email: RickH@faithpromise.org
 phone_ext: null
 title: 'Campbell Campus Groups Director'
-teams: [campbell]
+campuses: [campbell]
+teams: [groups]
+ministries: [groups]
 sort: 6
 number_photos: 0
 ---

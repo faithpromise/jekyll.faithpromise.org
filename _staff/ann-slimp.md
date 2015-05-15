@@ -8,7 +8,9 @@ display_name: 'Ann Slimp'
 email: AnnS@faithpromise.org
 phone_ext: null
 title: 'Staff Counselor'
+campuses: ['']
 teams: [administration]
+ministries: [care]
 sort: 200
 number_photos: 0
 ---

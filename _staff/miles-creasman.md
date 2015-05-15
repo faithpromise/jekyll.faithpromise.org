@@ -8,7 +8,9 @@ display_name: 'Miles Creasman'
 email: MilesC@faithpromise.org
 phone_ext: '1005'
 title: 'Next Steps Pastor/Blount Groups Pastor'
-teams: [administration, blount]
+campuses: [blount]
+teams: [administration]
+ministries: [groups]
 sort: 34
 number_photos: 1
 ---

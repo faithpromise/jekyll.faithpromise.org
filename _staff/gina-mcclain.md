@@ -8,7 +8,9 @@ display_name: 'Gina McClain'
 email: GinaM@faithpromise.org
 phone_ext: '1204'
 title: 'Pastor of Children''s Ministries'
-teams: [family]
+campuses: ['']
+teams: [kids]
+ministries: [kids]
 sort: 7
 number_photos: 1
 ---

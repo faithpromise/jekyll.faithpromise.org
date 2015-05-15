@@ -8,7 +8,9 @@ display_name: 'Dr. Chris Stephens'
 email: Pastor@faithpromise.org
 phone_ext: '2000'
 title: 'Senior Pastor'
+campuses: ['']
 teams: [executive]
+ministries: ['']
 sort: 1
 number_photos: 4
 ---

@@ -8,7 +8,9 @@ display_name: 'Justin Petrowski'
 email: JustinP@faithpromise.org
 phone_ext: '1502'
 title: 'Worship Ministry Associate'
+campuses: [pel]
 teams: [worship]
+ministries: [worship]
 sort: 30
 number_photos: 5
 ---

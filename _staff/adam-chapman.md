@@ -8,7 +8,9 @@ display_name: 'Adam Chapman'
 email: AdamC@faithpromise.org
 phone_ext: null
 title: 'Video Project Manager'
+campuses: ['']
 teams: [worship]
+ministries: [worship]
 sort: 11
 number_photos: 0
 ---

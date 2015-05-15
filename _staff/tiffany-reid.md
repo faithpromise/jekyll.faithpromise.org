@@ -8,7 +8,9 @@ display_name: 'Tiffany Reid'
 email: TiffanyR@faithpromise.org
 phone_ext: '1205'
 title: 'fpKids Team Administrator'
-teams: [family]
+campuses: [pel]
+teams: [kids]
+ministries: [kids]
 sort: 11
 number_photos: 0
 ---

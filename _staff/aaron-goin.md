@@ -8,7 +8,9 @@ display_name: 'Aaron Goin'
 email: AaronG@faithpromise.org
 phone_ext: '1602'
 title: 'Chief Financial Officer'
+campuses: ['']
 teams: [administration]
+ministries: ['']
 sort: 10
 number_photos: 3
 ---

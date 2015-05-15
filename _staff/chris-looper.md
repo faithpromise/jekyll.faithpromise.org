@@ -8,7 +8,9 @@ display_name: 'Chris Looper'
 email: ChrisL@faithpromise.org
 phone_ext: '1300'
 title: 'fpStudents Venue & Creative Director'
-teams: [family]
+campuses: [pel]
+teams: [students]
+ministries: [students]
 sort: 62
 number_photos: 0
 ---

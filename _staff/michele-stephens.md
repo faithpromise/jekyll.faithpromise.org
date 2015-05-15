@@ -8,7 +8,9 @@ display_name: 'Michele Stephens'
 email: MicheleS@faithpromise.org
 phone_ext: '1501'
 title: 'Worship and Creative Arts Leader'
+campuses: ['']
 teams: [executive, worship]
+ministries: [worship]
 sort: 4
 number_photos: 3
 ---

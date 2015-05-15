@@ -8,7 +8,9 @@ display_name: 'Joe Filipowicz'
 email: JoeF@faithpromise.org
 phone_ext: '1605'
 title: 'IT Director'
+campuses: ['']
 teams: [administration]
+ministries: ['']
 sort: 47
 number_photos: 1
 ---

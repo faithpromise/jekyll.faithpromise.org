@@ -8,7 +8,9 @@ display_name: 'Jeff Rose'
 email: JeffR@faithpromise.org
 phone_ext: '1703'
 title: 'Building Services Director'
+campuses: [pel]
 teams: [administration]
+ministries: ['']
 sort: 99
 number_photos: 4
 ---

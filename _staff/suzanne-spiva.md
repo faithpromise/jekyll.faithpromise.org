@@ -8,7 +8,9 @@ display_name: 'Suzanne Spiva'
 email: SuzanneS@faithpromise.org
 phone_ext: null
 title: 'Campbell Campus fpKids Director'
-teams: [campbell]
+campuses: [campbell]
+teams: [kids]
+ministries: [kids]
 sort: 5
 number_photos: 0
 ---

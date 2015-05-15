@@ -8,7 +8,9 @@ display_name: 'Brandon Dunford'
 email: BrandonD@faithpromise.org
 phone_ext: null
 title: 'North Knox Worship Director'
-teams: [north]
+campuses: [north]
+teams: [worship]
+ministries: [worship]
 sort: 10
 number_photos: 0
 ---

@@ -8,7 +8,9 @@ display_name: 'Mallory Ellis'
 email: MalloryE@faithpromise.org
 phone_ext: '1603'
 title: 'Accounting Director & Human Resources Director'
+campuses: [pel]
 teams: [administration]
+ministries: ['']
 sort: 11
 number_photos: 3
 ---

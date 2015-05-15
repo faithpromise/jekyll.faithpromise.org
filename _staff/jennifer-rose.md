@@ -8,7 +8,9 @@ display_name: 'Jennifer Rose'
 email: JenniferR@faithpromise.org
 phone_ext: '1100'
 title: 'Assistant to the Pastor of Leadership Development & Stewardship'
+campuses: ['']
 teams: [leadership]
+ministries: ['']
 sort: 6
 number_photos: 0
 ---

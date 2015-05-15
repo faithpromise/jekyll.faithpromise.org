@@ -8,7 +8,9 @@ display_name: 'Micah Stephens'
 email: MicahS@faithpromise.org
 phone_ext: null
 title: 'Creative Director'
+campuses: ['']
 teams: [worship]
+ministries: [worship]
 sort: 10
 number_photos: 0
 ---

@@ -8,7 +8,9 @@ display_name: 'Heather Burson'
 email: HeatherB@faithpromise.org
 phone_ext: '1014'
 title: 'Graphic Designer'
+campuses: ['']
 teams: [administration]
+ministries: ['']
 sort: 33
 number_photos: 4
 ---

@@ -8,7 +8,9 @@ display_name: 'Deneen Lambert'
 email: DeneenL@faithpromise.org
 phone_ext: '1600'
 title: 'Assistant to the Chief Financial Officer'
+campuses: ['']
 teams: [administration]
+ministries: ['']
 sort: 11
 number_photos: 3
 ---

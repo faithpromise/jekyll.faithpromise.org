@@ -8,7 +8,9 @@ display_name: 'Brenda Moore'
 email: BrendaM@faithpromise.org
 phone_ext: '1000'
 title: Receptionist
+campuses: ['']
 teams: [administration]
+ministries: ['']
 sort: 37
 number_photos: 3
 ---

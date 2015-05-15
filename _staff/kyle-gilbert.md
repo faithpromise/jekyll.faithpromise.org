@@ -8,7 +8,9 @@ display_name: 'Kyle Gilbert'
 email: KyleG@faithpromise.org
 phone_ext: '1704'
 title: 'Pastor of Communications & Internet Campus Pastor'
+campuses: [online]
 teams: [administration]
+ministries: ['']
 sort: 32
 number_photos: 6
 ---

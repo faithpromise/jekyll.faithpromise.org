@@ -8,7 +8,9 @@ display_name: 'Noah Case'
 email: NoahC@faitpromise.org
 phone_ext: '1306'
 title: 'North Knox Student Pastor'
-teams: [north]
+campuses: [north]
+teams: [students]
+ministries: [students]
 sort: 3
 number_photos: 0
 ---

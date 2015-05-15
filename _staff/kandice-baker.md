@@ -8,7 +8,9 @@ display_name: 'Kandice Baker'
 email: KandiceB@faithpromise.org
 phone_ext: '1103'
 title: 'North Knoxville Campus fpKids Director'
-teams: [family, north]
+campuses: [north]
+teams: [kids]
+ministries: [kids]
 sort: 8
 number_photos: 2
 ---

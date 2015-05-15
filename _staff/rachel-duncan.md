@@ -8,7 +8,9 @@ display_name: 'Rachel Duncan'
 email: RachelD@faithpromise.org
 phone_ext: '1508'
 title: 'Assistant to Worship and Creative Arts Leader'
+campuses: ['']
 teams: [worship]
+ministries: [worship]
 sort: 5
 number_photos: 0
 ---

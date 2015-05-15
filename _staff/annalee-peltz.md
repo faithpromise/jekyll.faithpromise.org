@@ -8,7 +8,9 @@ display_name: 'AnnaLee Peltz'
 email: AnnaLeeP@faithpromise.org
 phone_ext: '1201'
 title: 'Volunteer Coordinator-Elementary Small Groups'
-teams: [family]
+campuses: [pel]
+teams: [kids]
+ministries: [kids]
 sort: 13
 number_photos: 0
 ---

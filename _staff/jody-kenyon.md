@@ -8,7 +8,9 @@ display_name: 'Jody Kenyon'
 email: JodyK@faithpromise.org
 phone_ext: '1400'
 title: 'Group Ministries'
+campuses: [pel]
 teams: [groups]
+ministries: [groups]
 sort: 34
 number_photos: 3
 ---

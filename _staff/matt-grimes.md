@@ -8,7 +8,9 @@ display_name: 'Matt Grimes'
 email: MattG@faithpromise.org
 phone_ext: '1706'
 title: 'Blount Campus Pastor'
-teams: [blount]
+campuses: [blount]
+teams: [pastors]
+ministries: ['']
 sort: 1
 number_photos: 2
 ---

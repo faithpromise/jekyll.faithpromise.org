@@ -8,7 +8,9 @@ display_name: 'Macy Deel'
 email: MacyD@faithpromise.org
 phone_ext: '1711'
 title: 'Next Steps Assistant'
+campuses: [pel]
 teams: [administration]
+ministries: ['']
 sort: 35
 number_photos: 3
 ---

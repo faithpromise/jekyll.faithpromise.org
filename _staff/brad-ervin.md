@@ -8,7 +8,9 @@ display_name: 'Brad Ervin'
 email: BradE@faithpromise.org
 phone_ext: '1405'
 title: 'Pastor of Outreach and Missions'
+campuses: ['']
 teams: [groups]
+ministries: [missions]
 sort: 49
 number_photos: 4
 ---

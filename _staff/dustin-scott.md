@@ -8,7 +8,9 @@ display_name: 'Dustin Scott'
 email: DustinS@faithpromise.org
 phone_ext: '1302'
 title: 'Pastor of Group Leader Discipleship'
+campuses: [pel]
 teams: [groups]
+ministries: [groups]
 sort: 80
 number_photos: 0
 ---

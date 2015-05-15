@@ -8,7 +8,9 @@ display_name: 'Zach Carringer'
 email: ZachC@faithpromise.org
 phone_ext: null
 title: 'Worship Intern'
+campuses: ['']
 teams: [worship]
+ministries: [worship]
 sort: 900
 number_photos: 0
 ---

@@ -8,7 +8,9 @@ display_name: 'John Adams'
 email: JohnA@faithpromise.org
 phone_ext: '1506'
 title: 'Blount Campus Worship Pastor'
-teams: [blount]
+campuses: [blount]
+teams: [worship]
+ministries: [worship]
 sort: 7
 number_photos: 0
 ---

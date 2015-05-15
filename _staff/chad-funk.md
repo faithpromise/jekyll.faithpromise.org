@@ -8,7 +8,9 @@ display_name: 'Chad Funk'
 email: ChadF@faithpromise.org
 phone_ext: '1410'
 title: 'Campbell Campus Pastor'
-teams: [campbell]
+campuses: [campbell]
+teams: [pastors]
+ministries: [celebrate]
 sort: 1
 number_photos: 2
 ---
