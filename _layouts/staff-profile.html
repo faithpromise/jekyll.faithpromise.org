@@ -3,13 +3,31 @@ layout: default
 ---
 
 {% capture imgUrl %}/assets/images/staff/{{ page.ident }}-1.jpg{% endcapture %}
+
 {% if page.number_photos == null or page.number_photos == 0 %}
 {% assign imgUrl = 'https://placekitten.com/g/200/300' %}
 {% endif %}
 
-<div class="Featured" style="background-image: url('{{ imgUrl }}');">
-  <h1>{{ page.display_name }}</h1>
-  <h2>{{ page.title }}</h2>
+{% if page.has_cover_photo %}
+{% capture imgUrl %}/assets/images/staff/{{ page.ident }}-cover.jpg{% endcapture %}
+{% endif %}
+
+<div class="StaffHeader" style="background-image: url('{{ imgUrl }}');">
+  <div class="StaffHeader-content">
+    <div class="StaffHeader-titles">
+      <h1 class="StaffHeader-name">{{ page.display_name }}</h1>
+
+      <h2 class="StaffHeader-title">{{ page.title }}</h2>
+    </div>
+  </div>
 </div>
 
-{{ content }}
+<div class="Content" content-scroll>
+
+  {{ page.content }}
+
+  <div class="StaffMore">
+
+  </div>
+
+</div>
