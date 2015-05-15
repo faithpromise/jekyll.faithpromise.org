@@ -8,6 +8,14 @@
 @import "../bower_components/cardinal/cardinal";
 @import "../bower_components/bootstrap/less/mixins/gradients";
 /*
+  Variables
+*/
+@import "variables/colors";
+/*
+  Mixins
+*/
+@import "mixins/link-color";
+/*
   Components
 */
 @import "components/Container";
@@ -19,10 +27,22 @@
 @import "components/Nav-animation";
 @import "components/NavDropdown";
 @import "components/StaffGallery";
+@import "components/StaffSort";
 
 a {
   text-decoration: none;
   &:hover {
     text-decoration: underline;
   }
+}
+
+@font-weight-light: 300;
+@font-weight-regular: 400;
+@font-weight-bold: 600;
+@font-weight-heavy: 600;
+
+.Section-title {
+  .to-rem(font-size, 28);
+  .to-rem(margin, (@font-size * 3) 0);
+  font-weight: @font-weight-light;
 }
