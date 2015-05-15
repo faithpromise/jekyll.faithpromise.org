@@ -1,23 +1,17 @@
 - title: "Executive Team"
   slug: executive
 
-- title: "Blount Campus"
-  slug: blount
+- title: "Campus Pastors"
+  slug: pastors
 
-- title: "North Knoxville Campus"
-  slug: north
+- title: "fpKids"
+  slug: kids
 
-- title: "Family Ministry"
-  slug: family
-
-- title: "Anderson Campus"
-  slug: anderson
+- title: "fpStudents"
+  slug: students
 
 - title: "Groups Ministry"
   slug: groups
-
-- title: "Campbell Campus"
-  slug: campbell
 
 - title: "Worship Ministry"
   slug: worship
