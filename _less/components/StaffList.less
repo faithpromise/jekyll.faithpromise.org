@@ -1,0 +1,49 @@
+@StaffListPadding: 30;
+
+.StaffList {
+  padding:       0;
+  margin-bottom: 3rem;
+  list-style:    none;
+}
+
+.StaffList-item {
+  .clearfix();
+  display: block;
+  margin:  0 0 2rem;
+}
+
+.StaffList-infoWrap {
+  color: @root-text-color;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.StaffList-photo {
+  display:             inline-block;
+  float:               left;
+  width:               80px;
+  height:              80px;
+  margin-right:        1rem;
+  background-position: center;
+  background-size:     cover;
+  opacity:             .8;
+  transition:          opacity .25s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.StaffList-name {
+  .to-rem(font-size, 18);
+  display:     block;
+  line-height: 1;
+}
+
+.StaffList-title {
+  .to-rem(font-size, 15);
+  display:     block;
+  font-weight: 400;
+  color:       @black-40;
+}
