@@ -12,6 +12,7 @@ campuses: [blount]
 teams: [kids]
 ministries: [kids]
 sort: 40
+has_cover_photo: false
 number_photos: 2
 ---
 

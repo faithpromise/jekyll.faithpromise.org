@@ -7,13 +7,12 @@ last_name: Stephens
 display_name: 'Dr. Chris Stephens'
 email: Pastor@faithpromise.org
 phone_ext: '2000'
-twitter: drchrisstephens
-facebook: pastorchris
 title: 'Senior Pastor'
 campuses: ['']
 teams: [executive]
 ministries: ['']
 sort: 1
+has_cover_photo: false
 number_photos: 4
 ---
 

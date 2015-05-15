@@ -12,6 +12,7 @@ campuses: ['']
 teams: [groups]
 ministries: [missions]
 sort: 50
+has_cover_photo: false
 number_photos: 3
 ---
 

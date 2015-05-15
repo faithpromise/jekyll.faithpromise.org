@@ -12,6 +12,7 @@ campuses: [north]
 teams: [kids]
 ministries: [kids]
 sort: 8
+has_cover_photo: false
 number_photos: 2
 ---
 

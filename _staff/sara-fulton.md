@@ -12,6 +12,7 @@ campuses: ['']
 teams: [administration]
 ministries: [care]
 sort: 201
+has_cover_photo: false
 number_photos: 1
 ---
 

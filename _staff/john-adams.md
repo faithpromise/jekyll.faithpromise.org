@@ -12,6 +12,7 @@ campuses: [blount]
 teams: [worship]
 ministries: [worship]
 sort: 7
+has_cover_photo: false
 number_photos: 0
 ---
 

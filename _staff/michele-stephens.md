@@ -12,6 +12,7 @@ campuses: ['']
 teams: [executive, worship]
 ministries: [worship]
 sort: 4
+has_cover_photo: false
 number_photos: 3
 ---
 

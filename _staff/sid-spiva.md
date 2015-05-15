@@ -12,6 +12,7 @@ campuses: [anderson]
 teams: [pastors]
 ministries: ['']
 sort: 1
+has_cover_photo: false
 number_photos: 3
 ---
 

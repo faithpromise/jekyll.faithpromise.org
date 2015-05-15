@@ -12,6 +12,7 @@ campuses: [pel]
 teams: [worship]
 ministries: [worship]
 sort: 30
+has_cover_photo: false
 number_photos: 5
 ---
 

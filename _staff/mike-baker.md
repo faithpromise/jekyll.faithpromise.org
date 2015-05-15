@@ -12,6 +12,7 @@ campuses: [north]
 teams: [pastors]
 ministries: ['']
 sort: 3
+has_cover_photo: false
 number_photos: 0
 ---
 

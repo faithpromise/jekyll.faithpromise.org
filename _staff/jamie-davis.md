@@ -12,6 +12,7 @@ campuses: [pel]
 teams: [kids]
 ministries: [kids]
 sort: 10
+has_cover_photo: false
 number_photos: 1
 ---
 

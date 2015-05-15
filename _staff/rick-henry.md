@@ -12,6 +12,7 @@ campuses: [campbell]
 teams: [groups]
 ministries: [groups]
 sort: 6
+has_cover_photo: false
 number_photos: 0
 ---
 

@@ -12,6 +12,7 @@ campuses: [blount]
 teams: [administration]
 ministries: [groups]
 sort: 34
+has_cover_photo: false
 number_photos: 1
 ---
 

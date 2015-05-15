@@ -12,6 +12,7 @@ campuses: [pel]
 teams: [administration]
 ministries: ['']
 sort: 35
+has_cover_photo: false
 number_photos: 3
 ---
 

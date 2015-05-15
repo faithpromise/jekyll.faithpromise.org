@@ -12,6 +12,7 @@ campuses: [north]
 teams: [groups]
 ministries: [groups, celebrate]
 sort: 100
+has_cover_photo: false
 number_photos: 1
 ---
 

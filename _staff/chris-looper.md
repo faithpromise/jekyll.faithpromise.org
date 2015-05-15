@@ -12,6 +12,7 @@ campuses: [pel]
 teams: [students]
 ministries: [students]
 sort: 62
+has_cover_photo: false
 number_photos: 0
 ---
 
