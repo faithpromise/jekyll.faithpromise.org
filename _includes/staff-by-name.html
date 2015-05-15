@@ -1,24 +1,15 @@
 {% assign members = site.staff | sort: 'first_name' %}
 
+<h2 class="Section-title">Staff Directory</h2>
+
 <ul class="StaffList">
   {% for member in members %}
   <li class="StaffList-item">
-    {% capture imgUrl %}/images/staff/{{ member.ident }}-1.jpg{% endcapture %} {% if member.number_photos == null or member.number_photos == 0 %} {% assign imgUrl = 'https://placekitten.com/g/200/300' %} {% endif %}
+    {% capture imgUrl %}/assets/images/staff/{{ member.ident }}-1.jpg{% endcapture %} {% if member.number_photos == null or member.number_photos == 0 %} {% assign imgUrl = 'https://placekitten.com/g/200/300' %} {% endif %}
+    <span class="StaffList-photo" style="background-image:url('{{ imgUrl }}');"></span>
     <a class="StaffList-infoWrap" href="/staff/{{ member.ident }}/">
-
-      <span class="StaffList-photo" style="background-image:url('{{ imgUrl }}');"></span>
       <span class="StaffList-name">{{ member.display_name }}</span>
       <span class="StaffList-title">{{ member.title }}</span>
-
-      <!-- Phone -->{% if member.phone_ext %}
-      <span class="StaffList-phone">865-251-2590 x {{ member.phone_ext }}</span> {% endif %}
-
-      <!-- Facebook -->{% if member.facebook %}
-      <a class="StaffList-social StaffList-social--facebook" href="https://facebook.com/{{ member.facebook }}">facebook</a> {% endif %}
-
-      <!-- Twitter -->{% if member.twitter %}
-      <a class="StaffList-social StaffList-social--twitter" href="https://twitter.com/{{ member.twitter }}">Twitter</a> {% endif %}
-
     </a>
   </li>
   {% endfor %}

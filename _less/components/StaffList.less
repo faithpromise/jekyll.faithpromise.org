@@ -3,46 +3,52 @@
 .StaffList {
   padding:       0;
   margin-bottom: 3rem;
+  padding-top:   1rem;
+  border-top:    1px solid #ddd;
   list-style:    none;
 }
 
 .StaffList-item {
   .clearfix();
-  display: block;
-  margin:  0 0 2rem;
-}
-
-.StaffList-infoWrap {
-  color: @root-text-color;
-  &:hover {
-    text-decoration: none;
-  }
+  display:       block;
+  margin:        0 0 1rem;
+  padding:       0 0 1rem;
+  border-bottom: 1px solid #ddd;
 }
 
 .StaffList-photo {
   display:             inline-block;
-  float:               left;
-  width:               80px;
-  height:              80px;
-  margin-right:        1rem;
+  width:               60px;
+  height:              60px;
+  margin-right:        .5rem;
   background-position: center;
   background-size:     cover;
   opacity:             .8;
   transition:          opacity .25s ease-in-out;
+  vertical-align:      middle;
 
   &:hover {
     opacity: 1;
   }
 }
 
+.StaffList-infoWrap {
+  display:        inline-block;
+  vertical-align: middle;
+  color:          @root-text-color;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .StaffList-name {
-  .to-rem(font-size, 18);
-  display:     block;
-  line-height: 1;
+  .to-rem(font-size, 16);
+  display:        block;
+  letter-spacing: 1px;
 }
 
 .StaffList-title {
-  .to-rem(font-size, 15);
+  .to-rem(font-size, 14);
   display:     block;
   font-weight: 400;
   color:       @black-40;

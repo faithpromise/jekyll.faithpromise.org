@@ -1,15 +1,19 @@
 .StaffSort {
   .to-rem(font-size, 14);
-  color:         @color-gray;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   padding:       1rem 0;
   border-bottom: 1px solid #ddd;
+}
+
+.StaffSort-label {
+  color: @color-gray;
 }
 
 .StaffSort-option {
   display: inline-block;
   margin:  0 .25rem;
   cursor:  pointer;
+  color:   @color-gray-dark;
 
   &.is-active {
     font-weight: @font-weight-bold;
