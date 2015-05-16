@@ -1,6 +1,6 @@
-_site
-.sass-cache
-.jekyll-metadata
+# ignore all files that begin with a dot
+.*
+!.gitignore
 bower_components
 node_modules
 build
