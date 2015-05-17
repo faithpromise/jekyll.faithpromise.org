@@ -1,17 +1,13 @@
 .Content {
-
   padding-top:      1px; // Keep margins from collapsing
   padding-bottom:   1px; // Keep margins from collapsing
-
   background-color: #fff;
 
-  .Featured + & {
-    position: relative;
-    top:      350px;
-    z-index:  3;
-
-    @media (min-width: @Nav-showDesktopVersion) {
-      top: @FeaturedHeight;
+  @media (min-width: @Nav-showDesktopVersion) {
+    .Featured + & {
+      position: relative;
+      top:      @FeaturedHeight;
+      z-index:  3;
     }
   }
 }

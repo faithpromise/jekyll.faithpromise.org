@@ -24,10 +24,16 @@ layout: default
 
 <div class="Content" content-scroll>
 
+  <div class="StaffProfile-bio">
+    {{ page.bio }}
+  </div>
+
   {{ page.content }}
 
   <div class="StaffMore">
-
+    <p>
+      <a href="{{ site.urls.staff }}">Meet the staff</a>
+    </p>
   </div>
 
 </div>
