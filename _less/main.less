@@ -4,6 +4,10 @@
 @import "fonts";
 @import (less) "../assets/fontello/css/fontello.css";
 /*
+  Icon fonts
+*/
+@import (less) "../build/fontello.css.tmp";
+/*
   Third party
 */
 @import "../bower_components/cardinal/cardinal";
@@ -33,12 +37,24 @@
 @import "components/StaffProfile";
 @import "components/StaffSort";
 
+//html {
+//  font-size: 100%;
+//}
+//
+//body {
+//  .to-rem(font-size, 20);
+//  line-height: 1.5;
+//  font-weight: @font-weight-light;
+//}
+
 a {
   text-decoration: none;
   &:hover {
     text-decoration: underline;
   }
 }
+
+@root-text-color: #555;
 
 @font-weight-light: 300;
 @font-weight-regular: 400;

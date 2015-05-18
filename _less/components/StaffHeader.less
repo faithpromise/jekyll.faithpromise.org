@@ -1,5 +1,7 @@
 .StaffHeader {
   &:extend(.Featured all);
+
+  // Gradient overlay
   &:after {
     content:    '';
     position:   absolute;
@@ -21,8 +23,7 @@
 
 .StaffHeader-titles {
   &:extend(.Container);
-  padding-top:    3rem;
-  padding-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .StaffHeader-name,
@@ -40,4 +41,16 @@
 .StaffHeader-title {
   .to-rem(font-size, 26);
   font-weight: @font-weight-light;
+}
+
+.StaffHeader-socialIcon {
+  .link-color(#fff, @anchor-text-color);
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:before {
+    margin-left: 0;
+  }
 }

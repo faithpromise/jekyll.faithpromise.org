@@ -24,11 +24,15 @@ layout: default
 
 <div class="Content" content-scroll>
 
-  <div class="StaffProfile-bio">
-    {{ page.bio }}
+  <div class="StaffProfile-about">
+    <div class="StaffHeader-social">
+      {% if page.facebook %}<a class="StaffHeader-socialIcon icon-facebook" href="https://facebook.com/{{ page.facebook }}"></a>{% endif %}
+      {% if page.twitter %}<a class="StaffHeader-socialIcon icon-twitter" href="https://twitter.com/{{ page.twitter }}"></a>{% endif %}
+    </div>
+    <div class="StaffProfile-bio">
+      {{ page.content }}
+    </div>
   </div>
-
-  {{ page.content }}
 
   <div class="StaffMore">
     <p>
