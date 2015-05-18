@@ -73,6 +73,31 @@ module.exports = function (grunt) {
                     }
                 }
             },
+            replace: {
+                fontello: {
+                    options: {
+                        patterns: [
+                            {
+                                match: '../font/',
+                                replacement: '/assets/fontello/font/'
+                            },
+                            {
+                                match: '[class^="icon-"]',
+                                replacement: '.icon:before, [class^="icon-"]'
+                            }
+                        ],
+                        usePrefix: false
+                    },
+                    files: [
+                        {
+                            expand: false,
+                            flatten: true,
+                            src: ['assets/fontello/css/fontello.css'],
+                            dest: 'build/fontello.css.tmp'
+                        }
+                    ]
+                }
+            },
             autoprefixer: {
                 options: {
                     browsers: ['last 2 versions', 'ie 8', 'ie 9', 'android 2.3', 'android 4', 'opera 12']
@@ -101,12 +126,14 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['dev']);
 
     grunt.registerTask('dev', [
+        'replace',
         'concat',
         'less:dev',
         'autoprefixer:dev'
     ]);
 
     grunt.registerTask('production', [
+        'replace',
         'uglify',
         'less:production',
         'autoprefixer:production'
