@@ -1,6 +1,7 @@
 # ignore all files that begin with a dot
 .*
 !.gitignore
+!.nojekyll
 bower_components
 node_modules
 build
