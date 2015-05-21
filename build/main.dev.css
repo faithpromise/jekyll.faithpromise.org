@@ -7151,47 +7151,37 @@ input[type="submit"].btn-round {
   padding-top: 1px;
   padding-bottom: 1px;
   background-color: #fff;
-}
-@media (min-width: 900px) and (min-height: 700px) {
-  .Featured + .Content,
-  .StaffHeader + .Content {
-    position: relative;
-    top: 600px;
-    z-index: 3;
-  }
+  position: relative;
+  z-index: 3;
 }
 .Featured,
 .StaffHeader {
-  position: relative;
-  background: #ffffff no-repeat top center;
-  -webkit-background-size: cover;
-          background-size: cover;
   height: 0;
   width: 100%;
   overflow: hidden;
-  padding-top: 36.45%;
+  padding-top: 100%;
 }
-@media (min-width: 900px) {
+@media (min-aspect-ratio: 5/8) {
   .Featured,
   .StaffHeader {
-    top: 0;
-    z-index: 1;
+    padding-top: 36.48%;
   }
 }
-.Featured:after,
-.StaffHeader:after {
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.34) 0%, transparent 100%);
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.34) 0%, transparent 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.34)), to(transparent));
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.34) 0%, transparent 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#57000000', endColorstr='#00000000', GradientType=0);
-  content: " ";
-  position: absolute;
-  left: 0;
+.Featured-content {
+  position: fixed;
   top: 0;
-  height: 100%;
-  width: 100%;
+  z-index: 1;
+}
+.Featured-image--wide {
+  display: none;
+}
+@media (min-aspect-ratio: 5/8) {
+  .Featured-image--square {
+    display: none;
+  }
+  .Featured-image--wide {
+    display: inline;
+  }
 }
 @media (max-width: 899px) {
   .Layout {
@@ -7232,7 +7222,7 @@ input[type="submit"].btn-round {
   top: 0;
   left: 0;
   right: 0;
-  height: 50px;
+  height: 90px;
   width: 100%;
   padding: 10px 10px;
 }
@@ -7244,7 +7234,7 @@ input[type="submit"].btn-round {
   cursor: pointer;
 }
 .MobileBar-logo {
-  float: right;
+  float: left;
   height: 30px;
 }
 /**
@@ -7254,7 +7244,7 @@ input[type="submit"].btn-round {
  */
 @media (min-width: 621px) {
   .MobileBar {
-    height: 60px;
+    height: 90px;
     padding: 10px 20px;
   }
   .MobileBar-navToggle {
@@ -7376,11 +7366,17 @@ input[type="submit"].btn-round {
  */
 @media (min-width: 900px) {
   .Nav {
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.34) 0%, transparent 100%);
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.34) 0%, transparent 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.34)), to(transparent));
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.34) 0%, transparent 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#57000000', endColorstr='#00000000', GradientType=0);
     position: fixed;
     z-index: 2;
     left: 0;
     right: 0;
-    height: 60px;
+    height: 160px;
     width: 100%;
     padding: 10px 20px;
   }
