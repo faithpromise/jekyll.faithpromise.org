@@ -7166,16 +7166,16 @@ input[type="submit"].btn-round {
   background: #ffffff no-repeat top center;
   -webkit-background-size: cover;
           background-size: cover;
-  height: 350px;
+  height: 0;
   width: 100%;
+  overflow: hidden;
+  padding-top: 36.45%;
 }
-@media (min-width: 900px) and (min-height: 700px) {
+@media (min-width: 900px) {
   .Featured,
   .StaffHeader {
-    position: fixed;
     top: 0;
     z-index: 1;
-    height: 600px;
   }
 }
 .Featured:after,

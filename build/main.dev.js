@@ -1108,6 +1108,7 @@ https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
 ;(function(angular) {
 
     angular.module('app', [
+        'siteConfig',
         'ngAnimate',
         'ui.bootstrap.dropdown',
         'template-cache'
