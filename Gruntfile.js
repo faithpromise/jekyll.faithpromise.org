@@ -118,6 +118,13 @@ module.exports = function (grunt) {
                     files: jsDir + '/**/*.js',
                     tasks: ['concat:js']
                 }
+            },
+            'gh-pages': {
+                options: {
+                    base: 'public',
+                    message: 'Deploy'
+                },
+                src: ['**/*']
             }
         }
     );
