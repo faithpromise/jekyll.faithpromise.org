@@ -30,6 +30,9 @@ collections:
   series:
     output: true
     permalink: /series/:path/
+  series_video:
+    output: true
+    permalink: /series/:path/
 
 # URLS
 urls:
