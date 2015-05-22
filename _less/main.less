@@ -66,3 +66,24 @@ a {
   .to-rem(margin, (@font-size * 3) 0);
   font-weight: @font-weight-light;
 }
+
+.Hero {
+  position:            fixed;
+  top:                 0;
+  z-index:             1;
+  height:              0;
+  width:               100%;
+  overflow:            hidden;
+  background-size:     100%;
+  background-position: center;
+}
+
+.Hero {
+  padding-top: 100%;
+}
+
+@media (min-aspect-ratio: 5/8) {
+  .Hero {
+    padding-top: 36.48%;
+  }
+}
