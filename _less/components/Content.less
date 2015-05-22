@@ -3,11 +3,14 @@
   padding-bottom:   1px; // Keep margins from collapsing
   background-color: #fff;
 
-  @media (min-width: @Nav-showDesktopVersion) and (min-height: (@FeaturedHeight + 100)) {
-    .Featured + & {
-      position: relative;
-      top:      @FeaturedHeight;
-      z-index:  3;
-    }
-  }
+  position:         relative;
+  z-index:          3;
+
+  //  @media (min-width: @Nav-showDesktopVersion) and (min-height: (@FeaturedHeight + 100)) {
+  //    .Featured + & {
+  //      position: relative;
+  //      top:      @FeaturedHeight;
+  //      z-index:  3;
+  //    }
+  //  }
 }
