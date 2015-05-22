@@ -12,6 +12,9 @@
     <!-- TODO: favicon -->
 
     <link rel="stylesheet" href="/build/main.dev.css">
+    {% if page.stylesheet %}
+    <link rel="stylesheet" href="{{ page.stylesheet }}">
+    {% endif %}
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   </head>
 
