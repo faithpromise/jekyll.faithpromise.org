@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+{% assign videos = site.series_video | where:"series", page.ident | sort:"publish_on" %}
+{% capture imgUrl_wide %}/assets/series/{{ page.ident }}-wide.jpg{% endcapture %}
+{% capture imgUrl_square %}/assets/series/{{ page.ident }}-square.jpg{% endcapture %}
+
+<div class="Hero Hero--series_{{ page.ident }}">
+
+</div>
+
+<div style="height: 370px;">test</div>
+
+<!--<div class="Featured">-->
+  <!--<div class="Featured-content">-->
+    <!--<img class="Featured-image Featured-image--wide" src="{{ imgUrl_wide }}">-->
+    <!--<img class="Featured-image Featured-image--square" src="{{ imgUrl_square }}">-->
+  <!--</div>-->
+<!--</div>-->
+
+<div class="Content" content-scroll>
+  <div class="Container">
+    <h1 class="Section-title">{{ page.title }}</h1>
+    {{ page.content }}
+    <hr>
+    <ul>
+      {% for video in videos %}
+        <li>{{ video.title }}</li>
+      {% endfor %}
+    </ul>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div>
+</div>
