@@ -1,6 +1,7 @@
 (function(angular) {
 
     angular.module('app', [
+        'siteConfig',
         'ngAnimate',
         'ui.bootstrap.dropdown',
         'template-cache'
