@@ -1,0 +1,18 @@
+---
+layout: page
+title: Sermon Series
+permalink: /series/
+banner_image: /assets/images/temp/banner-placeholder.png
+---
+
+{% assign series = site.series | sort: 'publish_on' | reverse %}
+
+<div class="Container">
+
+  <h2 class="Section-title">Series</h2>
+
+  {% for item in series %}
+    <a href="/series/{{ item.ident }}/">{{ item.title }}</a><br>
+  {% endfor %}
+
+</div>
