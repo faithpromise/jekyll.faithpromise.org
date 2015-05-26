@@ -7152,36 +7152,7 @@ input[type="submit"].btn-round {
   padding-bottom: 1px;
   background-color: #fff;
   position: relative;
-  z-index: 3;
-}
-.Featured,
-.StaffHeader {
-  height: 0;
-  width: 100%;
-  overflow: hidden;
-  padding-top: 100%;
-}
-@media (min-aspect-ratio: 5/8) {
-  .Featured,
-  .StaffHeader {
-    padding-top: 36.48%;
-  }
-}
-.Featured-content {
-  position: fixed;
-  top: 0;
-  z-index: 1;
-}
-.Featured-image--wide {
-  display: none;
-}
-@media (min-aspect-ratio: 5/8) {
-  .Featured-image--square {
-    display: none;
-  }
-  .Featured-image--wide {
-    display: inline;
-  }
+  z-index: 4;
 }
 @media (max-width: 899px) {
   .Layout {
@@ -7191,6 +7162,7 @@ input[type="submit"].btn-round {
     position: relative;
     z-index: 2;
     left: 0;
+    min-height: 100vh;
     clear: both;
     overflow: hidden;
     background-color: #fff;
@@ -7211,31 +7183,41 @@ input[type="submit"].btn-round {
  * ==========================================================
  */
 .MobileBar {
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.74) 0%, transparent 100%);
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.74) 0%, transparent 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.74)), to(transparent));
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.74) 0%, transparent 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bd000000', endColorstr='#00000000', GradientType=0);
   position: absolute;
   z-index: 3;
   top: 0;
   left: 0;
   right: 0;
-  height: 90px;
+  height: 55px;
   width: 100%;
   padding: 10px 10px;
 }
 .MobileBar-navToggle {
   display: inline-block;
+  float: right;
   padding: 0;
-  font-size: 30px;
+  font-size: 35px;
   color: #fff;
   cursor: pointer;
 }
 .MobileBar-logo {
-  float: left;
-  height: 30px;
+  height: 35px;
+}
+.MobileBar-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 88px;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.34) 0%, transparent 100%);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.34) 0%, transparent 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.34)), to(transparent));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.34) 0%, transparent 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#57000000', endColorstr='#00000000', GradientType=0);
 }
 /**
  * ==========================================================
@@ -7244,7 +7226,7 @@ input[type="submit"].btn-round {
  */
 @media (min-width: 621px) {
   .MobileBar {
-    height: 90px;
+    height: 60px;
     padding: 10px 20px;
   }
   .MobileBar-navToggle {
@@ -7257,6 +7239,9 @@ input[type="submit"].btn-round {
   .MobileBar-logo {
     height: 40px;
   }
+  .MobileBar-background {
+    height: 96px;
+  }
 }
 /**
  * ==========================================================
@@ -7264,7 +7249,8 @@ input[type="submit"].btn-round {
  * ==========================================================
  */
 @media (min-width: 900px) {
-  .MobileBar {
+  .MobileBar,
+  .MobileBar-background {
     display: none;
   }
 }
@@ -7274,8 +7260,8 @@ input[type="submit"].btn-round {
       -ms-user-select: none;
           user-select: none;
 }
-.Nav-background,
-.Nav-dismiss {
+.MobileNav-background,
+.MobileNav-dismiss {
   display: none;
 }
 /**
@@ -7315,7 +7301,7 @@ input[type="submit"].btn-round {
   .Nav-logo {
     display: none;
   }
-  .is-navOpen .Nav-background {
+  .is-navOpen .MobileNav-background {
     display: block;
     position: fixed;
     top: 0;
@@ -7325,7 +7311,7 @@ input[type="submit"].btn-round {
     width: 17em;
     background-color: #2e2e2e;
   }
-  .is-navOpen .Nav-dismiss {
+  .is-navOpen .MobileNav-dismiss {
     position: fixed;
     z-index: 1002;
     top: 0;
@@ -7366,17 +7352,11 @@ input[type="submit"].btn-round {
  */
 @media (min-width: 900px) {
   .Nav {
-    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.34) 0%, transparent 100%);
-    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.34) 0%, transparent 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.34)), to(transparent));
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.34) 0%, transparent 100%);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#57000000', endColorstr='#00000000', GradientType=0);
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     left: 0;
     right: 0;
-    height: 160px;
+    height: 60px;
     width: 100%;
     padding: 10px 20px;
   }
@@ -7423,6 +7403,22 @@ input[type="submit"].btn-round {
     color: #fff;
   }
 }
+.Nav-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 96px;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.34) 0%, transparent 100%);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.34) 0%, transparent 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.34)), to(transparent));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.34) 0%, transparent 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#57000000', endColorstr='#00000000', GradientType=0);
+}
 /**
   CSS classes are added by a directive that monitors the scroll position of .Content
 **/
@@ -7432,17 +7428,17 @@ input[type="submit"].btn-round {
     Nav enter
     ===================================
   */
-  .Nav.sticky-enter {
-    z-index: 4;
+  .Nav.sticky-yes {
+    z-index: 5;
     background-color: rgba(0, 0, 0, 0.9);
   }
-  .Nav.sticky-enter-add {
+  .Nav.sticky-yes-add {
     -webkit-transition: top 0.5s ease-in-out;
          -o-transition: top 0.5s ease-in-out;
             transition: top 0.5s ease-in-out;
     top: -60px;
   }
-  .Nav.sticky-enter-add.sticky-enter-add-active {
+  .Nav.sticky-yes-add.sticky-yes-add-active {
     top: 0;
   }
   /*
@@ -7450,16 +7446,16 @@ input[type="submit"].btn-round {
     Nav leave
     ===================================
   */
-  .Nav.sticky-leave {
+  .Nav.sticky-no {
     background-color: transparent;
   }
-  .Nav.sticky-leave-add {
+  .Nav.sticky-no-add {
     -webkit-transition: background-color 0.5s ease-in-out;
          -o-transition: background-color 0.5s ease-in-out;
             transition: background-color 0.5s ease-in-out;
     background-color: rgba(0, 0, 0, 0.9);
   }
-  .Nav.sticky-leave-add.sticky-leave-add-active {
+  .Nav.sticky-no-add.sticky-no-add-active {
     background-color: transparent;
   }
 }
@@ -7730,4 +7726,44 @@ a:hover {
   /*px*/ margin: 48px 0;
   /*rem*/ margin: 3rem 0;
   font-weight: 300;
+}
+.Hero {
+  height: 0;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+  -webkit-background-size: 100% 100%;
+          background-size: 100%;
+  background-position: center;
+}
+.Hero:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  width: 100%;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.34) 0%, transparent 100%);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.34) 0%, transparent 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.34)), to(transparent));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.34) 0%, transparent 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#57000000', endColorstr='#00000000', GradientType=0);
+}
+@media (min-aspect-ratio: 5/8) {
+  .Hero {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+  .Hero-shim {
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+  .Hero,
+  .Hero-shim {
+    padding-top: 36.48%;
+  }
 }
