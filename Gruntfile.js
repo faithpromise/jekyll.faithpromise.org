@@ -124,6 +124,10 @@ module.exports = function (grunt) {
                 html: {
                     files: ['**/*.html','**/*.yml','!bower_components/**/*.*','!node_modules/**/*.*','!public/**/*.*','!build/**/*.*'],
                     tasks: ['shell:jekyllBuild']
+                },
+                fontello: {
+                    files: ['assets/fontello/**/*.*'],
+                    tasks: ['replace:fontello', 'less:dev', 'autoprefixer:dev', 'shell:jekyllBuild']
                 }
             },
             'gh-pages': {
