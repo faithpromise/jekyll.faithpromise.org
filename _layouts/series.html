@@ -6,11 +6,13 @@ layout: default
 {% capture imgUrl_wide %}/assets/series/{{ page.ident }}-wide.jpg{% endcapture %}
 {% capture imgUrl_square %}/assets/series/{{ page.ident }}-square.jpg{% endcapture %}
 
-<div class="Hero Hero--series_{{ page.ident }}">
-
-</div>
-
-<div style="height: 370px;">test</div>
+<style type="text/css" scoped>
+  .Hero--series-{{ page.ident }} { background-image: url(/assets/series/{{ page.ident }}-square.jpg); }
+  @media (min-aspect-ratio: 5/8) {
+    .Hero--series-{{ page.ident }} { background-image: url(/assets/series/{{ page.ident }}-wide.jpg); }
+  }
+</style>
+<div class="Hero Hero--series-{{ page.ident }}"></div>
 
 <!--<div class="Featured">-->
   <!--<div class="Featured-content">-->
