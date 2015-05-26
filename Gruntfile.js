@@ -34,6 +34,9 @@ module.exports = function (grunt) {
             shell: {
                 jekyllBuild: {
                     command: 'jekyll build'
+                },
+                jekyllServe: {
+                    command: 'jekyll serve --no-watch'
                 }
             },
             concat: {
@@ -112,11 +115,15 @@ module.exports = function (grunt) {
             watch: {
                 less: {
                     files: lessDir + '/**/*.less',
-                    tasks: ['less:dev', 'autoprefixer:dev']
+                    tasks: ['less:dev', 'autoprefixer:dev', 'shell:jekyllBuild']
                 },
                 js: {
                     files: jsDir + '/**/*.js',
-                    tasks: ['concat:js']
+                    tasks: ['concat:js', 'shell:jekyllBuild']
+                },
+                html: {
+                    files: ['**/*.html','**/*.yml','!bower_components/**/*.*','!node_modules/**/*.*','!public/**/*.*','!build/**/*.*'],
+                    tasks: ['shell:jekyllBuild']
                 }
             },
             'gh-pages': {
