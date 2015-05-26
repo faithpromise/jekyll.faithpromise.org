@@ -153,4 +153,8 @@ module.exports = function (grunt) {
         'autoprefixer:production'
     ]);
 
+    grunt.registerTask('deploy', [
+        'gh-pages'
+    ]);
+
 };
