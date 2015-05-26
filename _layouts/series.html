@@ -3,6 +3,7 @@ layout: default
 ---
 
 {% assign videos = site.series_video | where:"series", page.ident | sort:"publish_on" %}
+{% assign promo = videos | where:"type", "promo" | first %}
 {% capture imgUrl_wide %}/assets/series/{{ page.ident }}-wide.jpg{% endcapture %}
 {% capture imgUrl_square %}/assets/series/{{ page.ident }}-square.jpg{% endcapture %}
 
@@ -12,7 +13,10 @@ layout: default
     .Hero--series-{{ page.ident }} { background-image: url(/assets/series/{{ page.ident }}-wide.jpg); }
   }
 </style>
-<div class="Hero Hero--series-{{ page.ident }}"></div>
+
+<div class="Hero Hero--series-{{ page.ident }}">
+  <a href="{{ promo.url }}" class="Hero-playButton"></a>
+</div>
 
 <!--<div class="Featured">-->
   <!--<div class="Featured-content">-->
@@ -28,19 +32,14 @@ layout: default
     <hr>
     <ul>
       {% for video in videos %}
-        <li>{{ video.title }}</li>
+        <li>
+          <div>{{ video.title }} | {{ video.speaker }} | {{ video.publish_on | date: "%b %d, %Y" }}</div>
+          <a href="{{ video.url }}">Play Video</a>
+          {% if video.audio_file_name %}
+            | <a href="http://fpcresources.org/audio/{{ video.audio_file_name }}">Play Audio</a>
+          {% endif %}
+        </li>
       {% endfor %}
     </ul>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
   </div>
 </div>
