@@ -1,5 +1,5 @@
 - title: "Home"
-  href: "/"
+  url: "/"
 
 - title: "About"
   subnav:
