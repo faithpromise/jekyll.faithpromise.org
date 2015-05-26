@@ -16,6 +16,7 @@
   Variables
 */
 @import "variables/colors";
+@import "variables/z-index";
 /*
   Mixins
 */
@@ -67,23 +68,54 @@ a {
   font-weight: @font-weight-light;
 }
 
+// Square format
 .Hero {
-  position:            fixed;
-  top:                 0;
-  z-index:             1;
   height:              0;
   width:               100%;
+  padding-top:         100%;
   overflow:            hidden;
   background-size:     100%;
   background-position: center;
+
+  &:before {
+//    content:  " ";
+    display:  block;
+    position: absolute;
+    top:      0;
+    left:     0;
+    right:    0;
+    height:   (@Nav-height-sm + 30px);
+    width:    100%;
+    #gradient> .vertical(rgba(0, 0, 0, 0.34), transparent, 0%, 100%); // Shows behind nav
+  }
 }
 
-.Hero {
-  padding-top: 100%;
-}
-
+// Wide format
 @media (min-aspect-ratio: 5/8) {
+
   .Hero {
+    position: fixed;
+    top:      0;
+    z-index:  1;
+  }
+
+  // Pushes content below Hero
+  .Hero-shim {
+    height:   0;
+    width:    100%;
+    overflow: hidden;
+  }
+
+  .Hero,
+  .Hero-shim {
     padding-top: 36.48%;
   }
 }
+
+//@media (max-width: (@Nav-showDesktopVersion - 1)) {
+//  .Hero {
+//    &:before {
+//      height:   (@Nav-height-lg + 30px);
+//    }
+//  }
+//}

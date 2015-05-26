@@ -1,14 +1,17 @@
-@Nav-logoHeight-sm: 30px;
+@Nav-logoHeight-sm: 35px;
 @Nav-hPadding-sm: 10px;
 @Nav-vPadding-sm: 10px;
+@Nav-height-sm: (@Nav-logoHeight-sm + @Nav-vPadding-sm + @Nav-vPadding-sm);
 
 @Nav-logoHeight-md: 40px;
 @Nav-hPadding-md: 20px;
 @Nav-vPadding-md: 10px;
+@Nav-height-md: (@Nav-logoHeight-md + @Nav-vPadding-md + @Nav-vPadding-md);
 
 @Nav-logoHeight-lg: 40px;
 @Nav-hPadding-lg: 20px;
 @Nav-vPadding-lg: 10px;
+@Nav-height-lg: (@Nav-logoHeight-lg + @Nav-vPadding-lg + @Nav-vPadding-lg);
 
 @Nav-showDesktopVersion: 900px;
 
@@ -16,8 +19,8 @@
   user-select: none;
 }
 
-.Nav-background,
-.Nav-dismiss {
+.MobileNav-background,
+.MobileNav-dismiss {
   display: none;
 }
 
@@ -34,7 +37,7 @@
     position:                    absolute;
     top:                         0;
     left:                        0;
-    z-index:                     1;
+    z-index:                     @z-index-mobile-nav;
     width:                       17em;
     min-height:                  100%;
     padding-bottom:              70px;
@@ -59,7 +62,7 @@
       right:            17em;
       bottom:           0;
       left:             0;
-      z-index:          -1;
+      z-index:          @z-index-mobile-nav-background;
       background-color: #2e2e2e;
     }
   }
@@ -68,20 +71,20 @@
     display: none;
   }
 
-  .is-navOpen .Nav-background {
+  .is-navOpen .MobileNav-background {
     display:          block;
     position:         fixed;
     top:              0;
     bottom:           0;
     left:             0;
-    z-index:          0;
+    z-index:          @z-index-mobile-nav-background-open;
     width:            17em;
     background-color: #2e2e2e;
   }
 
-  .is-navOpen .Nav-dismiss {
+  .is-navOpen .MobileNav-dismiss {
     position: fixed;
-    z-index:  1002;
+    z-index:  @z-index-mobile-nav-dismiss;
     top:      0;
     right:    0;
     bottom:   0;
@@ -122,16 +125,14 @@
  * ==========================================================
  */
 
-@NavDesktopHeight: (@Nav-logoHeight-lg + @Nav-vPadding-lg + @Nav-vPadding-lg);
-
 @media (min-width: @Nav-showDesktopVersion) {
 
   .Nav {
     position: fixed;
-    z-index:  2;
+    z-index:  @z-index-nav;
     left:     0;
     right:    0;
-    height:   @NavDesktopHeight;
+    height:   @Nav-height-lg;
     width:    100%;
     padding:  @Nav-vPadding-lg @Nav-hPadding-lg;
   }
@@ -185,4 +186,16 @@
     }
   }
 
+}
+
+.Nav-background {
+  position: fixed;
+  top:      0;
+  right:    0;
+  left:     0;
+  z-index:  @z-index-nav-background;
+  display:  block;
+  width:    100%;
+  height:   (@Nav-height-lg * 1.6);
+  #gradient> .vertical(rgba(0, 0, 0, 0.34), transparent, 0%, 100%); // Shows behind nav
 }

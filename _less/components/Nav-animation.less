@@ -11,19 +11,19 @@
     Nav enter
     ===================================
   */
-  .Nav.sticky-enter {
-    z-index:          4;
+  .Nav.sticky-yes {
+    z-index:          @z-index-nav-sticky;
     background-color: @NavStickyBackgroundColor;
   }
 
   // From
-  .Nav.sticky-enter-add {
+  .Nav.sticky-yes-add {
     transition: top .5s ease-in-out;
-    top:        -@NavDesktopHeight;
+    top:        -@Nav-height-lg;
   }
 
   // To
-  .Nav.sticky-enter-add.sticky-enter-add-active {
+  .Nav.sticky-yes-add.sticky-yes-add-active {
     top: 0;
   }
 
@@ -32,18 +32,18 @@
     Nav leave
     ===================================
   */
-  .Nav.sticky-leave {
+  .Nav.sticky-no {
     background-color: transparent;
   }
 
   // From
-  .Nav.sticky-leave-add {
+  .Nav.sticky-no-add {
     transition:       background-color .5s ease-in-out;
     background-color: @NavStickyBackgroundColor;
   }
 
   // To
-  .Nav.sticky-leave-add.sticky-leave-add-active {
+  .Nav.sticky-no-add.sticky-no-add-active {
     background-color: transparent;
   }
 

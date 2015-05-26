@@ -16,8 +16,8 @@
 
             var nav = document.getElementById('js-nav'),
                 navHeight = 60,
-                navEnterClass = 'sticky-enter',
-                navLeaveClass = 'sticky-leave';
+                navStickyClass = 'sticky-yes',
+                navNoStickyClass = 'sticky-no';
 
             // Scrolling down as top of content reaches top of viewport
             new Waypoint({
@@ -25,10 +25,10 @@
                 handler: function (direction) {
 
                     if (direction === 'down') {
-                        angular.element(nav).removeClass(navLeaveClass);
+                        angular.element(nav).removeClass(navNoStickyClass);
                         // http://stackoverflow.com/questions/12729122/prevent-error-digest-already-in-progress-when-calling-scope-apply
                         $timeout(function () {
-                            $animate.addClass(angular.element(nav), navEnterClass);
+                            $animate.addClass(angular.element(nav), navStickyClass);
                         });
                     }
 
@@ -42,9 +42,9 @@
                 handler: function (direction) {
 
                     if (direction === 'up') {
-                        angular.element(nav).removeClass(navEnterClass);
+                        angular.element(nav).removeClass(navStickyClass);
                         scope.$apply(function () {
-                            $animate.addClass(angular.element(nav), navLeaveClass);
+                            $animate.addClass(angular.element(nav), navNoStickyClass);
                         });
                     }
 

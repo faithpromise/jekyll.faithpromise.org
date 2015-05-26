@@ -5,19 +5,19 @@
  */
 
 .MobileBar {
-  #gradient> .vertical(rgba(0, 0, 0, 0.74), transparent, 0%, 100%);
   position: absolute;
-  z-index:  3;
+  z-index:  @z-index-mobile-bar;
   top:      0;
   left:     0;
   right:    0;
-  height:   (@Nav-logoHeight-sm + @Nav-vPadding-sm + @Nav-vPadding-sm);
+  height:   @Nav-height-sm;
   width:    100%;
   padding:  @Nav-vPadding-sm @Nav-hPadding-sm;
 }
 
 .MobileBar-navToggle {
   display:   inline-block;
+  float:     right;
   padding:   0;
   font-size: @Nav-logoHeight-sm;
   color:     #fff;
@@ -25,8 +25,19 @@
 }
 
 .MobileBar-logo {
-  float:  right;
-  height: 30px;
+  height: @Nav-logoHeight-sm;
+}
+
+.MobileBar-background {
+  position: absolute;
+  top:      0;
+  right:    0;
+  left:     0;
+  z-index:  @z-index-nav-background;
+  display:  block;
+  width:    100%;
+  height:   (@Nav-height-sm * 1.6);
+  #gradient> .vertical(rgba(0, 0, 0, 0.34), transparent, 0%, 100%); // Shows behind nav
 }
 
 /**
@@ -54,6 +65,10 @@
     height: @Nav-logoHeight-md;
   }
 
+  .MobileBar-background {
+    height: (@Nav-height-md * 1.6);
+  }
+
 }
 
 /**
@@ -63,7 +78,8 @@
  */
 
 @media (min-width: @Nav-showDesktopVersion) {
-  .MobileBar {
+  .MobileBar,
+  .MobileBar-background {
     display: none;
   }
 }

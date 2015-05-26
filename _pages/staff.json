@@ -1,0 +1,11 @@
+---
+permalink: /api/staff.json
+---
+[
+  {% for member in site.collections.staff %}
+  {
+    "display_name": {{member.display_name | jsonify}},
+  "title": {{member.title | jsonify}}
+}{% if forloop.rindex0 > 0 %},{% endif %}
+  {% endfor %}
+]
