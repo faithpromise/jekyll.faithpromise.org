@@ -3,74 +3,13 @@
 /*
   Fonts
 */
-@font-face {
-  font-family: 'fontello';
-  src: url('../font/fontello.eot?9274512');
-  src: url('../font/fontello.eot?9274512#iefix') format('embedded-opentype'), url('../font/fontello.woff?9274512') format('woff'), url('../font/fontello.ttf?9274512') format('truetype'), url('../font/fontello.svg?9274512#fontello') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'fontello';
-    src: url('../font/fontello.svg?9274512#fontello') format('svg');
-  }
-}
-*/
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  font-family: "fontello";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
-  /* opacity: .8; */
-  /* For safety - reset parent styles, that can break glyph codes*/
-  font-variant: normal;
-  text-transform: none;
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
-  margin-left: .2em;
-  /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
-  /* Font smoothing. That was taken from TWBS */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
-}
-.icon-facebook:before {
-  content: '\e800';
-}
-/* '' */
-.icon-twitter:before {
-  content: '\e801';
-}
-/* '' */
-.icon-instagramm:before {
-  content: '\e802';
-}
-/* '' */
-.icon-git:before {
-  content: '\e803';
-}
-/* '' */
 /*
   Icon fonts
 */
 @font-face {
   font-family: 'fontello';
-  src: url('/assets/fontello/font/fontello.eot?9274512');
-  src: url('/assets/fontello/font/fontello.eot?9274512#iefix') format('embedded-opentype'), url('/assets/fontello/font/fontello.woff?9274512') format('woff'), url('/assets/fontello/font/fontello.ttf?9274512') format('truetype'), url('/assets/fontello/font/fontello.svg?9274512#fontello') format('svg');
+  src: url('/assets/fontello/font/fontello.eot?78660846');
+  src: url('/assets/fontello/font/fontello.eot?78660846#iefix') format('embedded-opentype'), url('/assets/fontello/font/fontello.woff?78660846') format('woff'), url('/assets/fontello/font/fontello.ttf?78660846') format('truetype'), url('/assets/fontello/font/fontello.svg?78660846#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -80,13 +19,14 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('/assets/fontello/font/fontello.svg?9274512#fontello') format('svg');
+    src: url('/assets/fontello/font/fontello.svg?78660846#fontello') format('svg');
   }
 }
 */
 .icon:before,
 [class^="icon-"]:before,
-[class*=" icon-"]:before {
+[class*=" icon-"]:before,
+.Hero-playButton:before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -129,6 +69,18 @@
   content: '\e803';
 }
 /* '' */
+.icon-play-1:before {
+  content: '\e804';
+}
+/* '' */
+.icon-pause:before {
+  content: '\e805';
+}
+/* '' */
+.icon-play-circled:before {
+  content: '\e806';
+}
+/* '' */
 /*
   Third party
 */
@@ -7152,7 +7104,90 @@ input[type="submit"].btn-round {
   padding-bottom: 1px;
   background-color: #fff;
   position: relative;
-  z-index: 4;
+  z-index: 2;
+}
+.Hero {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+  -webkit-background-size: 100% 100%;
+          background-size: 100%;
+  background-position: center;
+}
+@media (min-aspect-ratio: 5/8) {
+  .Hero {
+    padding-top: 36.48%;
+  }
+}
+.Hero-container {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+}
+.Hero-playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  margin-top: -60px;
+  margin-left: -60px;
+  padding-left: 12px;
+  border: 4px solid #fff;
+  border-radius: 300px;
+  font-size: 74px;
+  color: #fff;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: background-color 0.25s ease-in-out;
+       -o-transition: background-color 0.25s ease-in-out;
+          transition: background-color 0.25s ease-in-out;
+}
+.Hero-playButton,
+.Hero-playButton:hover {
+  text-decoration: none;
+}
+.Hero-playButton:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.HeroVideo-responsive {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+.HeroVideo-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 900px) {
+  .HeroVideo {
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    text-align: center;
+    -webkit-background-size: cover;
+            background-size: cover;
+  }
+  .HeroVideo-container {
+    display: inline-block;
+    width: 100%;
+    max-width: 720px;
+    padding: 0 15px;
+  }
+  .HeroVideo-responsive {
+    max-width: 720px;
+  }
 }
 @media (max-width: 899px) {
   .Layout {
@@ -7183,7 +7218,6 @@ input[type="submit"].btn-round {
  * ==========================================================
  */
 .MobileBar {
-  position: absolute;
   z-index: 3;
   top: 0;
   left: 0;
@@ -7191,6 +7225,7 @@ input[type="submit"].btn-round {
   height: 55px;
   width: 100%;
   padding: 10px 10px;
+  background-color: #fff;
 }
 .MobileBar-navToggle {
   display: inline-block;
@@ -7358,16 +7393,16 @@ input[type="submit"].btn-round {
     right: 0;
     height: 60px;
     width: 100%;
-    padding: 10px 20px;
+    padding: 10px 0;
   }
   .Nav-menu {
     margin: 0;
   }
   .Nav-container {
     position: relative;
-    max-width: 1100px;
+    max-width: 1140px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
   }
   .Nav-logoWrap {
     float: left;
@@ -7504,7 +7539,7 @@ input[type="submit"].btn-round {
     position: absolute;
     top: 100%;
     left: -20px;
-    z-index: 1;
+    z-index: 3;
     margin: 0;
     padding: 10px 20px;
     list-style: none;
@@ -7526,6 +7561,80 @@ input[type="submit"].btn-round {
   .NavDropdown-link:hover {
     color: #fff;
   }
+}
+.PageHeader {
+  /*px*/ height: 140px;
+  /*rem*/ height: 8.75rem;
+}
+.PageHeader:after {
+  content: " ";
+  display: inline-block;
+  height: 100%;
+  width: 0px;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.PageHeader-container {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.PageHeader-titles {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+}
+.PageHeader-title {
+  /*px*/ font-size: 28px;
+  /*rem*/ font-size: 1.75rem;
+  margin: 0;
+  line-height: 1.3;
+  font-weight: 300;
+}
+.PageHeader-subtitle {
+  /*px*/ font-size: 15px;
+  /*rem*/ font-size: 0.9375rem;
+  margin: 0;
+  line-height: 1;
+  font-weight: 300;
+  color: #575757;
+}
+.PageHeader-subtitle:empty {
+  display: none;
+}
+.PageHeader-thumb {
+  /*px*/ height: 80px;
+  /*rem*/ height: 5rem;
+  /*px*/ margin-right: 10px;
+  /*rem*/ margin-right: 0.625rem;
+  vertical-align: middle;
+}
+.Playlist {
+  table-layout: fixed;
+  border-top: 1px solid #dedede;
+}
+.Playlist th {
+  /*px*/ font-size: 13px;
+  /*rem*/ font-size: 0.8125rem;
+  /*px*/ padding: 10px;
+  /*rem*/ padding: 0.625rem;
+  text-transform: uppercase;
+  color: #b5b5b5;
+  white-space: nowrap;
+  font-weight: 300;
+}
+.Playlist tbody > tr:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+.Playlist td {
+  /*px*/ padding: 10px;
+  /*rem*/ padding: 0.625rem;
+  /*px*/ font-size: 15px;
+  /*rem*/ font-size: 0.9375rem;
+  white-space: nowrap;
+}
+.Playlist-play {
+  text-align: right;
 }
 .StaffGallery {
   /*px*/ margin: 0 0 0 -30px;
@@ -7720,6 +7829,10 @@ a {
 a:hover {
   text-decoration: underline;
 }
+.PageTitles {
+  /*px*/ margin: 43px 0;
+  /*rem*/ margin: 2.6875rem 0;
+}
 .Section-title {
   /*px*/ font-size: 28px;
   /*rem*/ font-size: 1.75rem;
@@ -7727,43 +7840,42 @@ a:hover {
   /*rem*/ margin: 3rem 0;
   font-weight: 300;
 }
-.Hero {
-  height: 0;
-  width: 100%;
-  padding-top: 100%;
-  overflow: hidden;
-  -webkit-background-size: 100% 100%;
-          background-size: 100%;
-  background-position: center;
+.Section-titles > .Section-title {
+  margin: 0;
+  line-height: 1.3;
 }
-.Hero:before {
-  display: block;
+.Section-subtitle {
+  /*px*/ font-size: 16px;
+  /*rem*/ font-size: 1rem;
+  line-height: 1;
+  font-weight: 300;
+}
+.HeroPlayer {
+  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+}
+.Section {
+  /*px*/ padding: 60px 0;
+  /*rem*/ padding: 3.75rem 0;
+}
+.VideoPlayer {
+  position: absolute;
+  text-align: center;
+}
+.VideoPlayer-container {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.VideoPlayer-container iframe,
+.VideoPlayer-container object,
+.VideoPlayer-container embed {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  height: 85px;
   width: 100%;
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.34) 0%, transparent 100%);
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.34) 0%, transparent 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.34)), to(transparent));
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.34) 0%, transparent 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#57000000', endColorstr='#00000000', GradientType=0);
-}
-@media (min-aspect-ratio: 5/8) {
-  .Hero {
-    position: fixed;
-    top: 0;
-    z-index: 1;
-  }
-  .Hero-shim {
-    height: 0;
-    width: 100%;
-    overflow: hidden;
-  }
-  .Hero,
-  .Hero-shim {
-    padding-top: 36.48%;
-  }
+  height: 100%;
 }

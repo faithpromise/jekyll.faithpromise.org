@@ -29,7 +29,7 @@
             
             <li class="Nav-item" dropdown>
               
-              <a class="Nav-link" href="">Home</a>
+              <a class="Nav-link" href="/">Home</a>
               
             </li>
             
@@ -163,13 +163,15 @@
       <div class="MobileNav-dismiss"></div>
 
       <div class="Layout-contentWrap">
-        <div class="MobileBar-background"></div>
+        <!--<div class="MobileBar-background"></div>-->
         <div class="MobileBar">
           <span class="MobileBar-navToggle"><i class="icon-navicon" fp-nav-toggle></i></span>
           <a href="/"><img class="MobileBar-logo" src="/assets/images/logo-faith-promise.svg"></a>
         </div>
-        <div class="Hero-shim"></div>
+        <!--<div class="Hero-shim"></div>-->
         
+
+
 
 
 
@@ -179,38 +181,51 @@
     .Hero--series-no-filter { background-image: url(/assets/series/no-filter-wide.jpg); }
   }
 </style>
-<div class="Hero Hero--series-no-filter"></div>
 
-<!--<div class="Featured">-->
-  <!--<div class="Featured-content">-->
-    <!--<img class="Featured-image Featured-image--wide" src="/assets/series/no-filter-wide.jpg">-->
-    <!--<img class="Featured-image Featured-image--square" src="/assets/series/no-filter-square.jpg">-->
-  <!--</div>-->
-<!--</div>-->
+<div class="Hero Hero--series-no-filter">
+  <div class="Hero-container">
+    <a href="/series/no-filter/series-promo/" class="Hero-playButton"></a>
+  </div>
+</div>
 
 <div class="Content" content-scroll>
   <div class="Container">
     <h1 class="Section-title">#NoFilter</h1>
     Whether we mean to or not, we compare our unfiltered lives to images of perfection paraded across our screens each day. Join us for a five-week series called #NoFilter as we discover the freedom we have in Christ to live outside the trap of comparison.
-    <hr>
-    <ul>
-      
-        <li>Series Promo</li>
-      
-        <li>Just Call Me Jacob</li>
-      
-    </ul>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
+
+    <table class="Playlist">
+  <thead>
+    <tr>
+      <th class="Playlist-date">Date</th>
+      <th class="Playlist-title">Title</th>
+      <th class="Playlist-speaker">Speaker</th>
+      <th></th>
+    </tr>
+  </thead>
+  <!-- TODO: Highlight currently selected video -->
+  <tbody>
+    
+    <tr>
+      <td>May 11, 2015</td>
+      <td><a href="/series/no-filter/series-promo/">Series Promo</a></td>
+      <td></td>
+      <th class="Playlist-play">
+        <i class="icon icon-play-circled"></i>
+      </th>
+    </tr>
+    
+    <tr>
+      <td>May 17, 2015</td>
+      <td><a href="/series/no-filter/just-call-me-jacob/">Just Call Me Jacob</a></td>
+      <td>Zac Stephens</td>
+      <th class="Playlist-play">
+        <i class="icon icon-play-circled"></i>
+      </th>
+    </tr>
+    
+  </tbody>
+</table>
+
   </div>
 </div>
       </div>
