@@ -161,4 +161,8 @@ module.exports = function (grunt) {
         'gh-pages'
     ]);
 
+    grunt.registerTask('serve', [
+        'shell:jekyllServe'
+    ]);
+
 };
