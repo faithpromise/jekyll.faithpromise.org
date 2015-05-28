@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% assign series = page %}
-{% assign playlist = site.series_video | where:"series", series.ident | sort:"publish_on" %}
+{% assign playlist = site.video | where:"series", series.ident | sort:"publish_on" %}
 {% assign promo = playlist | where:"type", "promo" | first %}
 {% capture imgUrl_wide %}/assets/series/{{ series.ident }}-wide.jpg{% endcapture %}
 {% capture imgUrl_square %}/assets/series/{{ series.ident }}-square.jpg{% endcapture %}

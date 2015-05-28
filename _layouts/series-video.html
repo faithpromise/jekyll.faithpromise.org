@@ -4,7 +4,7 @@ layout: default
 
 {% assign video = page %}
 {% assign series = site.series | where:"ident", video.series | first %}
-{% assign playlist = site.series_video | where:"series", video.series | sort:"publish_on" %}
+{% assign playlist = site.video | where:"series", video.series | sort:"publish_on" %}
 
 {% assign week = 0 %}
 {% for v in playlist %}
