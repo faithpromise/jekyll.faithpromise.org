@@ -1,0 +1,23 @@
+<table class="Playlist">
+  <thead>
+    <tr>
+      <th class="Playlist-date">Date</th>
+      <th class="Playlist-title">Title</th>
+      <th class="Playlist-speaker">Speaker</th>
+      <th></th>
+    </tr>
+  </thead>
+  <!-- TODO: Highlight currently selected video -->
+  <tbody>
+    {% for v in include.playlist %}
+    <tr{% if v.ident == include.current %} class="Playlist-current" {% endif %}>
+      <td>{{ v.publish_on | date: "%b %d, %Y" }}</td>
+      <td><a href="{{ v.url }}">{{ v.title }}</a></td>
+      <td>{{ v.speaker }}</td>
+      <th class="Playlist-play">
+        <i class="icon icon-play-circled"></i>
+      </th>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

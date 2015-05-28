@@ -6,7 +6,7 @@
   <tbody>
   {% for member in members %}
   <tr class="StaffList-row" onclick="window.document.location='{{ site.urls.staff }}{{ member.ident }}/';">
-    {% capture imgUrl %}/assets/images/staff/{{ member.ident }}-1.jpg{% endcapture %} {% if member.number_photos == null or member.number_photos == 0 %} {% assign imgUrl = 'https://placekitten.com/g/200/300' %} {% endif %}
+    {% capture imgUrl %}/assets/staff/{{ member.ident }}-1.jpg{% endcapture %} {% if member.number_photos == null or member.number_photos == 0 %} {% assign imgUrl = 'https://placekitten.com/g/200/300' %} {% endif %}
     <td class="StaffList-column StaffList-column--photo">
       <span class="StaffList-photo" style="background-image:url('{{ imgUrl }}');"></span>
     </td>

@@ -2,29 +2,59 @@
 layout: default
 ---
 
-{% assign related = site.series_video | where:"series", page.series | sort:"publish_on" %}
+{% assign video = page %}
+{% assign series = site.series | where:"ident", video.series | first %}
+{% assign playlist = site.series_video | where:"series", video.series | sort:"publish_on" %}
 
-<div class="HeroVideo">
+{% assign week = 0 %}
+{% for v in playlist %}
+  {% if v.type == 'sermon' %}
+    {% assign week = week | plus:1 %}
+  {% endif %}
+  {% if v.ident == video.ident %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+<style type="text/css" scoped>
+  /*.Hero--series-{{ series.ident }} { background-image: url(/assets/series/{{ series.ident }}-square.jpg); }*/
+  @media (min-width: 900px) {
+    .Hero--series-{{ series.ident }} { background-image: url(/assets/series/{{ series.ident }}-video-detail.jpg); }
+  }
+</style>
+
+<div class="HeroVideo Hero--series-{{ series.ident }}">
   <div class="HeroVideo-container">
     <div class="HeroVideo-responsive">
-      <iframe src="https://player.vimeo.com/video/{{ page.vimeo_id }}?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <iframe src="https://player.vimeo.com/video/{{ video.vimeo_id }}?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
   </div>
 </div>
 
-<div class="Content"content-scroll>
+<div class="Content" content-scroll>
   <div class="Container">
-    <h1 class="Section-title">{{ page.title }}</h1>
-    {{ page.content }}
 
-    <hr>
+    <div class="Section">
 
-    <ul>
-      {% for video in related %}
-      <li>
-        <a href="{{ video.url }}">{{ video.title }}</a>
-      </li>
-      {% endfor %}
-    </ul>
+      <div class="PageHeader">
+        <div class="PageHeader-container">
+          <a href="{{ site.urls.series }}{{ series.ident }}/"><img class="PageHeader-thumb" src="/assets/series/{{ series.ident }}-square.jpg"></a>
+
+          <div class="PageHeader-titles">
+            <h1 class="PageHeader-title">
+              {% if week > 0 %} Week {{ week }} - {% endif %} {{ video.title }}
+            </h1>
+
+            <h2 class="PageHeader-subtitle">
+              {% if video.speaker %} {{ video.speaker }} | {% endif %}
+              {% if video.type == 'sermon' %} {{ video.publish_on | date: "%b %d, %Y" }} {% endif %}
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      {% include playlist.html playlist=playlist current=video.ident %}
+
+    </div>
   </div>
 </div>

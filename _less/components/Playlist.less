@@ -1,0 +1,37 @@
+.Playlist {
+
+  table-layout: fixed;
+  border-top:   1px solid #dedede;
+
+  th {
+    .to-rem(font-size, 13);
+    .to-rem(padding, 10);
+    text-transform: uppercase;
+    color:          #b5b5b5;
+    white-space:    nowrap;
+    font-weight:    @font-weight-light;
+  }
+
+  tbody > tr:nth-child(odd) {
+    background-color: #f7f7f7;
+  }
+
+  td {
+    .to-rem(padding, 10);
+    .to-rem(font-size, 15);
+    white-space: nowrap;
+  }
+
+}
+
+.Playlist-play {
+  text-align: right;
+}
+
+//.Playlist-date {
+//  width: 150px;
+//}
+//
+//.Playlist-title {
+//  width: 300px;
+//}
