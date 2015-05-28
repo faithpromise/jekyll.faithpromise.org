@@ -25,8 +25,7 @@
 */
 .icon:before,
 [class^="icon-"]:before,
-[class*=" icon-"]:before,
-.Hero-playButton:before {
+[class*=" icon-"]:before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -7097,7 +7096,7 @@ input[type="submit"].btn-round {
 .StaffProfile-about {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 20px;
 }
 .Content {
   padding-top: 1px;
@@ -7106,7 +7105,8 @@ input[type="submit"].btn-round {
   position: relative;
   z-index: 2;
 }
-.Hero {
+.Hero,
+.StaffHeader {
   position: relative;
   height: 0;
   width: 100%;
@@ -7114,10 +7114,11 @@ input[type="submit"].btn-round {
   overflow: hidden;
   -webkit-background-size: 100% 100%;
           background-size: 100%;
-  background-position: center;
+  background-position: top;
 }
 @media (min-aspect-ratio: 5/8) {
-  .Hero {
+  .Hero,
+  .StaffHeader {
     padding-top: 36.48%;
   }
 }
@@ -7129,32 +7130,6 @@ input[type="submit"].btn-round {
   left: 0;
   width: 100%;
   height: calc(100% - 60px);
-}
-.Hero-playButton {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120px;
-  height: 120px;
-  margin-top: -60px;
-  margin-left: -60px;
-  padding-left: 12px;
-  border: 4px solid #fff;
-  border-radius: 300px;
-  font-size: 74px;
-  color: #fff;
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.5);
-  -webkit-transition: background-color 0.25s ease-in-out;
-       -o-transition: background-color 0.25s ease-in-out;
-          transition: background-color 0.25s ease-in-out;
-}
-.Hero-playButton,
-.Hero-playButton:hover {
-  text-decoration: none;
-}
-.Hero-playButton:hover {
-  background-color: rgba(0, 0, 0, 0.8);
 }
 .HeroVideo-responsive {
   position: relative;
@@ -7402,7 +7377,7 @@ input[type="submit"].btn-round {
     position: relative;
     max-width: 1140px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 20px;
   }
   .Nav-logoWrap {
     float: left;
@@ -7652,7 +7627,7 @@ input[type="submit"].btn-round {
   /*rem*/ margin: 0 0 3.75rem;
   display: inline-block;
   width: 50%;
-  max-width: 265px;
+  max-width: 275px;
   vertical-align: top;
 }
 .StaffGallery-infoWrap {
@@ -7878,4 +7853,26 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
+}
+.SeriesList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid #efefef;
+}
+.SeriesList-item {
+  margin: 0;
+  padding: 5px 10px;
+  border-bottom: 1px solid #efefef;
+}
+.SeriesList-link {
+  display: block;
+}
+.SeriesList-thumb {
+  width: 25%;
+  vertical-align: middle;
+}
+.SeriesList-titles {
+  display: inline-block;
+  vertical-align: middle;
 }
