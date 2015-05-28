@@ -76,6 +76,17 @@ module.exports = function (grunt) {
                     }
                 }
             },
+            uncss: {
+                options: {
+                    htmlroot: 'public',
+                    report: 'min'
+                },
+                production: {
+                    files: {
+                        'public/build/main.tidy.css': ['public/**/*.html','!public/assets/**/*.html']
+                    }
+                }
+            },
             replace: {
                 fontello: {
                     options: {
@@ -122,7 +133,7 @@ module.exports = function (grunt) {
                     tasks: ['concat:js', 'shell:jekyllBuild']
                 },
                 html: {
-                    files: ['**/*.html','**/*.yml','!bower_components/**/*.*','!node_modules/**/*.*','!public/**/*.*','!build/**/*.*'],
+                    files: ['**/*.html', '**/*.yml', '!bower_components/**/*.*', '!node_modules/**/*.*', '!public/**/*.*', '!build/**/*.*'],
                     tasks: ['shell:jekyllBuild']
                 },
                 fontello: {
