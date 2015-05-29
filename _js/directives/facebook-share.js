@@ -1,4 +1,4 @@
-(function (module, FB) {
+(function (module) {
     'use strict';
 
     module.directive('facebookShare', directive);
@@ -14,14 +14,23 @@
         function Link(scope, elem, attr) {
 
             elem.on('click', function() {
-                var shareUrl = attr.facebookShare || $window.location.href;
+                var shareUrl = fullUrl(attr.facebookShare || $window.location.href);
+
                 FB.ui({
                     method: 'share',
-                    href: shareUrl,
+                    href: shareUrl
                 }, function(response){});
             });
 
         }
+
+        function fullUrl(url) {
+            var baseUrl = $window.location.protocol + '//' + $window.location.hostname + ($window.location.port !== 80 ? (':' + $window.location.port) : '');
+            if (url.charAt(0) === '/') {
+                return baseUrl + url;
+            }
+            return url;
+        }
     }
 
-})(angular.module('app'), FB);
+})(angular.module('app'));
