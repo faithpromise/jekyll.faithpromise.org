@@ -33,6 +33,9 @@ module.exports = function (grunt) {
     grunt.initConfig(
         {
             shell: {
+                jekyllClean: {
+                    command: 'jekyll clean'
+                },
                 jekyllBuild: {
                     command: 'jekyll build'
                 },
@@ -170,6 +173,8 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('deploy', [
+        'shell:jekyllClean',
+        'shell:jekyllBuild',
         'gh-pages'
     ]);
 
