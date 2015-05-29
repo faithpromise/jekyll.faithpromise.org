@@ -3,6 +3,7 @@
     angular.module('app', [
         'siteConfig',
         'ngAnimate',
+        'LocalStorageModule',
         'ui.bootstrap.dropdown',
         'template-cache'
     ]);
