@@ -8,14 +8,33 @@
 
     <title>Under the Influence - Faith Promise Church</title>
     <meta name="description" content="A contemporary church with locations in Knoxville, Maryville, Clinton, and La Follette, TN">
-
-    <!-- TODO: favicon -->
+    
 
     <link rel="stylesheet" href="/build/main.dev.css">
     <link rel="canonical" href="http://faithpromise.org/series/open-house/under-the-influence/">
   </head>
 
   <body>
+
+    <!-- TODO: Include by default, but make conditional if we don't need it on some pages -->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1592691894327442', // TODO: Switch to production: 1592675454329086
+          xfbml      : true,
+          version    : 'v2.3'
+        });
+      };
+
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <div class="Layout">
 
@@ -183,16 +202,16 @@
     
 
 <style type="text/css" scoped>
-  /*.Hero--series-open-house { background-image: url(/assets/series/open-house-square.jpg); }*/
   @media (min-width: 900px) {
-    .Hero--series-open-house { background-image: url(/assets/series/open-house-video-detail.jpg); }
+    .Hero--series-open-house { background-image: url(/assets/series/open-house-wide-blur.jpg); }
   }
 </style>
 
-<div class="HeroVideo Hero--series-open-house">
+<div class="HeroVideo Hero--series-open-house HeroVideo--overlay">
   <div class="HeroVideo-container">
     <div class="HeroVideo-responsive">
-      <iframe src="https://player.vimeo.com/video/102470692?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <!-- TODO: Sometimes a sermon may be audio only (/series/faith-without-borders/restoration-costs/) - need to wrap video embed in conditional -->
+      <vimeo id="102470692"></vimeo>
     </div>
   </div>
 </div>
@@ -222,76 +241,329 @@
       <table class="Playlist">
   <thead>
     <tr>
-      <th class="Playlist-date">Date</th>
+      <th></th>
+      <th></th>
       <th class="Playlist-title">Title</th>
       <th class="Playlist-speaker">Speaker</th>
+      <th class="Playlist-date">Date</th>
       <th></th>
     </tr>
   </thead>
   <!-- TODO: Highlight currently selected video -->
   <tbody>
     
-    <tr>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/open-house/trailer/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+      </td>
+      <td><a href="/series/open-house/trailer/" title="Learn more">Series Promo</a></td>
       <td></td>
-      <td><a href="/series/open-house/trailer/">Trailer</a></td>
       <td></td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Series Promo</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/open-house/trailer/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr class="Playlist-current" >
+    <tr class="Playlist-selected">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/open-house/under-the-influence/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20140801_02.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/open-house/under-the-influence/" title="Learn more">Under the Influence</a></td>
+      <td>Dr. Chris Stephens</td>
       <td>Aug 03, 2014</td>
-      <td><a href="/series/open-house/under-the-influence/">Under the Influence</a></td>
-      <td>Dr. Chris Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Under the Influence</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/open-house/under-the-influence/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/open-house/lock-the-doors/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20140809_10.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/open-house/lock-the-doors/" title="Learn more">Lock the Doors</a></td>
+      <td>Dr. Chris Stephens</td>
       <td>Aug 10, 2014</td>
-      <td><a href="/series/open-house/lock-the-doors/">Lock the Doors</a></td>
-      <td>Dr. Chris Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Lock the Doors</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/open-house/lock-the-doors/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/open-house/permission-granted/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20140816_17Permission Granted.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/open-house/permission-granted/" title="Learn more">Permission Granted</a></td>
+      <td>Dr. Chris Stephens</td>
       <td>Aug 17, 2014</td>
-      <td><a href="/series/open-house/permission-granted/">Permission Granted</a></td>
-      <td>Dr. Chris Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Permission Granted</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/open-house/permission-granted/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/open-house/believers-in-bondage/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/Believers in Bondage.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/open-house/believers-in-bondage/" title="Learn more">Believers in Bondage</a></td>
+      <td>Dr. Chris Stephens</td>
       <td>Aug 24, 2014</td>
-      <td><a href="/series/open-house/believers-in-bondage/">Believers in Bondage</a></td>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Believers in Bondage</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/open-house/believers-in-bondage/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/open-house/demons/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+      </td>
+      <td><a href="/series/open-house/demons/" title="Learn more">Demons Video</a></td>
+      <td></td>
+      <td></td>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Demons Video</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/open-house/demons/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
+    </tr>
+    
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/open-house/set-free-and-stay-free/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20140830_31.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/open-house/set-free-and-stay-free/" title="Learn more">Set Free & Stay Free</a></td>
       <td>Dr. Chris Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
-    </tr>
-    
-    <tr>
-      <td></td>
-      <td><a href="/series/open-house/demons/">Demons Video</a></td>
-      <td></td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
-    </tr>
-    
-    <tr>
       <td>Aug 31, 2014</td>
-      <td><a href="/series/open-house/set-free-and-stay-free/">Set Free & Stay Free</a></td>
-      <td>Dr. Chris Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Set Free & Stay Free</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/open-house/set-free-and-stay-free/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
   </tbody>

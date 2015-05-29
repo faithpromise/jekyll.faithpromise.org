@@ -8,14 +8,33 @@
 
     <title>Four Cups - Faith Promise Church</title>
     <meta name="description" content="A contemporary church with locations in Knoxville, Maryville, Clinton, and La Follette, TN">
-
-    <!-- TODO: favicon -->
+    
 
     <link rel="stylesheet" href="/build/main.dev.css">
     <link rel="canonical" href="http://faithpromise.org/series/four-cups/">
   </head>
 
   <body>
+
+    <!-- TODO: Include by default, but make conditional if we don't need it on some pages -->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1592691894327442', // TODO: Switch to production: 1592675454329086
+          xfbml      : true,
+          version    : 'v2.3'
+        });
+      };
+
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <div class="Layout">
 
@@ -186,82 +205,344 @@
 
 <div class="Content" content-scroll>
   <div class="Container">
-    <h1 class="Section-title">Four Cups</h1>
-    
+
+
+    <div class="PageHeader">
+      <div class="PageHeader-container">
+        <img class="PageHeader-thumb" src="/assets/series/four-cups-square.jpg">
+        <div class="PageHeader-titles">
+          <h1 class="PageHeader-title">Four Cups</h1>
+          <!--<h2 class="PageHeader-subtitle"></h2>-->
+        </div>
+      </div>
+    </div>
 
     <table class="Playlist">
   <thead>
     <tr>
-      <th class="Playlist-date">Date</th>
+      <th></th>
+      <th></th>
       <th class="Playlist-title">Title</th>
       <th class="Playlist-speaker">Speaker</th>
+      <th class="Playlist-date">Date</th>
       <th></th>
     </tr>
   </thead>
   <!-- TODO: Highlight currently selected video -->
   <tbody>
     
-    <tr>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/four-cups/trailer/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+      </td>
+      <td><a href="/series/four-cups/trailer/" title="Learn more">Series Promo</a></td>
       <td></td>
-      <td><a href="/series/four-cups/trailer/">Trailer</a></td>
       <td></td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Series Promo</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/four-cups/trailer/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/four-cups/what-are-the-four-cups/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20150411_12.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/four-cups/what-are-the-four-cups/" title="Learn more">What are the Four Cups?</a></td>
+      <td>Dr. Chris Stephens</td>
       <td>Apr 12, 2015</td>
-      <td><a href="/series/four-cups/what-are-the-four-cups/">What are the Four Cups?</a></td>
-      <td>Dr. Chris Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">What are the Four Cups?</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/four-cups/what-are-the-four-cups/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/four-cups/set-apart-for-a-higher-purpose/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20150418_19.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/four-cups/set-apart-for-a-higher-purpose/" title="Learn more">Set Apart for a Higher Purpose</a></td>
+      <td>Dr. Chris Stephens</td>
       <td>Apr 19, 2015</td>
-      <td><a href="/series/four-cups/set-apart-for-a-higher-purpose/">Set Apart for a Higher Purpose</a></td>
-      <td>Dr. Chris Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Set Apart for a Higher Purpose</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/four-cups/set-apart-for-a-higher-purpose/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/four-cups/drinking-deeply-of-deliverance/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20150425_26.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/four-cups/drinking-deeply-of-deliverance/" title="Learn more">Drinking Deeply of Deliverance</a></td>
+      <td>Dr. Chris Stephens</td>
       <td>Apr 26, 2015</td>
-      <td><a href="/series/four-cups/drinking-deeply-of-deliverance/">Drinking Deeply of Deliverance</a></td>
-      <td>Dr. Chris Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Drinking Deeply of Deliverance</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/four-cups/drinking-deeply-of-deliverance/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/four-cups/your-original-intent/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20150502_03.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/four-cups/your-original-intent/" title="Learn more">Your Original Intent</a></td>
+      <td>Dr. Chris Stephens</td>
       <td>May 03, 2015</td>
-      <td><a href="/series/four-cups/your-original-intent/">Your Original Intent</a></td>
-      <td>Dr. Chris Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Your Original Intent</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/four-cups/your-original-intent/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/four-cups/the-ultimate-fulfillment/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20150502_03.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/four-cups/the-ultimate-fulfillment/" title="Learn more">The Ultimate Fulfillment</a></td>
+      <td>Dr. Chris Stephens</td>
       <td>May 10, 2015</td>
-      <td><a href="/series/four-cups/the-ultimate-fulfillment/">The Ultimate Fulfillment</a></td>
-      <td>Dr. Chris Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">The Ultimate Fulfillment</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/four-cups/the-ultimate-fulfillment/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/four-cups/mothers-day-song-2015/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+      </td>
+      <td><a href="/series/four-cups/mothers-day-song-2015/" title="Learn more">Mother's Day Song</a></td>
       <td></td>
-      <td><a href="/series/four-cups/mothers-day-song-2015/">Mother's Day Song</a></td>
       <td></td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Mother's Day Song</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/four-cups/mothers-day-song-2015/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
   </tbody>

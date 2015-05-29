@@ -8,14 +8,33 @@
 
     <title>Just Call Me Jacob - Faith Promise Church</title>
     <meta name="description" content="A contemporary church with locations in Knoxville, Maryville, Clinton, and La Follette, TN">
-
-    <!-- TODO: favicon -->
+    
 
     <link rel="stylesheet" href="/build/main.dev.css">
     <link rel="canonical" href="http://faithpromise.org/series/no-filter/just-call-me-jacob/">
   </head>
 
   <body>
+
+    <!-- TODO: Include by default, but make conditional if we don't need it on some pages -->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1592691894327442', // TODO: Switch to production: 1592675454329086
+          xfbml      : true,
+          version    : 'v2.3'
+        });
+      };
+
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <div class="Layout">
 
@@ -183,16 +202,16 @@
     
 
 <style type="text/css" scoped>
-  /*.Hero--series-no-filter { background-image: url(/assets/series/no-filter-square.jpg); }*/
   @media (min-width: 900px) {
-    .Hero--series-no-filter { background-image: url(/assets/series/no-filter-video-detail.jpg); }
+    .Hero--series-no-filter { background-image: url(/assets/series/no-filter-wide-blur.jpg); }
   }
 </style>
 
-<div class="HeroVideo Hero--series-no-filter">
+<div class="HeroVideo Hero--series-no-filter HeroVideo--overlay">
   <div class="HeroVideo-container">
     <div class="HeroVideo-responsive">
-      <iframe src="https://player.vimeo.com/video/128150143?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <!-- TODO: Sometimes a sermon may be audio only (/series/faith-without-borders/restoration-costs/) - need to wrap video embed in conditional -->
+      <vimeo id="128150143"></vimeo>
     </div>
   </div>
 </div>
@@ -222,49 +241,191 @@
       <table class="Playlist">
   <thead>
     <tr>
-      <th class="Playlist-date">Date</th>
+      <th></th>
+      <th></th>
       <th class="Playlist-title">Title</th>
       <th class="Playlist-speaker">Speaker</th>
+      <th class="Playlist-date">Date</th>
       <th></th>
     </tr>
   </thead>
   <!-- TODO: Highlight currently selected video -->
   <tbody>
     
-    <tr>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/no-filter/series-promo/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+      </td>
+      <td><a href="/series/no-filter/series-promo/" title="Learn more">Series Promo</a></td>
       <td></td>
-      <td><a href="/series/no-filter/series-promo/">Series Promo</a></td>
       <td></td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Series Promo</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/no-filter/series-promo/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr class="Playlist-current" >
-      <td>May 17, 2015</td>
-      <td><a href="/series/no-filter/just-call-me-jacob/">Just Call Me Jacob</a></td>
+    <tr class="Playlist-selected">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/no-filter/just-call-me-jacob/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/Just Call Me Jacob.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/no-filter/just-call-me-jacob/" title="Learn more">Just Call Me Jacob</a></td>
       <td>Zac Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td>May 17, 2015</td>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Just Call Me Jacob</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/no-filter/just-call-me-jacob/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr>
-      <td>May 24, 2015</td>
-      <td><a href="/series/no-filter/back-to-bethel/">Back to Bethel</a></td>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/no-filter/back-to-bethel/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+      </td>
+      <td><a href="/series/no-filter/back-to-bethel/" title="Learn more">Back to Bethel</a></td>
       <td>Dr. Chris Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td>May 24, 2015</td>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Back to Bethel</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/no-filter/back-to-bethel/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr>
-      <td>May 24, 2015</td>
-      <td><a href="/series/no-filter/starving-sons/">Starving Sons</a></td>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/no-filter/starving-sons/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/Starving Sons.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/no-filter/starving-sons/" title="Learn more">Starving Sons</a></td>
       <td>Matt Grimes</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td>May 24, 2015</td>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Starving Sons</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/no-filter/starving-sons/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
   </tbody>

@@ -8,14 +8,33 @@
 
     <title>Rooted in Freedom - Faith Promise Church</title>
     <meta name="description" content="A contemporary church with locations in Knoxville, Maryville, Clinton, and La Follette, TN">
-
-    <!-- TODO: favicon -->
+    
 
     <link rel="stylesheet" href="/build/main.dev.css">
     <link rel="canonical" href="http://faithpromise.org/series/roots/rooted-in-freedom/">
   </head>
 
   <body>
+
+    <!-- TODO: Include by default, but make conditional if we don't need it on some pages -->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1592691894327442', // TODO: Switch to production: 1592675454329086
+          xfbml      : true,
+          version    : 'v2.3'
+        });
+      };
+
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <div class="Layout">
 
@@ -195,16 +214,16 @@
     
 
 <style type="text/css" scoped>
-  /*.Hero--series-roots { background-image: url(/assets/series/roots-square.jpg); }*/
   @media (min-width: 900px) {
-    .Hero--series-roots { background-image: url(/assets/series/roots-video-detail.jpg); }
+    .Hero--series-roots { background-image: url(/assets/series/roots-wide-blur.jpg); }
   }
 </style>
 
-<div class="HeroVideo Hero--series-roots">
+<div class="HeroVideo Hero--series-roots HeroVideo--overlay">
   <div class="HeroVideo-container">
     <div class="HeroVideo-responsive">
-      <iframe src="https://player.vimeo.com/video/98970704?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <!-- TODO: Sometimes a sermon may be audio only (/series/faith-without-borders/restoration-costs/) - need to wrap video embed in conditional -->
+      <vimeo id="98970704"></vimeo>
     </div>
   </div>
 </div>
@@ -234,112 +253,517 @@
       <table class="Playlist">
   <thead>
     <tr>
-      <th class="Playlist-date">Date</th>
+      <th></th>
+      <th></th>
       <th class="Playlist-title">Title</th>
       <th class="Playlist-speaker">Speaker</th>
+      <th class="Playlist-date">Date</th>
       <th></th>
     </tr>
   </thead>
   <!-- TODO: Highlight currently selected video -->
   <tbody>
     
-    <tr>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/roots/trailer/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+      </td>
+      <td><a href="/series/roots/trailer/" title="Learn more">Series Promo</a></td>
       <td></td>
-      <td><a href="/series/roots/trailer/">Trailer</a></td>
       <td></td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Series Promo</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/roots/trailer/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/roots/heart-of-intercession/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20140517-18.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/roots/heart-of-intercession/" title="Learn more">Heart of Intercession</a></td>
+      <td>Dr. Chris Stephens</td>
       <td>May 18, 2014</td>
-      <td><a href="/series/roots/heart-of-intercession/">Heart of Intercession</a></td>
-      <td>Dr. Chris Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Heart of Intercession</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/roots/heart-of-intercession/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/roots/rooted-in-him/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20140524-25.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/roots/rooted-in-him/" title="Learn more">Rooted in Him</a></td>
+      <td>Dr. Chris Stephens</td>
       <td>May 25, 2014</td>
-      <td><a href="/series/roots/rooted-in-him/">Rooted in Him</a></td>
-      <td>Dr. Chris Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Rooted in Him</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/roots/rooted-in-him/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/roots/rooted-in-what-he-did/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20140601-01.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/roots/rooted-in-what-he-did/" title="Learn more">Rooted in What He Did</a></td>
+      <td>Dr. Chris Stephens</td>
       <td>Jun 01, 2014</td>
-      <td><a href="/series/roots/rooted-in-what-he-did/">Rooted in What He Did</a></td>
-      <td>Dr. Chris Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Rooted in What He Did</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/roots/rooted-in-what-he-did/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/roots/rooted-in-a-process/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20140607-08.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/roots/rooted-in-a-process/" title="Learn more">Rooted in a Process </a></td>
+      <td>Dr. Chris Stephens</td>
       <td>Jun 08, 2014</td>
-      <td><a href="/series/roots/rooted-in-a-process/">Rooted in a Process </a></td>
-      <td>Dr. Chris Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Rooted in a Process </h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/roots/rooted-in-a-process/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr class="Playlist-current" >
+    <tr class="Playlist-selected">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/roots/rooted-in-freedom/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20140621-22.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/roots/rooted-in-freedom/" title="Learn more">Rooted in Freedom</a></td>
+      <td>Dr. Chris Stephens</td>
       <td>Jun 22, 2014</td>
-      <td><a href="/series/roots/rooted-in-freedom/">Rooted in Freedom</a></td>
-      <td>Dr. Chris Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Rooted in Freedom</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/roots/rooted-in-freedom/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr>
-      <td>Jun 29, 2014</td>
-      <td><a href="/series/roots/whats-in-your-closet/">What's in Your Closet?</a></td>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/roots/whats-in-your-closet/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20140628-29.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/roots/whats-in-your-closet/" title="Learn more">What's in Your Closet?</a></td>
       <td>Matt Grimes</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td>Jun 29, 2014</td>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">What's in Your Closet?</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/roots/whats-in-your-closet/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr>
-      <td>Jul 06, 2014</td>
-      <td><a href="/series/roots/dressed-for-success/">Dressed for Success</a></td>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/roots/dressed-for-success/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20140705-06.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/roots/dressed-for-success/" title="Learn more">Dressed for Success</a></td>
       <td>Dr. Josh Whitehead</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td>Jul 06, 2014</td>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Dressed for Success</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/roots/dressed-for-success/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/roots/theres-more-where-that-came-from/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20140712-13.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/roots/theres-more-where-that-came-from/" title="Learn more">There's More Where That Came From</a></td>
+      <td>Dr. Chris Stephens</td>
       <td>Jul 13, 2014</td>
-      <td><a href="/series/roots/theres-more-where-that-came-from/">There's More Where That Came From</a></td>
-      <td>Dr. Chris Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">There's More Where That Came From</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/roots/theres-more-where-that-came-from/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/roots/rooted-in-family/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20140719_20.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/roots/rooted-in-family/" title="Learn more">Rooted in Family</a></td>
+      <td>Dr. Chris Stephens</td>
       <td>Jul 20, 2014</td>
-      <td><a href="/series/roots/rooted-in-family/">Rooted in Family</a></td>
-      <td>Dr. Chris Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Rooted in Family</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/roots/rooted-in-family/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr>
-      <td>Jul 27, 2014</td>
-      <td><a href="/series/roots/rooted-in-serving/">Rooted in Serving</a></td>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/roots/rooted-in-serving/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20140726_27.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/roots/rooted-in-serving/" title="Learn more">Rooted in Serving</a></td>
       <td>Dr. Chris Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td>Jul 27, 2014</td>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Rooted in Serving</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/roots/rooted-in-serving/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
   </tbody>

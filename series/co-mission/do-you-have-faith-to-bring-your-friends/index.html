@@ -8,14 +8,33 @@
 
     <title>Do You Have Faith to Bring Your Friends? - Faith Promise Church</title>
     <meta name="description" content="A contemporary church with locations in Knoxville, Maryville, Clinton, and La Follette, TN">
-
-    <!-- TODO: favicon -->
+    
 
     <link rel="stylesheet" href="/build/main.dev.css">
     <link rel="canonical" href="http://faithpromise.org/series/co-mission/do-you-have-faith-to-bring-your-friends/">
   </head>
 
   <body>
+
+    <!-- TODO: Include by default, but make conditional if we don't need it on some pages -->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1592691894327442', // TODO: Switch to production: 1592675454329086
+          xfbml      : true,
+          version    : 'v2.3'
+        });
+      };
+
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <div class="Layout">
 
@@ -183,16 +202,16 @@
     
 
 <style type="text/css" scoped>
-  /*.Hero--series-co-mission { background-image: url(/assets/series/co-mission-square.jpg); }*/
   @media (min-width: 900px) {
-    .Hero--series-co-mission { background-image: url(/assets/series/co-mission-video-detail.jpg); }
+    .Hero--series-co-mission { background-image: url(/assets/series/co-mission-wide-blur.jpg); }
   }
 </style>
 
-<div class="HeroVideo Hero--series-co-mission">
+<div class="HeroVideo Hero--series-co-mission HeroVideo--overlay">
   <div class="HeroVideo-container">
     <div class="HeroVideo-responsive">
-      <iframe src="https://player.vimeo.com/video/74143617?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <!-- TODO: Sometimes a sermon may be audio only (/series/faith-without-borders/restoration-costs/) - need to wrap video embed in conditional -->
+      <vimeo id="74143617"></vimeo>
     </div>
   </div>
 </div>
@@ -222,49 +241,195 @@
       <table class="Playlist">
   <thead>
     <tr>
-      <th class="Playlist-date">Date</th>
+      <th></th>
+      <th></th>
       <th class="Playlist-title">Title</th>
       <th class="Playlist-speaker">Speaker</th>
+      <th class="Playlist-date">Date</th>
       <th></th>
     </tr>
   </thead>
   <!-- TODO: Highlight currently selected video -->
   <tbody>
     
-    <tr>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/co-mission/trailer/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+      </td>
+      <td><a href="/series/co-mission/trailer/" title="Learn more">Series Promo</a></td>
       <td></td>
-      <td><a href="/series/co-mission/trailer/">Trailer</a></td>
       <td></td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Series Promo</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/co-mission/trailer/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr class="Playlist-current" >
+    <tr class="Playlist-selected">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/co-mission/do-you-have-faith-to-bring-your-friends/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20130907-08.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/co-mission/do-you-have-faith-to-bring-your-friends/" title="Learn more">Do You Have Faith to Bring Your Friends?</a></td>
+      <td>Dr. Chris Stephens</td>
       <td>Sep 08, 2013</td>
-      <td><a href="/series/co-mission/do-you-have-faith-to-bring-your-friends/">Do You Have Faith to Bring Your Friends?</a></td>
-      <td>Dr. Chris Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Do You Have Faith to Bring Your Friends?</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/co-mission/do-you-have-faith-to-bring-your-friends/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/co-mission/lets-get-harvesting/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20130914-15.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/co-mission/lets-get-harvesting/" title="Learn more">Let's Get Harvesting</a></td>
+      <td>Dr. Chris Stephens</td>
       <td>Sep 15, 2013</td>
-      <td><a href="/series/co-mission/lets-get-harvesting/">Let's Get Harvesting</a></td>
-      <td>Dr. Chris Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Let's Get Harvesting</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/co-mission/lets-get-harvesting/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
-    <tr>
-      <td>Sep 22, 2013</td>
-      <td><a href="/series/co-mission/walk-across/">Walk Across</a></td>
+    <tr class="">
+      <td class="Playlist-iconColumn">
+        <a class="PlayList-iconLink" href="/series/co-mission/walk-across/" title="Watch the video" video-link>
+          <i class="Playlist-playIcon"></i>
+        </a>
+      </td>
+      <td class="Playlist-iconColumn">
+        
+        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20130921-22.mp3.mp3" title="Listen to the audio version">
+          <i class="Playlist-listenIcon"></i>
+        </a>
+        
+      </td>
+      <td><a href="/series/co-mission/walk-across/" title="Learn more">Walk Across</a></td>
       <td>Zac Stephens</td>
-      <th class="Playlist-play">
-        <i class="icon icon-play-circled"></i>
-      </th>
+      <td>Sep 22, 2013</td>
+      <td class="Playlist-iconColumn">
+        <div class="Dropdown-wrapper" dropdown>
+          <span class="PlayList-iconLink" title="More options" dropdown-toggle>
+            <i class="MoreIcon"></i>
+          </span>
+
+          <div class="Dropdown Dropdown--topLeft">
+            <h3 class="Dropdown-title">Walk Across</h3>
+            <ul class="Dropdown-menu">
+              <li class="Dropdown-item">
+                <span class="Dropdown-link" facebook-share="/series/co-mission/walk-across/"><i class="icon icon-facebook"></i> Share on Facebook</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-twitter"></i> Tweet</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-mail"></i> Share by email</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-download"></i> Download audio</span>
+              </li>
+              <li class="Dropdown-item">
+                <span class="Dropdown-link"><i class="icon icon-link"></i> Copy link</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </td>
     </tr>
     
   </tbody>
