@@ -18,6 +18,7 @@
     "bootstrap": "~3.3.4",
     "cardinal": "~3.1.0",
     "suit": "~0.6.0",
-    "waypoints": "~3.1.1"
+    "waypoints": "~3.1.1",
+    "angular-local-storage": "~0.2.2"
   }
 }

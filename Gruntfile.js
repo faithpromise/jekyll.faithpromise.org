@@ -17,6 +17,7 @@ module.exports = function (grunt) {
             'bower_components/waypoints/lib/noframework.waypoints.js',
             'bower_components/angular-ui-bootstrap/src/position/position.js',
             'bower_components/angular-ui-bootstrap/src/dropdown/dropdown.js',
+            'bower_components/angular-local-storage/dist/angular-local-storage.js',
             jsDir + '/app.module.js',
             jsDir + '/**/*.js'
         ];
