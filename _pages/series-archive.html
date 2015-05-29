@@ -1,18 +1,59 @@
 ---
-layout: page
+layout: default
 title: Sermon Series
 permalink: /series/
 banner_image: /assets/images/temp/banner-placeholder.png
 ---
 
 {% assign series = site.series | sort: 'publish_on' | reverse %}
+{% assign current = series | first %}
 
-<div class="Container">
+<div class="Hero Hero--series-{{ series.ident }}"></div>
 
-  <h2 class="Section-title">Series</h2>
+<div class="Content" content-scroll>
 
-  {% for item in series %}
-    <a href="/series/{{ item.ident }}/">{{ item.title }}</a><br>
-  {% endfor %}
+  <div class="Container">
+
+    <!--<h2 class="Section-title">Current Series</h2>-->
+    <!--<img class="CurrentSeries-thumb" src="/assets/series/{{ current.ident }}-square.jpg">-->
+
+    <h2 class="Section-title">Recent Series</h2>
+
+  </div>
+
+  <div class="SeriesGallery">
+    <ul class="SeriesGallery-list">
+      {% assign counter = 1 %}
+      {% for item in series %}
+      {% if counter > 0 %}
+      <li class="SeriesGallery-item">
+        <a class="SeriesGallery-link" href="/series/{{ item.ident }}/">
+          <img class="SeriesGallery-thumb" src="/assets/series/{{ item.ident }}-square.jpg">
+
+          <div class="SeriesGallery-titles">
+            <h3 class="SeriesGallery-title">{{ item.title }}</h3>
+            <h4 class="SeriesGallery-subtitle">
+              {% if current.ident == item.ident %}
+              Current series
+              {% endif %}
+
+              {% if item.ident != current.ident %}
+              {% assign videos = site.videos | where:"series", item.ident | sort:"publish_on" %}
+              {% assign first_video = videos | first %}
+              {{ first_video.publish_on | date: "%b, %Y" }}
+              {% if videos.size > 0 %}
+              &nbsp;&middot;&nbsp; {{ videos.size }} video{% if videos.size <> 1 %}s{% endif %}
+              {% endif %}
+              {% endif %}
+            </h4>
+          </div>
+        </a>
+      </li>
+      {% endif %}
+      {% assign counter = counter | plus: 1 %}
+      {% endfor %}
+    </ul>
+
+  </div>
 
 </div>

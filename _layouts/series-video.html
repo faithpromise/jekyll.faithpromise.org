@@ -17,16 +17,15 @@ layout: default
 {% endfor %}
 
 <style type="text/css" scoped>
-  /*.Hero--series-{{ series.ident }} { background-image: url(/assets/series/{{ series.ident }}-square.jpg); }*/
   @media (min-width: 900px) {
-    .Hero--series-{{ series.ident }} { background-image: url(/assets/series/{{ series.ident }}-video-detail.jpg); }
+    .Hero--series-{{ series.ident }} { background-image: url(/assets/series/{{ series.ident }}-wide-blur.jpg); }
   }
 </style>
 
-<div class="HeroVideo Hero--series-{{ series.ident }}">
+<div class="HeroVideo Hero--series-{{ series.ident }} HeroVideo--overlay">
   <div class="HeroVideo-container">
     <div class="HeroVideo-responsive">
-      <iframe src="https://player.vimeo.com/video/{{ video.vimeo_id }}?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <vimeo id="{{ video.vimeo_id }}"></vimeo>
     </div>
   </div>
 </div>
@@ -53,7 +52,7 @@ layout: default
         </div>
       </div>
 
-      {% include playlist.html playlist=playlist current=video.ident %}
+      {% include playlist.html playlist=playlist selected=video.ident %}
 
     </div>
   </div>

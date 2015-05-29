@@ -19,8 +19,17 @@ layout: default
 
 <div class="Content" content-scroll>
   <div class="Container">
-    <h1 class="Section-title">{{ series.title }}</h1>
-    {{ series.content }}
+
+
+    <div class="PageHeader">
+      <div class="PageHeader-container">
+        <img class="PageHeader-thumb" src="/assets/series/{{ series.ident }}-square.jpg">
+        <div class="PageHeader-titles">
+          <h1 class="PageHeader-title">{{ series.title }}</h1>
+          <!--<h2 class="PageHeader-subtitle">{{ series.content }}</h2>-->
+        </div>
+      </div>
+    </div>
 
     {% include playlist.html playlist=playlist %}
 
