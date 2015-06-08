@@ -173,19 +173,19 @@ module.exports = function (grunt) {
             watch: {
                 less: {
                     files: lessDir + '/**/*.less',
-                    tasks: ['less:dev', 'autoprefixer:dev', 'shell:jekyllBuild']
+                    tasks: ['less:dev', 'autoprefixer:dev']
                 },
                 js: {
                     files: jsDir + '/**/*.js',
-                    tasks: ['concat:js', 'shell:jekyllBuild']
+                    tasks: ['concat:js']
                 },
                 html: {
-                    files: ['**/*.html', '**/*.yml', '!bower_components/**/*.*', '!node_modules/**/*.*', '!public/**/*.*', '!build/**/*.*'],
+                    files: ['**/*.html', '**/*.yml', '!bower_components/**/*.*', '!node_modules/**/*.*', '!public/**/*.*'],
                     tasks: ['shell:jekyllBuild']
                 },
                 fontello: {
                     files: ['assets/fontello/**/*.*'],
-                    tasks: ['replace:fontello', 'less:dev', 'autoprefixer:dev', 'shell:jekyllBuild']
+                    tasks: ['replace:fontello', 'less:dev', 'autoprefixer:dev']
                 },
                 images: {
                     files: ['_images/**/*.{png,jpg,gif,svg}'],
@@ -240,10 +240,10 @@ module.exports = function (grunt) {
 
     grunt.registerTask('production', [
         'clean:production',
-        'replace',
         'shell:jekyllClean',
         'shell:jekyllBuild',
         'images',
+        'replace',
         'less:production',
         'autoprefixer:production',
         'uglify:production',
