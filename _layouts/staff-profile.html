@@ -9,7 +9,7 @@ layout: default
 {% endif %}
 
 {% if page.has_cover_photo %}
-{% capture imgUrl %}/assets/staff/{{ page.ident }}-cover.jpg{% endcapture %}
+{% capture imgUrl %}{{ site.paths.staff_images}}{{ page.ident }}-cover.jpg{% endcapture %}
 {% endif %}
 
 <div class="StaffHeader" style="background-image: url('{{ imgUrl }}');">
