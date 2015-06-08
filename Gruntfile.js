@@ -45,6 +45,9 @@ module.exports = function (grunt) {
                     command: 'jekyll serve --no-watch'
                 }
             },
+            clean: {
+                production: ['build/**/*.*', '!build/.gitkeep', '!build/images/**/*.*']
+            },
             concat: {
                 options: {
                     separator: '\n;'
