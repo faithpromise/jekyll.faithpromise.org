@@ -11,8 +11,8 @@ module.exports = function (grunt) {
     var lessDir = '_less';
 
     // Source JS files
-    var jsOutput_dev = 'build/main.dev.js',
-        jsOutput_production = 'build/main.min.js',
+    var jsOutput_dev = 'public/build/main.dev.js',
+        jsOutput_production = 'public/build/main.min.js',
         jsInput = [
             'bower_components/waypoints/lib/noframework.waypoints.js',
             'bower_components/angular-ui-bootstrap/src/position/position.js',
@@ -23,8 +23,8 @@ module.exports = function (grunt) {
         ];
 
     // Source LESS files
-    var lessOutput_dev = 'build/main.dev.css',
-        lessOutput_production = 'build/main.min.css',
+    var lessOutput_dev = 'public/build/main.dev.css',
+        lessOutput_production = 'public/build/main.min.css',
         lessInput = [
             lessDir + '/main.less'
         ];
@@ -67,7 +67,7 @@ module.exports = function (grunt) {
             },
             removelogging: {
                 production: {
-                    src: ['build/main.min.js']
+                    src: ['public/build/main.min.js']
                 }
             },
             less: {
@@ -121,7 +121,40 @@ module.exports = function (grunt) {
                             expand: false,
                             flatten: true,
                             src: ['assets/fontello/css/fontello.css'],
-                            dest: 'build/fontello.css.tmp'
+                            dest: 'public/build/fontello.css.tmp'
+                        }
+                    ]
+                }
+            },
+            htmlbuild: {
+                production: {
+                    src: 'public/**/*.html',
+                    dest: 'public/',
+                    options: {
+                        replace: true,
+                        prefix: '/',
+                        scripts: {
+                            main: [
+                                'public/build/main.min.js'
+                            ]
+                        },
+                        styles: {
+                            main: [
+                                'public/build/main.min.css'
+                            ]
+                        }
+                    }
+                }
+            },
+            cacheBust:    {
+                options: {
+                    baseDir: 'public',
+                    rename:  false
+                },
+                production:     {
+                    files: [
+                        {
+                            src: ['public/**/*.html']
                         }
                     ]
                 }
@@ -190,12 +223,13 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['dev']);
 
     grunt.registerTask('dev', [
+        'shell:jekyllClean',
+        'shell:jekyllBuild',
         'replace',
-        'concat',
+        'images',
         'less:dev',
         'autoprefixer:dev',
-        'images',
-        'serve'
+        'concat:js'
     ]);
 
     grunt.registerTask('serve', [
@@ -207,17 +241,19 @@ module.exports = function (grunt) {
     grunt.registerTask('production', [
         'clean:production',
         'replace',
-        'uglify',
-        'removelogging',
+        'shell:jekyllClean',
+        'shell:jekyllBuild',
+        'images',
         'less:production',
         'autoprefixer:production',
-        'images'
+        'uglify:production',
+        'removelogging',
+        'htmlbuild:production',
+        'cacheBust:production'
     ]);
 
     grunt.registerTask('deploy', [
         'production',
-        'shell:jekyllClean',
-        'shell:jekyllBuild',
         'gh-pages'
     ]);
 
