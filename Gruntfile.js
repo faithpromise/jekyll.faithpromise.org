@@ -65,6 +65,11 @@ module.exports = function (grunt) {
                     }]
                 }
             },
+            removelogging: {
+                production: {
+                    src: ['build/main.min.js']
+                }
+            },
             less: {
                 dev: {
                     files: [{
@@ -178,7 +183,6 @@ module.exports = function (grunt) {
                     ]
                 }
             }
-
         }
     );
 
@@ -201,13 +205,17 @@ module.exports = function (grunt) {
     grunt.registerTask('images', ['newer:imagemin:main']);
 
     grunt.registerTask('production', [
+        'clean:production',
         'replace',
         'uglify',
+        'removelogging',
         'less:production',
-        'autoprefixer:production'
+        'autoprefixer:production',
+        'images'
     ]);
 
     grunt.registerTask('deploy', [
+        'production',
         'shell:jekyllClean',
         'shell:jekyllBuild',
         'gh-pages'
