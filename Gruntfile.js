@@ -29,6 +29,8 @@ module.exports = function (grunt) {
             lessDir + '/main.less'
         ];
 
+    var mozjpeg = require('imagemin-mozjpeg');
+
     // Project configuration.
     grunt.initConfig(
         {
@@ -87,7 +89,7 @@ module.exports = function (grunt) {
                 },
                 production: {
                     files: {
-                        'public/build/main.tidy.css': ['public/**/*.html','!public/assets/**/*.html']
+                        'public/build/main.tidy.css': ['public/**/*.html', '!public/assets/**/*.html']
                     }
                 }
             },
@@ -143,6 +145,10 @@ module.exports = function (grunt) {
                 fontello: {
                     files: ['assets/fontello/**/*.*'],
                     tasks: ['replace:fontello', 'less:dev', 'autoprefixer:dev', 'shell:jekyllBuild']
+                },
+                images: {
+                    files: ['assets/**/*.{png,jpg,gif}'],
+                    tasks: ['images', 'shell:jekyllBuild']
                 }
             },
             'gh-pages': {
@@ -151,7 +157,25 @@ module.exports = function (grunt) {
                     message: 'Deploy'
                 },
                 src: ['**/*']
+            },
+            imagemin: {
+                main: {
+                    options: {
+                        optimizationLevel: 3,
+                        svgoPlugins: [{removeViewBox: false}],
+                        use: [mozjpeg()]
+                    },
+                    files: [
+                        {
+                            expand: true,
+                            cwd: '_images/',
+                            src: ['**/*.{png,jpg,gif,svg}'],
+                            dest: 'build/images/'
+                        }
+                    ]
+                }
             }
+
         }
     );
 
@@ -162,8 +186,17 @@ module.exports = function (grunt) {
         'replace',
         'concat',
         'less:dev',
-        'autoprefixer:dev'
+        'autoprefixer:dev',
+        'images',
+        'serve',
+        'watch'
     ]);
+
+    grunt.registerTask('serve', [
+        'shell:jekyllServe'
+    ]);
+
+    grunt.registerTask('images', ['newer:imagemin:main']);
 
     grunt.registerTask('production', [
         'replace',
@@ -176,10 +209,6 @@ module.exports = function (grunt) {
         'shell:jekyllClean',
         'shell:jekyllBuild',
         'gh-pages'
-    ]);
-
-    grunt.registerTask('serve', [
-        'shell:jekyllServe'
     ]);
 
 };
