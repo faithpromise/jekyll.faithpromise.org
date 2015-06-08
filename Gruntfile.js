@@ -59,6 +59,9 @@ module.exports = function (grunt) {
             },
             uglify: {
                 production: {
+                    options: {
+                        mangle: false // TODO - remove once it works - mangling breaks the JS
+                    },
                     files: [{
                         src: jsInput,
                         dest: jsOutput_production
@@ -146,12 +149,12 @@ module.exports = function (grunt) {
                     }
                 }
             },
-            cacheBust:    {
+            cacheBust: {
                 options: {
                     baseDir: 'public',
-                    rename:  false
+                    rename: false
                 },
-                production:     {
+                production: {
                     files: [
                         {
                             src: ['public/**/*.html']
@@ -193,11 +196,13 @@ module.exports = function (grunt) {
                 }
             },
             'gh-pages': {
-                options: {
-                    base: 'public',
-                    message: 'Deploy'
-                },
-                src: ['**/*']
+                deploy: {
+                    options: {
+                        base: 'public',
+                        message: 'Deploy'
+                    },
+                    src: ['**/*']
+                }
             },
             imagemin: {
                 main: {
