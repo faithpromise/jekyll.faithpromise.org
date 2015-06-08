@@ -147,7 +147,7 @@ module.exports = function (grunt) {
                     tasks: ['replace:fontello', 'less:dev', 'autoprefixer:dev', 'shell:jekyllBuild']
                 },
                 images: {
-                    files: ['assets/**/*.{png,jpg,gif}'],
+                    files: ['_images/**/*.{png,jpg,gif,svg}'],
                     tasks: ['images', 'shell:jekyllBuild']
                 }
             },
@@ -188,8 +188,7 @@ module.exports = function (grunt) {
         'less:dev',
         'autoprefixer:dev',
         'images',
-        'serve',
-        'watch'
+        'serve'
     ]);
 
     grunt.registerTask('serve', [
