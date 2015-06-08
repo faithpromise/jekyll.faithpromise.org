@@ -15,7 +15,7 @@ banner_image: /assets/images/temp/banner-placeholder.png
   <div class="Container">
 
     <!--<h2 class="Section-title">Current Series</h2>-->
-    <!--<img class="CurrentSeries-thumb" src="/assets/series/{{ current.ident }}-square.jpg">-->
+    <!--<img class="CurrentSeries-thumb" src="{{ site.paths.series_images}}{{ current.ident }}-square.jpg">-->
 
     <h2 class="Section-title">Recent Series</h2>
 
@@ -28,7 +28,7 @@ banner_image: /assets/images/temp/banner-placeholder.png
       {% if counter > 0 %}
       <li class="SeriesGallery-item">
         <a class="SeriesGallery-link" href="/series/{{ item.ident }}/">
-          <img class="SeriesGallery-thumb" src="/assets/series/{{ item.ident }}-square.jpg">
+          <img class="SeriesGallery-thumb" src="{{ site.paths.series_images}}{{ item.ident }}-square.jpg">
 
           <div class="SeriesGallery-titles">
             <h3 class="SeriesGallery-title">{{ item.title }}</h3>

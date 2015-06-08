@@ -9,9 +9,9 @@ layout: default
 {% capture imgUrl_square %}/assets/series/{{ series.ident }}-square.jpg{% endcapture %}
 
 <style type="text/css" scoped>
-  .Hero--series-{{ series.ident }} { background-image: url(/assets/series/{{ series.ident }}-square.jpg); }
+  .Hero--series-{{ series.ident }} { background-image: url({{ site.paths.series_images}}{{ series.ident }}-square.jpg); }
   @media (min-aspect-ratio: 5/8) {
-    .Hero--series-{{ series.ident }} { background-image: url(/assets/series/{{ series.ident }}-wide.jpg); }
+    .Hero--series-{{ series.ident }} { background-image: url({{ site.paths.series_images}}{{ series.ident }}-wide.jpg); }
   }
 </style>
 
@@ -23,7 +23,7 @@ layout: default
 
     <div class="PageHeader">
       <div class="PageHeader-container">
-        <img class="PageHeader-thumb" src="/assets/series/{{ series.ident }}-square.jpg">
+        <img class="PageHeader-thumb" src="{{ site.paths.series_images}}{{ series.ident }}-square.jpg">
         <div class="PageHeader-titles">
           <h1 class="PageHeader-title">{{ series.title }}</h1>
           <!--<h2 class="PageHeader-subtitle">{{ series.content }}</h2>-->

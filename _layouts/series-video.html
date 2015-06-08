@@ -18,7 +18,7 @@ layout: default
 
 <style type="text/css" scoped>
   @media (min-width: 900px) {
-    .Hero--series-{{ series.ident }} { background-image: url(/assets/series/{{ series.ident }}-wide-blur.jpg); }
+    .Hero--series-{{ series.ident }} { background-image: url({{ site.paths.series_images}}{{ series.ident }}-wide-blur.jpg); }
   }
 </style>
 
@@ -38,7 +38,7 @@ layout: default
 
       <div class="PageHeader">
         <div class="PageHeader-container">
-          <a href="{{ site.urls.series }}{{ series.ident }}/"><img class="PageHeader-thumb" src="/assets/series/{{ series.ident }}-square.jpg"></a>
+          <a href="{{ site.urls.series }}{{ series.ident }}/"><img class="PageHeader-thumb" src="{{ site.paths.series_images}}{{ series.ident }}-square.jpg"></a>
 
           <div class="PageHeader-titles">
             <h1 class="PageHeader-title">
