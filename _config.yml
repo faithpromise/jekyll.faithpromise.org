@@ -39,3 +39,8 @@ urls:
   staff: /staff/
   events: /events/
   series: /series/
+
+paths:
+  images: /build/images/
+  series_images: /build/images/series/
+  staff_images: /build/images/staff/
