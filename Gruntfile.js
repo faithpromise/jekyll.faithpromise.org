@@ -93,17 +93,17 @@ module.exports = function (grunt) {
                     }
                 }
             },
-            uncss: {
-                options: {
-                    htmlroot: 'public',
-                    report: 'min'
-                },
-                production: {
-                    files: {
-                        'public/build/main.tidy.css': ['public/**/*.html', '!public/assets/**/*.html']
-                    }
-                }
-            },
+            // TODO: Can't get this to work. It crashes
+            //uncss: {
+            //    options: {
+            //        htmlroot: 'public'
+            //    },
+            //    production: {
+            //        files: {
+            //            'public/build/main.tidy.css': ['public/**/*.html', '!public/assets/**/*.html']
+            //        }
+            //    }
+            //},
             replace: {
                 fontello: {
                     options: {
