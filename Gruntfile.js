@@ -12,6 +12,7 @@ module.exports = function (grunt) {
 
     // Source JS files
     var jsOutput_dev = 'public/build/main.dev.js',
+        jsOutput_temp = 'build/main.tmp.js',
         jsOutput_production = 'public/build/main.min.js',
         jsInput = [
             'bower_components/waypoints/lib/noframework.waypoints.js',
@@ -46,15 +47,19 @@ module.exports = function (grunt) {
                 }
             },
             clean: {
-                production: ['build/**/*.*', '!build/.gitkeep', '!build/images/**/*.*']
+                build: ['build/**/*.*', '!build/.gitkeep', '!build/images/**/*.*']
             },
             concat: {
                 options: {
                     separator: '\n;'
                 },
-                js: {
+                js_dev: {
                     src: jsInput,
                     dest: jsOutput_dev
+                },
+                js_production: {
+                    src: jsInput,
+                    dest: jsOutput_temp
                 }
             },
             uglify: {
@@ -63,14 +68,14 @@ module.exports = function (grunt) {
                         mangle: false // TODO - remove once it works - mangling breaks the JS
                     },
                     files: [{
-                        src: jsInput,
+                        src: jsOutput_temp,
                         dest: jsOutput_production
                     }]
                 }
             },
             removelogging: {
                 production: {
-                    src: ['public/build/main.min.js']
+                    src: [jsOutput_temp]
                 }
             },
             less: {
@@ -180,7 +185,7 @@ module.exports = function (grunt) {
                 },
                 js: {
                     files: jsDir + '/**/*.js',
-                    tasks: ['concat:js']
+                    tasks: ['concat:js_dev']
                 },
                 html: {
                     files: ['**/*.html', '**/*.yml', '!bower_components/**/*.*', '!node_modules/**/*.*', '!public/**/*.*'],
@@ -192,7 +197,7 @@ module.exports = function (grunt) {
                 },
                 images: {
                     files: ['_images/**/*.{png,jpg,gif,svg}'],
-                    tasks: ['images', 'shell:jekyllBuild']
+                    tasks: ['optimize_images', 'shell:jekyllBuild']
                 }
             },
             'gh-pages': {
@@ -225,40 +230,56 @@ module.exports = function (grunt) {
     );
 
     // Register tasks
-    grunt.registerTask('default', ['dev']);
+    grunt.registerTask('default', ['build_dev']);
 
-    grunt.registerTask('dev', [
+    grunt.registerTask('build_dev', [
+        'clean:build',
         'shell:jekyllClean',
         'shell:jekyllBuild',
         'replace',
-        'images',
+        'optimize_images',
         'less:dev',
         'autoprefixer:dev',
-        'concat:js'
+        'concat:js_dev'
     ]);
+
+    grunt.registerTask('build_production', [
+        'clean:build',
+        'shell:jekyllClean',
+        'shell:jekyllBuild',
+        'optimize_images',
+        'js_production',
+        'css_production',
+        'htmlbuild:production',
+        'cacheBust:production'
+    ]);
+
+    grunt.registerTask('js_production', [
+        'concat:js_production',
+        'removelogging',
+        'uglify:production'
+    ]);
+
+    grunt.registerTask('css_production', [
+        'replace',
+        'less:production',
+        'autoprefixer:production'
+    ]);
+
+    grunt.registerTask('optimize_images', ['newer:imagemin:main']);
 
     grunt.registerTask('serve', [
         'shell:jekyllServe'
     ]);
 
-    grunt.registerTask('images', ['newer:imagemin:main']);
-
-    grunt.registerTask('production', [
-        'clean:production',
-        'shell:jekyllClean',
-        'shell:jekyllBuild',
-        'images',
-        'replace',
-        'less:production',
-        'autoprefixer:production',
-        'uglify:production',
-        'removelogging',
-        'htmlbuild:production',
-        'cacheBust:production'
+    grunt.registerTask('startup', [
+        'build_dev',
+        'serve',
+        'watch'
     ]);
 
     grunt.registerTask('deploy', [
-        'production',
+        'build_production',
         'gh-pages'
     ]);
 
