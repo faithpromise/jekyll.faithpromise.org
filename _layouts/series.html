@@ -2,11 +2,18 @@
 layout: default
 ---
 
+<!-- This series -->
 {% assign series = page %}
+
+<!-- Videos for this series -->
 {% assign playlist = site.videos | where:"series", series.ident | sort:"publish_on" %}
+
+<!-- Promo video for this series -->
 {% assign promo = playlist | where:"type", "promo" | first %}
-{% capture imgUrl_wide %}/assets/series/{{ series.ident }}-wide.jpg{% endcapture %}
-{% capture imgUrl_square %}/assets/series/{{ series.ident }}-square.jpg{% endcapture %}
+
+<!-- Images for this series -->
+{% capture imgUrl_wide %}{{ site.paths.series_images }}{{ series.ident }}-wide.jpg{% endcapture %}
+{% capture imgUrl_square %}{{ site.paths.series_images }}{{ series.ident }}-square.jpg{% endcapture %}
 
 <style type="text/css" scoped>
   .Hero--series-{{ series.ident }} { background-image: url({{ site.paths.series_images}}{{ series.ident }}-square.jpg); }
