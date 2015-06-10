@@ -44,12 +44,8 @@
 - title: "Next Steps"
   url: "/nextsteps/"
 
-- title: "Media"
-  subnav:
-    - title: "Sermon Audio & Video"
-      url: "/series/"
-    - title: "Church Blog"
-      url: "http://blog.faithpromise.org/"
+- title: "Sermons"
+  url: "/sermons/"
 
 - title: "Events"
   url: "/events/"
