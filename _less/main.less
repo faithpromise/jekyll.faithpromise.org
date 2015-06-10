@@ -20,6 +20,7 @@
   Mixins
 */
 @import "mixins/link-color";
+@import "mixins/to-em";
 /*
   Components
 */
@@ -42,15 +43,23 @@
 @import "components/StaffProfile";
 @import "components/StaffSort";
 
-//html {
-//  font-size: 100%;
-//}
-//
-//body {
-//  .to-rem(font-size, 20);
-//  line-height: 1.5;
-//  font-weight: @font-weight-light;
-//}
+@font-size: 18;
+
+html {
+  font-size: 112.5%; // 18px
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 93.75%; // 14px
+  }
+}
+
+body {
+  //  .to-rem(font-size, 20);
+  //  line-height: 1.5;
+  //  font-weight: @font-weight-light;
+}
 
 a {
   text-decoration: none;

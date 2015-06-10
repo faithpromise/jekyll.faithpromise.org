@@ -1,10 +1,20 @@
+// Font sizes
+@playlist_root_font_size: @font-size;
+@playlist_font_size_headers: 14;
+@playlist_font_size_rows: @playlist_root_font_size;
+
+// Padding
+@playlist_horizontal_padding: 10;
+@playlist_vertical_padding: 14;
+
 .Playlist {
 
+  .to-rem(font-size, @playlist_root_font_size);
   border-top: 1px solid #dedede;
 
   th {
-    .to-rem(font-size, 12);
-    .to-rem(padding, 10);
+    .to-em(font-size, @playlist_font_size_headers, @playlist_root_font_size);
+    .to-em(padding, @playlist_vertical_padding, @playlist_font_size_headers);
     text-transform: uppercase;
     color:          #b5b5b5;
     white-space:    nowrap;
@@ -16,8 +26,7 @@
   }
 
   td {
-    .to-rem(padding, 6 10);
-    .to-rem(font-size, 15);
+    .to-em(padding, @playlist_vertical_padding @playlist_horizontal_padding, @playlist_font_size_rows);
     white-space: nowrap;
   }
 
@@ -34,11 +43,6 @@
   .link-color(#999, #555);
   display: block;
   cursor:  pointer;
-}
-
-.Playlist-playIcon,
-.Playlist-listenIcon {
-  .to-rem(font-size, 18);
 }
 
 .Playlist-playIcon {
