@@ -196,15 +196,6 @@ module.exports = function (grunt) {
                     tasks: ['optimize_images', 'shell:jekyllBuild']
                 }
             },
-            'gh-pages': {
-                deploy: {
-                    options: {
-                        base: 'public',
-                        message: 'Deploy'
-                    },
-                    src: ['**/*']
-                }
-            },
             imagemin: {
                 main: {
                     options: {
@@ -228,6 +219,15 @@ module.exports = function (grunt) {
                     cwd: 'assets/',
                     src: ['fontello/font/*.*'],
                     dest: 'build/'
+                }
+            },
+            'gh-pages': {
+                deploy: {
+                    options: {
+                        base: 'public',
+                        message: 'Deploy'
+                    },
+                    src: ['**/*']
                 }
             }
         }
