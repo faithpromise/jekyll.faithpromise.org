@@ -11,9 +11,9 @@ module.exports = function (grunt) {
     var lessDir = '_less';
 
     // Source JS files
-    var jsOutput_dev = 'public/build/main.dev.js',
+    var jsOutput_dev = 'build/main.dev.js',
         jsOutput_temp = 'build/main.tmp.js',
-        jsOutput_production = 'public/build/main.min.js',
+        jsOutput_production = 'build/main.min.js',
         jsInput = [
             'bower_components/waypoints/lib/noframework.waypoints.js',
             'bower_components/angular-ui-bootstrap/src/position/position.js',
@@ -24,8 +24,8 @@ module.exports = function (grunt) {
         ];
 
     // Source LESS files
-    var lessOutput_dev = 'public/build/main.dev.css',
-        lessOutput_production = 'public/build/main.min.css',
+    var lessOutput_dev = 'build/main.dev.css',
+        lessOutput_production = 'build/main.min.css',
         lessInput = [
             lessDir + '/main.less'
         ];
@@ -115,7 +115,7 @@ module.exports = function (grunt) {
                         patterns: [
                             {
                                 match: '../font/',
-                                replacement: '/assets/fontello/font/'
+                                replacement: '/build/fontello/font/'
                             },
                             {
                                 match: '[class^="icon-"]',
@@ -129,7 +129,7 @@ module.exports = function (grunt) {
                             expand: false,
                             flatten: true,
                             src: ['assets/fontello/css/fontello.css'],
-                            dest: 'public/build/fontello.css.tmp'
+                            dest: 'build/fontello.css.tmp'
                         }
                     ]
                 }
@@ -179,21 +179,17 @@ module.exports = function (grunt) {
                 }
             },
             watch: {
-                less: {
-                    files: lessDir + '/**/*.less',
-                    tasks: ['less:dev', 'autoprefixer:dev']
+                css: {
+                    files: [lessDir + '/**/*.less', 'assets/fontello/**/*.*'],
+                    tasks: ['css_dev', 'shell:jekyllBuild']
                 },
                 js: {
                     files: jsDir + '/**/*.js',
-                    tasks: ['concat:js_dev']
+                    tasks: ['concat:js_dev', 'shell:jekyllBuild']
                 },
                 html: {
                     files: ['**/*.html', '**/*.yml', '!bower_components/**/*.*', '!node_modules/**/*.*', '!public/**/*.*'],
                     tasks: ['shell:jekyllBuild']
-                },
-                fontello: {
-                    files: ['assets/fontello/**/*.*'],
-                    tasks: ['replace:fontello', 'less:dev', 'autoprefixer:dev']
                 },
                 images: {
                     files: ['_images/**/*.{png,jpg,gif,svg}'],
@@ -225,6 +221,14 @@ module.exports = function (grunt) {
                         }
                     ]
                 }
+            },
+            copy: {
+                fontello: {
+                    expand: true,
+                    cwd: 'assets/',
+                    src: ['fontello/font/*.*'],
+                    dest: 'build/'
+                }
             }
         }
     );
@@ -234,22 +238,22 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build_dev', [
         'clean:build',
-        'shell:jekyllClean',
-        'shell:jekyllBuild',
-        'replace',
         'optimize_images',
-        'less:dev',
-        'autoprefixer:dev',
-        'concat:js_dev'
+        'copy:fontello',
+        'css_dev',
+        'concat:js_dev',
+        'shell:jekyllClean',
+        'shell:jekyllBuild'
     ]);
 
     grunt.registerTask('build_production', [
         'clean:build',
-        'shell:jekyllClean',
-        'shell:jekyllBuild',
         'optimize_images',
+        'copy:fontello',
         'js_production',
         'css_production',
+        'shell:jekyllClean',
+        'shell:jekyllBuild',
         'htmlbuild:production',
         'cacheBust:production'
     ]);
@@ -261,9 +265,15 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('css_production', [
-        'replace',
+        'replace:fontello',
         'less:production',
         'autoprefixer:production'
+    ]);
+
+    grunt.registerTask('css_dev', [
+        'replace:fontello',
+        'less:dev',
+        'autoprefixer:dev'
     ]);
 
     grunt.registerTask('optimize_images', ['newer:imagemin:main']);
