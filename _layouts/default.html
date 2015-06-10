@@ -1,3 +1,10 @@
+
+<!-- Desktop nav style -->
+{% assign nav_style = 'transparent' %}
+{% if page.nav_style %}
+  {% assign nav_style = page.nav_style %}
+{% endif %}
+
 <!DOCTYPE html>
 <html ng-app="app">
 
@@ -17,7 +24,7 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   </head>
 
-  <body>
+  <body class="navStyle--{{ nav_style }}">
 
     <!-- TODO: Include by default, but make conditional if we don't need it on some pages -->
     <div id="fb-root"></div>

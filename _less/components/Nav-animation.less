@@ -4,47 +4,51 @@
 
 @NavStickyBackgroundColor: rgba(0, 0, 0, 0.9);
 
-@media (min-width: @Nav-showDesktopVersion) {
+body.navStyle--transparent {
 
-  /*
-    ===================================
-    Nav enter
-    ===================================
-  */
-  .Nav.sticky-yes {
-    z-index:          @z-index-nav-sticky;
-    background-color: @NavStickyBackgroundColor;
-  }
+  @media (min-width: @Nav-showDesktopVersion) {
 
-  // From
-  .Nav.sticky-yes-add {
-    transition: top .5s ease-in-out;
-    top:        -@Nav-height-lg;
-  }
+    /*
+      ===================================
+      Nav enter
+      ===================================
+    */
+    .Nav.sticky-yes {
+      z-index:          @z-index-nav-sticky;
+      background-color: @NavStickyBackgroundColor;
+    }
 
-  // To
-  .Nav.sticky-yes-add.sticky-yes-add-active {
-    top: 0;
-  }
+    // From
+    .Nav.sticky-yes-add {
+      transition: top .5s ease-in-out;
+      top:        -@Nav-height-lg;
+    }
 
-  /*
-    ===================================
-    Nav leave
-    ===================================
-  */
-  .Nav.sticky-no {
-    background-color: transparent;
-  }
+    // To
+    .Nav.sticky-yes-add.sticky-yes-add-active {
+      top: 0;
+    }
 
-  // From
-  .Nav.sticky-no-add {
-    transition:       background-color .5s ease-in-out;
-    background-color: @NavStickyBackgroundColor;
-  }
+    /*
+      ===================================
+      Nav leave
+      ===================================
+    */
+    .Nav.sticky-no {
+      background-color: transparent;
+    }
 
-  // To
-  .Nav.sticky-no-add.sticky-no-add-active {
-    background-color: transparent;
+    // From
+    .Nav.sticky-no-add {
+      transition:       background-color .5s ease-in-out;
+      background-color: @NavStickyBackgroundColor;
+    }
+
+    // To
+    .Nav.sticky-no-add.sticky-no-add-active {
+      background-color: transparent;
+    }
+
   }
 
 }

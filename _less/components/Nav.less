@@ -127,6 +127,16 @@
 
 @media (min-width: @Nav-showDesktopVersion) {
 
+  // Solid nav
+  body.navStyle--solid {
+    .Nav {
+      background-color: @NavStickyBackgroundColor;
+    }
+    .Nav-background {
+      display: none;
+    }
+  }
+
   .Nav {
     position: fixed;
     z-index:  @z-index-nav;
