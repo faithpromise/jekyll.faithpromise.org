@@ -32,6 +32,8 @@ collections:
     permalink: /series/:path/
   videos:
     output: true
+  redirects:
+    output: true
 
 # URLS
 urls:
