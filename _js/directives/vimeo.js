@@ -5,7 +5,7 @@
 
     function directive() {
         return {
-            template: '<iframe ng-src="{{ src }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
+            template: '<div class="VideoPlayer"><iframe ng-src="{{ src }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>',
             restrict: 'E',
             controller: Controller,
             //replace: true,

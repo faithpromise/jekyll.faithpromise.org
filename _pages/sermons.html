@@ -11,28 +11,41 @@ nav_style: solid
 
 <!-- Latest sermon -->
 {% assign latest_sermon = site.videos | where:'type', 'sermon' | sort: 'publish_on' | reverse | first %}
-{% assign latest_sermon_series = series | where:'series', latest_sermon.series | first %}
+
+<!-- Series the latest sermon belongs to -->
+{% assign latest_sermon_series = site.series | where:'ident', latest_sermon.series | first %}
 
 <!-- Hero background image -->
 {% assign heroImage_wide = '/build/images/temp/banner-placeholder.png' %}
-{% assign heroImage_square = '/build/images/temp/banner-placeholder.png' %}
 {% if latest_sermon_series.ident %}
-  {% capture heroImage_wide %}{{ site.paths.series_images }}{{ series.ident }}-wide.jpg{% endcapture %}
-  {% capture heroImage_square %}{{ site.paths.series_images }}{{ series.ident }}-square.jpg{% endcapture %}
+{% capture heroImage_wide %}{{ site.paths.series_images }}{{ latest_sermon_series.ident }}-blur.jpg{% endcapture %}
 {% endif %}
 
 <style type="text/css" scoped>
-  .LatestSermon { background-image: url({{ heroImage_square }}); }
+  /*.LatestSermon {*/
+    /*background-image: url({{ heroImage_square }});*/
+  /*}*/
+
   @media (min-aspect-ratio: 5/8) {
-    .LatestSermon { background-image: url({{ heroImage_wide }}); }
+    .LatestSermon {
+      background-image: url({{ heroImage_wide }});
+    }
   }
 </style>
 
 <div class="LatestSermon">
   <div class="LatestSermon-container">
-    <!--<vimeo id="{{ latest_sermon.vimeo_id }}"></vimeo>-->
-    <h2>Latest Sermon</h2>
-    {{ latest_sermon.title }}
+
+    <svg class="HeroVideo-play" role="img" title="Play Video">
+      <use xlink:href="/build/images/video.svg#play-button"></use>
+    </svg>
+
+    <div class="LatestSermon-info">
+      <h2 class="LatestSermon-heading">Latest Sermon</h2>
+      <h3 class="LatestSermon-title">{{ latest_sermon.title }}</h3>
+      <span class="LatestSermon-speaker">{{ latest_sermon.speaker_name }}</span> &nbsp; | &nbsp;
+      <span class="LatestSermon-date">{{ latest_sermon.publish_on | date: "%b %d, %Y" }}</span>
+    </div>
   </div>
 </div>
 

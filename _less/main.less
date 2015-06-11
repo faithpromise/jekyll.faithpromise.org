@@ -78,13 +78,15 @@ a {
 @font-weight-bold: 600;
 @font-weight-heavy: 600;
 
+@Section-vertical-padding: 48;
+
 .PageTitles {
   .to-rem(margin, 43 0);
 }
 
 .Section-title {
   .to-rem(font-size, 28);
-  .to-rem(margin, 48 0);
+  .to-rem(margin, @Section-vertical-padding 0);
   font-weight: @font-weight-light;
 
   .Section-titles > & {
@@ -107,23 +109,22 @@ a {
   .to-rem(padding, 60 0);
 }
 
+/*
+ Fill 100% of wrapper
+ Needs wrapper with a max width
+ */
 .VideoPlayer {
-  position:   absolute;
-  text-align: center;
-}
-
-.VideoPlayer-container {
   position:       relative;
-  display:        inline-block;
+  display:        block;
   padding-bottom: 56.25%;
   height:         0;
   overflow:       hidden;
   max-width:      100%;
 }
 
-.VideoPlayer-container iframe,
-.VideoPlayer-container object,
-.VideoPlayer-container embed {
+.VideoPlayer iframe,
+.VideoPlayer object,
+.VideoPlayer embed {
   position: absolute;
   top:      0;
   left:     0;
@@ -137,7 +138,36 @@ a {
   cursor: pointer;
 }
 
+.LatestSermon {
+  background-size:     100%;
+  background-position: top;
+}
 
 .LatestSermon-container {
   &:extend(.Container);
+  .to-rem(padding, 80 0);
+  font-size: 0;
+}
+
+.LatestSermon-videoWrap,
+.LatestSermon-info {
+  .to-rem(font-size, @font-size);
+  display:        inline-block;
+  width:          50%;
+  vertical-align: top;
+}
+
+.LatestSermon-videoWrap {
+  background-color: #00b3ee;
+}
+
+.LatestSermon-info {
+  padding: 0 1.5em;
+}
+
+.LatestSermon-info,
+.LatestSermon-heading,
+.LatestSermon-title {
+  font-weight: @font-weight-light;
+  color:       #fff;
 }

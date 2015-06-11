@@ -1,8 +1,7 @@
-
 <!-- Desktop nav style -->
 {% assign nav_style = 'transparent' %}
 {% if page.nav_style %}
-  {% assign nav_style = page.nav_style %}
+{% assign nav_style = page.nav_style %}
 {% endif %}
 
 <!DOCTYPE html>
@@ -15,7 +14,9 @@
 
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    {% if page.facebook_description %}<meta property="og:description" content="{{ page.facebook_description | xml_escape }}">{% endif %}
+    {% if page.facebook_description %}
+    <meta property="og:description" content="{{ page.facebook_description | xml_escape }}">
+    {% endif %}
 
     <!-- build:style main -->
     <link rel="stylesheet" href="/build/main.dev.css">
@@ -29,18 +30,21 @@
     <!-- TODO: Include by default, but make conditional if we don't need it on some pages -->
     <div id="fb-root"></div>
     <script>
-      window.fbAsyncInit = function() {
+      window.fbAsyncInit = function () {
         FB.init({
-          appId      : '1592691894327442', // TODO: Switch to production: 1592675454329086
-          xfbml      : true,
-          version    : 'v2.3'
+          appId: '1592691894327442', // TODO: Switch to production: 1592675454329086
+          xfbml: true,
+          version: 'v2.3'
         });
       };
 
-      (function(d, s, id){
+      (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
+        if (d.getElementById(id)) {
+          return;
+        }
+        js = d.createElement(s);
+        js.id = id;
         js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
