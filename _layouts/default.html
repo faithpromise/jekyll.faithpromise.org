@@ -52,7 +52,12 @@
       <div id="js-nav" class="Nav">
         <div class="Nav-container">
 
-          <a class="Nav-logoWrap" href="/"><img class="Nav-logo" src="{{ site.paths.images}}logo-faith-promise.svg"></a>
+          <a class="Nav-logoWrap" href="/">
+            <svg class="Nav-logo" role="img" title="Faith Promise Church Logo">
+              <use xlink:href="/build/images/general.svg#logo-faith-promise"></use>
+            </svg>
+          </a>
+          <!--<a class="Nav-logoWrap" href="/"><img class="Nav-logo" src="{{ site.paths.images}}logo-faith-promise.svg"></a>-->
 
           <ul class="Nav-menu">
             {% for topnav in site.data.nav %}
@@ -83,7 +88,12 @@
         <!--<div class="MobileBar-background"></div>-->
         <div class="MobileBar">
           <span class="MobileBar-navToggle"><i class="icon-navicon" fp-nav-toggle></i></span>
-          <a href="/"><img class="MobileBar-logo" src="{{ site.paths.images}}logo-faith-promise.svg"></a>
+          <a class="MobileBar-logoWrap" href="/">
+            <svg role="img" title="Faith Promise Logo">
+              <use xlink:href="/build/images/general.svg#logo-faith-promise"></use>
+            </svg>
+            <!--<img class="MobileBar-logo" src="{{ site.paths.images}}logo-faith-promise.svg">-->
+          </a>
         </div>
         <!--<div class="Hero-shim"></div>-->
         {{ content }}
@@ -116,6 +126,10 @@
     <!-- build:script main -->
     <script src="/build/main.dev.js"></script>
     <!-- /build -->
+
+    <!--[if gte IE 9]>
+    <script src="/build/svg4everybody.min.js"></script>
+    <![endif]-->
 
   </body>
 

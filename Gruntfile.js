@@ -47,7 +47,7 @@ module.exports = function (grunt) {
                 }
             },
             clean: {
-                build: ['build/**/*.*', '!build/.gitkeep', '!build/images/**/*.*']
+                build: ['build/**/*.*', '!build/.gitkeep', '!build/images/**/*.{png,jpg,gif}']
             },
             concat: {
                 options: {
@@ -192,8 +192,12 @@ module.exports = function (grunt) {
                     tasks: ['shell:jekyllBuild']
                 },
                 images: {
-                    files: ['_images/**/*.{png,jpg,gif,svg}'],
+                    files: ['_images/**/*.{png,jpg,gif}'],
                     tasks: ['optimize_images', 'shell:jekyllBuild']
+                },
+                svg: {
+                    files: ['_images/**/*.svg'],
+                    tasks: ['svgstore:default', 'shell:jekyllBuild']
                 }
             },
             imagemin: {
@@ -207,7 +211,7 @@ module.exports = function (grunt) {
                         {
                             expand: true,
                             cwd: '_images/',
-                            src: ['**/*.{png,jpg,gif,svg}'],
+                            src: ['**/*.{png,jpg,gif}'],
                             dest: 'build/images/'
                         }
                     ]
@@ -219,6 +223,24 @@ module.exports = function (grunt) {
                     cwd: 'assets/',
                     src: ['fontello/font/*.*'],
                     dest: 'build/'
+                },
+                svg4everybody: {
+                    src: 'bower_components/svg4everybody/svg4everybody.min.js',
+                    dest: 'build/svg4everybody.min.js'
+                }
+            },
+            svgstore: {
+                options: {
+                    svg: {
+                        //viewBox: '0 0 100 100',
+                        xmlns: 'http://www.w3.org/2000/svg'
+                    }
+                },
+                default: {
+                    files: {
+                        'build/images/general.svg': ['_images/sprites/general/*.svg'],
+                        'build/images/video.svg': ['_images/sprites/video/*.svg']
+                    }
                 }
             },
             'gh-pages': {
@@ -240,6 +262,7 @@ module.exports = function (grunt) {
         'clean:build',
         'optimize_images',
         'copy:fontello',
+        'svgstore:default',
         'css_dev',
         'concat:js_dev',
         'shell:jekyllClean',
@@ -250,6 +273,7 @@ module.exports = function (grunt) {
         'clean:build',
         'optimize_images',
         'copy:fontello',
+        'svgstore:default',
         'js_production',
         'css_production',
         'shell:jekyllClean',
