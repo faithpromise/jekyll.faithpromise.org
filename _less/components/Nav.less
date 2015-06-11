@@ -130,10 +130,16 @@
   // Solid nav
   body.navStyle--solid {
     .Nav {
-      background-color: @NavStickyBackgroundColor;
+      background-color: #fff;
     }
     .Nav-background {
       display: none;
+    }
+    .Nav-logo {
+      fill: #222;
+    }
+    .Nav-link {
+      color: #555;
     }
   }
 
@@ -166,6 +172,7 @@
   }
 
   .Nav-logo {
+    width:  191px;
     height: 100%;
     fill:   #fff;
   }
@@ -186,15 +193,10 @@
 
   .Nav-link {
     .to-rem(font-size, 14);
+    .link-color(#fff);
     display:        block;
     line-height:    @Nav-logoHeight-lg;
     text-transform: uppercase;
-
-    &,
-    &:hover {
-      text-decoration: none;
-      color:           #fff; // TODO: .link-color();
-    }
   }
 
 }

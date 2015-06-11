@@ -1,5 +1,8 @@
 <!-- Desktop nav style -->
 {% assign nav_style = 'transparent' %}
+{% if page.layout == 'series-video' %}
+{% assign nav_style = 'solid' %}
+{% endif %}
 {% if page.nav_style %}
 {% assign nav_style = page.nav_style %}
 {% endif %}

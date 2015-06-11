@@ -6,6 +6,8 @@ layout: default
 {% assign series = site.series | where:"ident", video.series | first %}
 {% assign playlist = site.videos | where:"series", video.series | sort:"publish_on" %}
 
+{% capture heading %}&quot;{{ series.title }}&quot; Series{% endcapture %}
+
 {% assign week = 0 %}
 {% for v in playlist %}
   {% if v.type == 'sermon' %}
@@ -22,14 +24,7 @@ layout: default
   }
 </style>
 
-<div class="HeroVideo Hero--series-{{ series.ident }} HeroVideo--overlay">
-  <div class="HeroVideo-container">
-    <div class="HeroVideo-responsive">
-      <!-- TODO: Sometimes a sermon may be audio only (/series/faith-without-borders/restoration-costs/) - need to wrap video embed in conditional -->
-      <vimeo id="{{ video.vimeo_id }}"></vimeo>
-    </div>
-  </div>
-</div>
+{% include hero-video.html video=video series=series heading=heading %}
 
 <div class="Content" content-scroll>
   <div class="Container">

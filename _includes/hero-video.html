@@ -1,0 +1,73 @@
+<!-- Hero background image -->
+{% assign heroImage = '/build/images/staff/chris-stephens-sermon.jpg' %}
+{% if include.series.ident %}
+{% capture heroImage %}{{ site.paths.series_images }}{{ include.series.ident }}-fade-out.jpg{% endcapture %}
+{% endif %}
+
+<style type="text/css" scoped>
+  /*.HeroVideo {*/
+  /*background-image: url({{ heroImage_square }});*/
+  /*}*/
+
+  @media (min-aspect-ratio: 5/8) {
+    .HeroVideo-imageWrap {
+      background-image: url({{ heroImage }});
+    }
+  }
+</style>
+
+<div class="HeroVideo">
+  <div class="HeroVideo-container">
+
+    <div class="HeroVideo-playWrap">
+      <svg class="HeroVideo-play" role="img" title="Play Video">
+        <use xlink:href="/build/images/video.svg#play-button"></use>
+      </svg>
+    </div>
+
+    <div class="HeroVideo-imageWrap">
+      <img src="{{ heroImage }}">
+    </div>
+
+    <div class="HeroVideo-info">
+
+      {% if include.heading %}
+      <h2 class="HeroVideo-heading">{{ include.heading }}</h2>
+      {% endif %}
+      <h3 class="HeroVideo-title">{{ include.video.title }}</h3>
+
+      <div class="HeroVideo-meta">
+        <img class="HeroVideo-thumb" src="{{ site.paths.series_images }}{{ include.series.ident }}-square.jpg">
+        <!--<img class="HeroVideo-thumb" src="{{ site.paths.staff_images }}{{ include.video.speaker_ident }}-1.jpg">-->
+        <div class="HeroVideo-metaText">
+          {% if include.video.speaker_name %}
+          <span class="HeroVideo-speaker">{{ include.video.speaker_name }}</span>
+          {% endif %}
+          <span class="HeroVideo-date">{{ include.video.publish_on | date: "%b %d, %Y" }}</span>
+          <!--<span class="HeroVideo-series">&quot;{{ include.series.title }}&quot; series</span>-->
+        </div>
+      </div>
+    </div>
+
+    <div class="HeroVideo-actions">
+      <span class="HeroVideo-actionsItem">
+        <svg class="HeroVideo-action" role="img" title="Play Audio">
+          <use xlink:href="/build/images/video.svg#listen"></use>
+        </svg>
+        <span class="HeroVideo-actionText">Listen</span>
+      </span>
+      <a class="HeroVideo-actionsItem">
+        <svg class="HeroVideo-action" role="img" title="Download Audio">
+          <use xlink:href="/build/images/video.svg#download"></use>
+        </svg>
+        <span class="HeroVideo-actionText">Download</span>
+      </a>
+      <span class="HeroVideo-actionsItem">
+        <svg class="HeroVideo-action" role="img" title="Share Video">
+          <use xlink:href="/build/images/video.svg#share"></use>
+        </svg>
+        <span class="HeroVideo-actionText">Share</span>
+      </span>
+    </div>
+  </div>
+</div>
