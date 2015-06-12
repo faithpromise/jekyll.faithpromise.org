@@ -8,16 +8,6 @@ layout: default
 
 {% capture heading %}&quot;{{ series.title }}&quot; Series{% endcapture %}
 
-{% assign week = 0 %}
-{% for v in playlist %}
-  {% if v.type == 'sermon' %}
-    {% assign week = week | plus:1 %}
-  {% endif %}
-  {% if v.ident == video.ident %}
-    {% break %}
-  {% endif %}
-{% endfor %}
-
 <style type="text/css" scoped>
   @media (min-width: 900px) {
     .Hero--series-{{ series.ident }} { background-image: url({{ site.paths.series_images}}{{ series.ident }}-wide-blur.jpg); }
@@ -37,13 +27,8 @@ layout: default
 
           <div class="PageHeader-titles">
             <h1 class="PageHeader-title">
-              {% if week > 0 %} Week {{ week }} - {% endif %} {{ video.title }}
+              {{ series.title }}
             </h1>
-
-            <h2 class="PageHeader-subtitle">
-              {% if video.speaker %} {{ video.speaker }} | {% endif %}
-              {% if video.type == 'sermon' %} {{ video.publish_on | date: "%b %d, %Y" }} {% endif %}
-            </h2>
           </div>
         </div>
       </div>

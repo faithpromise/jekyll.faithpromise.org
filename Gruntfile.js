@@ -261,7 +261,7 @@ module.exports = function (grunt) {
     grunt.registerTask('build_dev', [
         'clean:build',
         'optimize_images',
-        'copy:fontello',
+        'copy',
         'svgstore:default',
         'css_dev',
         'concat:js_dev',
@@ -272,7 +272,7 @@ module.exports = function (grunt) {
     grunt.registerTask('build_production', [
         'clean:build',
         'optimize_images',
-        'copy:fontello',
+        'copy',
         'svgstore:default',
         'js_production',
         'css_production',

@@ -37,11 +37,12 @@
       <h3 class="HeroVideo-title">{{ include.video.title }}</h3>
 
       <div class="HeroVideo-meta">
-        <img class="HeroVideo-thumb" src="{{ site.paths.series_images }}{{ include.series.ident }}-square.jpg">
+        <!--<img class="HeroVideo-thumb" src="{{ site.paths.series_images }}{{ include.series.ident }}-square.jpg">-->
         <!--<img class="HeroVideo-thumb" src="{{ site.paths.staff_images }}{{ include.video.speaker_ident }}-1.jpg">-->
         <div class="HeroVideo-metaText">
           {% if include.video.speaker_name %}
           <span class="HeroVideo-speaker">{{ include.video.speaker_name }}</span>
+          <span class="HeroVideo-metaSeparator">&middot;</span>
           {% endif %}
           <span class="HeroVideo-date">{{ include.video.publish_on | date: "%b %d, %Y" }}</span>
           <!--<span class="HeroVideo-series">&quot;{{ include.series.title }}&quot; series</span>-->

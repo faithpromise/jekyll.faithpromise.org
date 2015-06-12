@@ -16,7 +16,7 @@ nav_style: solid
 {% assign latest_sermon_series = site.series | where:'ident', latest_sermon.series | first %}
 
 <!-- Output hero -->
-{% include hero-video.html video=latest_sermon series=latest_sermon_series heading='Latest Sermon' %}
+{% include hero-video.html video=latest_sermon series=latest_sermon_series heading='Latest Sermon:' %}
 
 <div class="Content" content-scroll>
 
