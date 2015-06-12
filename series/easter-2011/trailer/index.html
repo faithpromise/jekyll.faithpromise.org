@@ -1,3 +1,8 @@
+<!-- Desktop nav style -->
+
+
+
+
 <!DOCTYPE html>
 <html ng-app="app">
 
@@ -10,28 +15,31 @@
     <meta name="description" content="A contemporary church with locations in Knoxville, Maryville, Clinton, and La Follette, TN">
     
 
-<link type="text/css" rel="stylesheet" href="/build/main.min.css?3ebd9fb739a94f97" />
+<link type="text/css" rel="stylesheet" href="/build/main.min.css?9b9af1cbcc565191" />
 
     <link rel="canonical" href="http://faithpromise.org/series/easter-2011/trailer/">
   </head>
 
-  <body>
+  <body class="navStyle--solid">
 
     <!-- TODO: Include by default, but make conditional if we don't need it on some pages -->
     <div id="fb-root"></div>
     <script>
-      window.fbAsyncInit = function() {
+      window.fbAsyncInit = function () {
         FB.init({
-          appId      : '1592691894327442', // TODO: Switch to production: 1592675454329086
-          xfbml      : true,
-          version    : 'v2.3'
+          appId: '1592691894327442', // TODO: Switch to production: 1592675454329086
+          xfbml: true,
+          version: 'v2.3'
         });
       };
 
-      (function(d, s, id){
+      (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
+        if (d.getElementById(id)) {
+          return;
+        }
+        js = d.createElement(s);
+        js.id = id;
         js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
@@ -43,7 +51,12 @@
       <div id="js-nav" class="Nav">
         <div class="Nav-container">
 
-          <a class="Nav-logoWrap" href="/"><img class="Nav-logo" src="/build/images/logo-faith-promise.svg?5dd66bf6ecef46e7?5dd66bf6ecef46e7"></a>
+          <a class="Nav-logoWrap" href="/">
+            <svg class="Nav-logo" role="img" title="Faith Promise Church Logo">
+              <use xlink:href="/build/images/general.svg#logo-faith-promise"></use>
+            </svg>
+          </a>
+          <!--<a class="Nav-logoWrap" href="/"><img class="Nav-logo" src="/build/images/logo-faith-promise.svg"></a>-->
 
           <ul class="Nav-menu">
             
@@ -147,18 +160,7 @@
             
             <li class="Nav-item" dropdown>
               
-              <span class="Nav-link Nav-link--dropdown" dropdown-toggle>Media</span>
-              <ul class="NavDropdown">
-                
-                <li class="NavDropdown-item">
-                  <a class="NavDropdown-link" href="/series/">Sermon Audio & Video</a>
-                </li>
-                
-                <li class="NavDropdown-item">
-                  <a class="NavDropdown-link" href="http://blog.faithpromise.org/">Church Blog</a>
-                </li>
-                
-              </ul>
+              <a class="Nav-link" href="/sermons/">Sermons</a>
               
             </li>
             
@@ -186,7 +188,12 @@
         <!--<div class="MobileBar-background"></div>-->
         <div class="MobileBar">
           <span class="MobileBar-navToggle"><i class="icon-navicon" fp-nav-toggle></i></span>
-          <a href="/"><img class="MobileBar-logo" src="/build/images/logo-faith-promise.svg?5dd66bf6ecef46e7?5dd66bf6ecef46e7"></a>
+          <a class="MobileBar-logoWrap" href="/">
+            <svg role="img" title="Faith Promise Logo">
+              <use xlink:href="/build/images/general.svg#logo-faith-promise"></use>
+            </svg>
+            <!--<img class="MobileBar-logo" src="/build/images/logo-faith-promise.svg">-->
+          </a>
         </div>
         <!--<div class="Hero-shim"></div>-->
         
@@ -195,21 +202,84 @@
 
 
 
-  
-  
-    
-
 <style type="text/css" scoped>
   @media (min-width: 900px) {
     .Hero--series-easter-2011 { background-image: url(/build/images/series/easter-2011-wide-blur.jpg); }
   }
 </style>
 
-<div class="HeroVideo Hero--series-easter-2011 HeroVideo--overlay">
+<!-- Hero background image -->
+
+
+
+<style type="text/css" scoped>
+  /*.HeroVideo {*/
+  /*background-image: url();*/
+  /*}*/
+
+  /*@media (min-aspect-ratio: 5/8) {*/
+    /*.HeroVideo-imageWrap {*/
+      /*background-image: url(/build/images/series/easter-2011-fade-out.jpg?f5730d4d89db5647);*/
+    /*}*/
+  /*}*/
+</style>
+
+<div class="HeroVideo">
   <div class="HeroVideo-container">
-    <div class="HeroVideo-responsive">
-      <!-- TODO: Sometimes a sermon may be audio only (/series/faith-without-borders/restoration-costs/) - need to wrap video embed in conditional -->
-      <vimeo id="22467271"></vimeo>
+
+    <div class="HeroVideo-playWrap">
+      <svg class="HeroVideo-play" role="img" title="Play Video">
+        <use xlink:href="/build/images/video.svg#play-big"></use>
+      </svg>
+    </div>
+
+    <div class="HeroVideo-imageWrap">
+      <img class="HeroVideo-image" src="/build/images/series/easter-2011-fade-out.jpg?f5730d4d89db5647">
+    </div>
+
+    <div class="HeroVideo-info">
+
+      
+      <h2 class="HeroVideo-heading">&quot;Easter 2011&quot; Series</h2>
+      
+      <h3 class="HeroVideo-title">Series Promo</h3>
+
+      <div class="HeroVideo-meta">
+        <img class="HeroVideo-thumb" src="/build/images/series/easter-2011-square.jpg?f4b673b698c1c01d?f4b673b698c1c01d">
+        <!--<img class="HeroVideo-thumb" src="/build/images/staff/-1.jpg">-->
+        <div class="HeroVideo-metaText">
+          
+          <span class="HeroVideo-date">Apr 23, 2011</span>
+          <!--<span class="HeroVideo-series">&quot;Easter 2011&quot; series</span>-->
+        </div>
+      </div>
+    </div>
+
+    <div class="HeroVideo-actions">
+      <span class="HeroVideo-actionsItem">
+        <svg class="HeroVideo-action" role="img" title="Listen to audio">
+          <use xlink:href="/build/images/video.svg#listen"></use>
+        </svg>
+        <span class="HeroVideo-actionText">Listen</span>
+      </span>
+      <a class="HeroVideo-actionsItem">
+        <svg class="HeroVideo-action" role="img" title="Share on Facebook">
+          <use xlink:href="/build/images/video.svg#facebook"></use>
+        </svg>
+        <span class="HeroVideo-actionText">Share</span>
+      </a>
+      <span class="HeroVideo-actionsItem">
+        <svg class="HeroVideo-action" role="img" title="Tweet it">
+          <use xlink:href="/build/images/video.svg#twitter"></use>
+        </svg>
+        <span class="HeroVideo-actionText">Tweet</span>
+      </span>
+      <span class="HeroVideo-actionsItem">
+        <svg class="HeroVideo-action" role="img" title="More">
+          <use xlink:href="/build/images/video.svg#more"></use>
+        </svg>
+        <span class="HeroVideo-actionText">more</span>
+      </span>
     </div>
   </div>
 </div>
@@ -221,17 +291,12 @@
 
       <div class="PageHeader">
         <div class="PageHeader-container">
-          <a href="/series/easter-2011/"><img class="PageHeader-thumb" src="/build/images/series/easter-2011-square.jpg?f4b673b698c1c01d"></a>
+          <a href="/series/easter-2011/"><img class="PageHeader-thumb" src="/build/images/series/easter-2011-square.jpg?f4b673b698c1c01d?f4b673b698c1c01d"></a>
 
           <div class="PageHeader-titles">
             <h1 class="PageHeader-title">
-               Series Promo
+              Easter 2011
             </h1>
-
-            <h2 class="PageHeader-subtitle">
-              
-              
-            </h2>
           </div>
         </div>
       </div>
@@ -370,7 +435,11 @@
       })(angular);
     </script>
 
-<script type="text/javascript" src="/build/main.min.js?d68d2d318ab0556c"></script>
+<script type="text/javascript" src="/build/main.min.js?113a5e636061a017"></script>
+
+    <!--[if gte IE 9]>
+    <script src="/build/svg4everybody.min.js"></script>
+    <![endif]-->
 
   </body>
 
