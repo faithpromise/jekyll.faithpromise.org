@@ -3,25 +3,37 @@
   &:extend(.Container);
 }
 
-@media (min-width: @Nav-showDesktopVersion) {
+@media (max-width: 896px) {
+  .HeroVideo {
+    background-color: red;
+  }
+}
+
+@media (min-width: 900px) {
 
   .HeroVideo {
     background-color: #000;
   }
 
   .HeroVideo-container {
+    .to-rem(height, 405);
     position: relative;
-    height:   405px;
+    //    height:   405px;
   }
 
   .HeroVideo-imageWrap {
     position:            absolute;
     right:               4em;
     z-index:             1;
-    height:              405px;
-    width:               720px;
+    height:              100%;
+    //    height:              405px;
+    //    width:               720px;
     background-position: 90% 0;
     background-repeat:   no-repeat;
+  }
+
+  .HeroVideo-image {
+    height: 100%;
   }
 
   .HeroVideo-playWrap {
@@ -45,10 +57,12 @@
     width:       100px;
     height:      100px;
     cursor:      pointer;
+
+    //    fill:        #fff;
   }
 
   .HeroVideo-info {
-    .to-rem(top, 90);
+    .to-rem(top, 54);
     position: absolute;
     width:    40%;
     z-index:  3;
@@ -56,20 +70,22 @@
 
   .HeroVideo-heading {
     .to-rem(font-size, 21);
-    .to-rem(margin, 0 0 1.5);
+    margin:      0;
     font-weight: @font-weight-light;
     color:       #a3a3a3;
   }
 
   .HeroVideo-title {
+    .to-rem(margin, 16 0);
     .to-rem(font-size, 48);
     line-height: 1.1;
-    font-weight: @font-weight-light;
+    font-weight: @font-weight-bold;
     color:       #fff;
   }
 
   .HeroVideo-meta {
     .to-rem(font-size, 15);
+    line-height: 1.2;
     font-weight: @font-weight-light;
     color:       #fff;
   }
@@ -90,10 +106,11 @@
   }
 
   .HeroVideo-actions {
-    .to-rem(top, 90);
+    .to-rem(top, 44);
+    .to-rem(width, 80);
     position:   absolute;
     right:      0;
-    width:      80px;
+    //    width:      80px;
     margin:     0;
     padding:    0;
     list-style: none;
@@ -108,21 +125,36 @@
     width:      100%;
     text-align: center;
     cursor:     pointer;
+
+    &,
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   .HeroVideo-action {
-    height: 44px;
-    width:  44px;
-    fill:   #999;
+    .to-rem(height, 44);
+    .to-rem(width, 44);
+    //    height: 44px;
+    //    width:  44px;
+    fill: #999;
+
+    .HeroVideo-actionsItem:hover > & {
+      fill: #fff;
+    }
   }
 
   .HeroVideo-actionText {
     display:    block;
     margin-top: .5em;
-    &,
-    &:hover {
-      text-decoration: none;
+
+    .HeroVideo-actionsItem:hover > & {
+      color: #fff;
     }
+  }
+
+  .HeroVideo-play .test {
+    fill: red;
   }
 
 }

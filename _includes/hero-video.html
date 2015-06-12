@@ -9,11 +9,11 @@
   /*background-image: url({{ heroImage_square }});*/
   /*}*/
 
-  @media (min-aspect-ratio: 5/8) {
-    .HeroVideo-imageWrap {
-      background-image: url({{ heroImage }});
-    }
-  }
+  /*@media (min-aspect-ratio: 5/8) {*/
+    /*.HeroVideo-imageWrap {*/
+      /*background-image: url({{ heroImage }});*/
+    /*}*/
+  /*}*/
 </style>
 
 <div class="HeroVideo">
@@ -21,12 +21,12 @@
 
     <div class="HeroVideo-playWrap">
       <svg class="HeroVideo-play" role="img" title="Play Video">
-        <use xlink:href="/build/images/video.svg#play-button"></use>
+        <use xlink:href="/build/images/video.svg#play-big"></use>
       </svg>
     </div>
 
     <div class="HeroVideo-imageWrap">
-      <img src="{{ heroImage }}">
+      <img class="HeroVideo-image" src="{{ heroImage }}">
     </div>
 
     <div class="HeroVideo-info">
@@ -51,22 +51,28 @@
 
     <div class="HeroVideo-actions">
       <span class="HeroVideo-actionsItem">
-        <svg class="HeroVideo-action" role="img" title="Play Audio">
+        <svg class="HeroVideo-action" role="img" title="Listen to audio">
           <use xlink:href="/build/images/video.svg#listen"></use>
         </svg>
         <span class="HeroVideo-actionText">Listen</span>
       </span>
       <a class="HeroVideo-actionsItem">
-        <svg class="HeroVideo-action" role="img" title="Download Audio">
-          <use xlink:href="/build/images/video.svg#download"></use>
-        </svg>
-        <span class="HeroVideo-actionText">Download</span>
-      </a>
-      <span class="HeroVideo-actionsItem">
-        <svg class="HeroVideo-action" role="img" title="Share Video">
-          <use xlink:href="/build/images/video.svg#share"></use>
+        <svg class="HeroVideo-action" role="img" title="Share on Facebook">
+          <use xlink:href="/build/images/video.svg#facebook"></use>
         </svg>
         <span class="HeroVideo-actionText">Share</span>
+      </a>
+      <span class="HeroVideo-actionsItem">
+        <svg class="HeroVideo-action" role="img" title="Tweet it">
+          <use xlink:href="/build/images/video.svg#twitter"></use>
+        </svg>
+        <span class="HeroVideo-actionText">Tweet</span>
+      </span>
+      <span class="HeroVideo-actionsItem">
+        <svg class="HeroVideo-action" role="img" title="More">
+          <use xlink:href="/build/images/video.svg#more"></use>
+        </svg>
+        <span class="HeroVideo-actionText">more</span>
       </span>
     </div>
   </div>
