@@ -1,5 +1,5 @@
 <!-- Hero background image -->
-{% assign heroImage = '/build/images/staff/chris-stephens-sermon.jpg' %}
+{% capture heroImage %}{{ site.paths.staff_images }}{{ include.video.speaker_ident }}-sermon.jpg{% endcapture %}
 {% if include.series.ident %}
 {% capture heroImage %}{{ site.paths.series_images }}{{ include.series.ident }}-fade-out.jpg{% endcapture %}
 {% endif %}
@@ -16,14 +16,14 @@
   /*}*/
 </style>
 
-<div class="HeroVideo">
+<div class="HeroVideo" hero-video>
   <div class="HeroVideo-container">
 
-    <div class="HeroVideo-playWrap">
-      <svg class="HeroVideo-play" role="img" title="Play Video">
-        <use xlink:href="/build/images/video.svg#play-big"></use>
-      </svg>
-    </div>
+    <!--<div class="HeroVideo-playWrap">-->
+      <!--<svg class="HeroVideo-play" role="img" title="Play Video">-->
+        <!--<use xlink:href="/build/images/video.svg#play-big"></use>-->
+      <!--</svg>-->
+    <!--</div>-->
 
     <div class="HeroVideo-imageWrap">
       <img class="HeroVideo-image" src="{{ heroImage }}">
@@ -48,26 +48,36 @@
           <!--<span class="HeroVideo-series">&quot;{{ include.series.title }}&quot; series</span>-->
         </div>
       </div>
+
+      <div class="HeroVideo-buttons">
+        <span class="HeroVideo-button">
+          <i class="icon-play"></i> Watch
+        </span>
+        <span class="HeroVideo-button">
+          <i class="icon-headphones"></i> Listen
+        </span>
+      </div>
+
     </div>
 
     <div class="HeroVideo-actions">
-      <span class="HeroVideo-actionsItem">
-        <svg class="HeroVideo-action" role="img" title="Listen to audio">
-          <use xlink:href="/build/images/video.svg#listen"></use>
-        </svg>
-        <span class="HeroVideo-actionText">Listen</span>
-      </span>
       <a class="HeroVideo-actionsItem">
         <svg class="HeroVideo-action" role="img" title="Share on Facebook">
           <use xlink:href="/build/images/video.svg#facebook"></use>
         </svg>
-        <span class="HeroVideo-actionText">Share</span>
+        <span class="HeroVideo-actionText">share</span>
       </a>
       <span class="HeroVideo-actionsItem">
         <svg class="HeroVideo-action" role="img" title="Tweet it">
           <use xlink:href="/build/images/video.svg#twitter"></use>
         </svg>
-        <span class="HeroVideo-actionText">Tweet</span>
+        <span class="HeroVideo-actionText">tweet</span>
+      </span>
+      <span class="HeroVideo-actionsItem">
+        <svg class="HeroVideo-action" role="img" title="Email a friend">
+          <use xlink:href="/build/images/video.svg#email"></use>
+        </svg>
+        <span class="HeroVideo-actionText">email</span>
       </span>
       <span class="HeroVideo-actionsItem">
         <svg class="HeroVideo-action" role="img" title="More">

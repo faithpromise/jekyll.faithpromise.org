@@ -36,29 +36,54 @@
     height: 100%;
   }
 
-  .HeroVideo-playWrap {
-    position:    absolute;
-    top:         50%;
-    left:        50%;
-    z-index:     2;
-    margin-top:  -75px;
-    margin-left: -75px;
-    width:       150px;
-    height:      150px;
-    cursor:      pointer;
+  //  .HeroVideo-playWrap {
+  //    position:    absolute;
+  //    top:         50%;
+  //    left:        50%;
+  //    z-index:     2;
+  //    margin-top:  -75px;
+  //    margin-left: -75px;
+  //    width:       150px;
+  //    height:      150px;
+  //    cursor:      pointer;
+  //  }
+  //
+  //  .HeroVideo-play {
+  //    position:    absolute;
+  //    top:         50%;
+  //    left:        50%;
+  //    margin-top:  -50px;
+  //    margin-left: -50px;
+  //    width:       100px;
+  //    height:      100px;
+  //    cursor:      pointer;
+  //
+  //    //    fill:        #fff;
+  //  }
+  .HeroVideo-buttons {
+    .to-rem(margin-top, 40);
   }
 
-  .HeroVideo-play {
-    position:    absolute;
-    top:         50%;
-    left:        50%;
-    margin-top:  -50px;
-    margin-left: -50px;
-    width:       100px;
-    height:      100px;
-    cursor:      pointer;
+  .HeroVideo-button {
+    display:       inline-block;
+    line-height:   2em;
+    margin-right:  1em;
+    padding:       0 1em;
+    border:        2px solid #999;
+    border-radius: 2em;
+    color:         #999;
+    cursor:        pointer;
 
-    //    fill:        #fff;
+    transition: all .15s ease-in-out;
+
+    &:hover {
+      border-color: #fff;
+      color: #fff;
+    }
+  }
+
+  .icon-play:before {
+    margin-right: 0;
   }
 
   .HeroVideo-info {
@@ -79,7 +104,7 @@
     .to-rem(margin, 16 0);
     .to-rem(font-size, 48);
     line-height: 1.1;
-    font-weight: @font-weight-bold;
+    font-weight: @font-weight-regular;
     color:       #fff;
   }
 
@@ -102,9 +127,9 @@
   }
 
   .HeroVideo-metaSeparator {
-    display: inline-block;
+    display:      inline-block;
     margin-right: .1em;
-    margin-left: .1em;
+    margin-left:  .1em;
   }
 
   .HeroVideo-actions {
@@ -141,6 +166,8 @@
     //    width:  44px;
     fill: #999;
 
+    transition: all .15s ease-in-out;
+
     .HeroVideo-actionsItem:hover > & {
       fill: #fff;
     }
@@ -149,6 +176,8 @@
   .HeroVideo-actionText {
     display:    block;
     margin-top: .5em;
+
+    transition: all .15s ease-in-out;
 
     .HeroVideo-actionsItem:hover > & {
       color: #fff;
