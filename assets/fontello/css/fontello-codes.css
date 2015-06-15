@@ -3,9 +3,8 @@
 .icon-twitter:before { content: '\e801'; } /* '' */
 .icon-instagramm:before { content: '\e802'; } /* '' */
 .icon-git:before { content: '\e803'; } /* '' */
-.icon-play-1:before { content: '\e804'; } /* '' */
+.icon-play:before { content: '\e804'; } /* '' */
 .icon-pause:before { content: '\e805'; } /* '' */
-.icon-play-circled:before { content: '\e806'; } /* '' */
 .icon-headphones:before { content: '\e807'; } /* '' */
 .icon-menu:before { content: '\e808'; } /* '' */
 .icon-dot-3:before { content: '\e809'; } /* '' */
