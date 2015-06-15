@@ -314,7 +314,8 @@ module.exports = function (grunt) {
 
     grunt.registerTask('deploy', [
         'build_production',
-        'gh-pages'
+        'gh-pages',
+        'build_dev'
     ]);
 
 };
