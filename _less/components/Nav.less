@@ -130,17 +130,17 @@
   // Solid nav
   body.navStyle--solid {
     .Nav {
-      background-color: #fff;
+      background-color: @NavStickyBackgroundColor;
     }
     .Nav-background {
       display: none;
     }
-    .Nav-logo {
-      fill: #222;
-    }
-    .Nav-link {
-      color: #555;
-    }
+//    .Nav-logo {
+//      fill: #222;
+//    }
+//    .Nav-link {
+//      color: #555;
+//    }
   }
 
   .Nav {
@@ -197,6 +197,11 @@
     display:        block;
     line-height:    @Nav-logoHeight-lg;
     text-transform: uppercase;
+
+    &,
+    &:hover {
+      text-decoration: none;
+    }
   }
 
 }
