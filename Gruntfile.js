@@ -20,6 +20,7 @@ module.exports = function (grunt) {
             'bower_components/angular-ui-bootstrap/src/dropdown/dropdown.js',
             'bower_components/angular-local-storage/dist/angular-local-storage.js',
             'bower_components/angular-ui-bootstrap/src/modal/modal.js',
+            'build/template-cache.tmp',
             'build/angular-ui-template-cache.tmp',
             jsDir + '/app.module.js',
             jsDir + '/**/*.js'
@@ -200,6 +201,10 @@ module.exports = function (grunt) {
                 svg: {
                     files: ['_images/**/*.svg'],
                     tasks: ['svgstore:default', 'shell:jekyllBuild']
+                },
+                templates: {
+                    files: jsDir + '/**/*.html',
+                    tasks: ['html2js:templates', 'concat:js_dev', 'shell:jekyllBuild']
                 }
             },
             imagemin: {
@@ -238,10 +243,18 @@ module.exports = function (grunt) {
                 }
             },
             html2js: {
-                options: {
-                    base:'bower_components/angular-ui-bootstrap'
+                templates: {
+                    options: {
+                        base:'_js'
+                    },
+                    src: ['_js/**/*.html'],
+                    dest: 'build/template-cache.tmp',
+                    module: 'template-cache'
                 },
                 angularUi: {
+                    options: {
+                        base:'bower_components/angular-ui-bootstrap'
+                    },
                     src: ['bower_components/angular-ui-bootstrap/template/modal/*.html'],
                     dest: 'build/angular-ui-template-cache.tmp',
                     module: 'angular-ui-template-cache'

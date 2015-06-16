@@ -28,7 +28,7 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   </head>
 
-  <body class="navStyle--{{ nav_style }}">
+  <body class="navStyle--{{ nav_style }}" ng-controller="page">
 
     <!-- TODO: Include by default, but make conditional if we don't need it on some pages -->
     <div id="fb-root"></div>

@@ -4,25 +4,13 @@
 {% capture heroImage %}{{ site.paths.series_images }}{{ include.series.ident }}-fade-out.jpg{% endcapture %}
 {% endif %}
 
-<style type="text/css" scoped>
-  /*.HeroVideo {*/
-  /*background-image: url({{ heroImage_square }});*/
-  /*}*/
-
-  /*@media (min-aspect-ratio: 5/8) {*/
-    /*.HeroVideo-imageWrap {*/
-      /*background-image: url({{ heroImage }});*/
-    /*}*/
-  /*}*/
-</style>
-
 <div class="HeroVideo" hero-video>
   <div class="HeroVideo-container">
 
     <!--<div class="HeroVideo-playWrap">-->
-      <!--<svg class="HeroVideo-play" role="img" title="Play Video">-->
-        <!--<use xlink:href="/build/images/video.svg#play-big"></use>-->
-      <!--</svg>-->
+    <!--<svg class="HeroVideo-play" role="img" title="Play Video">-->
+    <!--<use xlink:href="/build/images/video.svg#play-big"></use>-->
+    <!--</svg>-->
     <!--</div>-->
 
     <div class="HeroVideo-imageWrap">
@@ -50,7 +38,7 @@
       </div>
 
       <div class="HeroVideo-buttons">
-        <span class="HeroVideo-button">
+        <span class="HeroVideo-button" ng-click="openVideo({{ include.video.vimeo_id }})">
           <i class="icon-play"></i> Watch
         </span>
         <span class="HeroVideo-button">

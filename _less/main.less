@@ -15,6 +15,7 @@
   Variables
 */
 @import "variables/colors";
+@import "variables/modals";
 @import "variables/z-index";
 /*
   Mixins
@@ -31,6 +32,7 @@
 @import "components/HeroVideo";
 @import "components/Layout";
 @import "components/MobileBar";
+@import "components/modals";
 @import "components/Nav";
 @import "components/Nav-animation";
 @import "components/NavDropdown";
@@ -44,6 +46,10 @@
 @import "components/StaffProfile";
 
 @font-size: 16;
+
+.clearfix {
+  .clearfix();
+}
 
 html {
   //  font-size: 112.5%; // 18px
@@ -125,7 +131,8 @@ a {
 
 .VideoPlayer iframe,
 .VideoPlayer object,
-.VideoPlayer embed {
+.VideoPlayer embed,
+.VideoPlayer image {
   position: absolute;
   top:      0;
   left:     0;
@@ -138,3 +145,16 @@ a {
   &:extend(.icon-dot-3 all);
   cursor: pointer;
 }
+
+//.VideoPopup {
+//  position:         absolute;
+//  top:              0;
+//  left:             0;
+//  z-index:          100;
+//  height:           100%;
+//  width:            100%;
+//}
+//
+//.VideoPopup-container {
+//  &:extend(.Container);
+//}
