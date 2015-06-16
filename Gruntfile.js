@@ -19,6 +19,8 @@ module.exports = function (grunt) {
             'bower_components/angular-ui-bootstrap/src/position/position.js',
             'bower_components/angular-ui-bootstrap/src/dropdown/dropdown.js',
             'bower_components/angular-local-storage/dist/angular-local-storage.js',
+            'bower_components/angular-ui-bootstrap/src/modal/modal.js',
+            'build/angular-ui-template-cache.tmp',
             jsDir + '/app.module.js',
             jsDir + '/**/*.js'
         ];
@@ -227,6 +229,22 @@ module.exports = function (grunt) {
                 svg4everybody: {
                     src: 'bower_components/svg4everybody/svg4everybody.min.js',
                     dest: 'build/svg4everybody.min.js'
+                },
+                appTemplates: {
+                    expand: true,
+                    cwd: '_js/',
+                    src: 'directives/**/*.html',
+                    dest: 'build/'
+                }
+            },
+            html2js: {
+                options: {
+                    base:'bower_components/angular-ui-bootstrap'
+                },
+                angularUi: {
+                    src: ['bower_components/angular-ui-bootstrap/template/modal/*.html'],
+                    dest: 'build/angular-ui-template-cache.tmp',
+                    module: 'angular-ui-template-cache'
                 }
             },
             svgstore: {
@@ -262,6 +280,7 @@ module.exports = function (grunt) {
         'clean:build',
         'optimize_images',
         'copy',
+        'html2js',
         'svgstore:default',
         'css_dev',
         'concat:js_dev',
@@ -273,6 +292,7 @@ module.exports = function (grunt) {
         'clean:build',
         'optimize_images',
         'copy',
+        'html2js',
         'svgstore:default',
         'js_production',
         'css_production',
