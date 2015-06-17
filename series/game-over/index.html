@@ -14,36 +14,17 @@
     <title>Game Over - Faith Promise Church</title>
     <meta name="description" content="A contemporary church with locations in Knoxville, Maryville, Clinton, and La Follette, TN">
     
+    <meta property="og:description" content="Game Over">
+    
 
-<link type="text/css" rel="stylesheet" href="/build/main.min.css?3222f7682a3c82ec" />
+<link type="text/css" rel="stylesheet" href="/build/main.min.css?66241d2ab9fa49be" />
 
     <link rel="canonical" href="http://faithpromise.org/series/game-over/">
   </head>
 
-  <body class="navStyle--transparent">
+  <body class="navStyle--transparent" ng-controller="page">
 
-    <!-- TODO: Include by default, but make conditional if we don't need it on some pages -->
-    <div id="fb-root"></div>
-    <script>
-      window.fbAsyncInit = function () {
-        FB.init({
-          appId: '1592691894327442', // TODO: Switch to production: 1592675454329086
-          xfbml: true,
-          version: 'v2.3'
-        });
-      };
-
-      (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {
-          return;
-        }
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
+    <!--{//% include facebook-sdk.html %}-->
 
     <div class="Layout">
 
@@ -189,7 +170,7 @@
         <div class="MobileBar">
           <span class="MobileBar-navToggle"><i class="icon-navicon" fp-nav-toggle></i></span>
           <a class="MobileBar-logoWrap" href="/">
-            <svg role="img" title="Faith Promise Logo">
+            <svg class="MobileBar-logo" role="img" title="Faith Promise Logo">
               <use xlink:href="/build/images/general.svg#logo-faith-promise"></use>
             </svg>
             <!--<img class="MobileBar-logo" src="/build/images/logo-faith-promise.svg">-->
@@ -235,8 +216,6 @@
     <table class="Playlist">
   <thead>
     <tr>
-      <th></th>
-      <th></th>
       <th class="Playlist-title">Title</th>
       <th class="Playlist-speaker">Speaker</th>
       <th class="Playlist-date">Date</th>
@@ -247,14 +226,6 @@
   <tbody>
     
     <tr class="">
-      <td class="Playlist-iconColumn">
-        <a class="PlayList-iconLink" href="/series/game-over/trailer/" title="Watch the video" video-link>
-          <i class="Playlist-playIcon"></i>
-        </a>
-      </td>
-      <td class="Playlist-iconColumn">
-        
-      </td>
       <td><a href="/series/game-over/trailer/" title="Learn more">Series Promo</a></td>
       <td></td>
       <td></td>
@@ -289,18 +260,6 @@
     </tr>
     
     <tr class="">
-      <td class="Playlist-iconColumn">
-        <a class="PlayList-iconLink" href="/series/game-over/step-over-the-line/" title="Watch the video" video-link>
-          <i class="Playlist-playIcon"></i>
-        </a>
-      </td>
-      <td class="Playlist-iconColumn">
-        
-        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20120114-15.mp3.mp3" title="Listen to the audio version">
-          <i class="Playlist-listenIcon"></i>
-        </a>
-        
-      </td>
       <td><a href="/series/game-over/step-over-the-line/" title="Learn more">Step Over the Line</a></td>
       <td>Dr. Chris Stephens</td>
       <td>Jan 15, 2012</td>
@@ -335,18 +294,6 @@
     </tr>
     
     <tr class="">
-      <td class="Playlist-iconColumn">
-        <a class="PlayList-iconLink" href="/series/game-over/a-generous-heart/" title="Watch the video" video-link>
-          <i class="Playlist-playIcon"></i>
-        </a>
-      </td>
-      <td class="Playlist-iconColumn">
-        
-        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20120121-22.mp3.mp3" title="Listen to the audio version">
-          <i class="Playlist-listenIcon"></i>
-        </a>
-        
-      </td>
       <td><a href="/series/game-over/a-generous-heart/" title="Learn more">A Generous Heart</a></td>
       <td>Dr. Chris Stephens</td>
       <td>Jan 22, 2012</td>
@@ -381,18 +328,6 @@
     </tr>
     
     <tr class="">
-      <td class="Playlist-iconColumn">
-        <a class="PlayList-iconLink" href="/series/game-over/growing/" title="Watch the video" video-link>
-          <i class="Playlist-playIcon"></i>
-        </a>
-      </td>
-      <td class="Playlist-iconColumn">
-        
-        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20120128-29.mp3.mp3" title="Listen to the audio version">
-          <i class="Playlist-listenIcon"></i>
-        </a>
-        
-      </td>
       <td><a href="/series/game-over/growing/" title="Learn more">Growing</a></td>
       <td>Dr. Chris Stephens</td>
       <td>Jan 29, 2012</td>
@@ -427,18 +362,6 @@
     </tr>
     
     <tr class="">
-      <td class="Playlist-iconColumn">
-        <a class="PlayList-iconLink" href="/series/game-over/serving/" title="Watch the video" video-link>
-          <i class="Playlist-playIcon"></i>
-        </a>
-      </td>
-      <td class="Playlist-iconColumn">
-        
-        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20120204-05.mp3.mp3" title="Listen to the audio version">
-          <i class="Playlist-listenIcon"></i>
-        </a>
-        
-      </td>
       <td><a href="/series/game-over/serving/" title="Learn more">Serving</a></td>
       <td>Dr. Chris Stephens</td>
       <td>Feb 05, 2012</td>
@@ -503,7 +426,7 @@
       })(angular);
     </script>
 
-<script type="text/javascript" src="/build/main.min.js?113a5e636061a017"></script>
+<script type="text/javascript" src="/build/main.min.js?2c5879d8a6d8a2ed"></script>
 
     <!--[if gte IE 9]>
     <script src="/build/svg4everybody.min.js?41c890046ffef9f1"></script>

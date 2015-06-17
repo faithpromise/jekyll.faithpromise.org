@@ -31,6 +31,12 @@
       "src": "entypo"
     },
     {
+      "uid": "c709da589c923ba3c2ad48d9fc563e93",
+      "css": "cancel",
+      "code": 59405,
+      "src": "entypo"
+    },
+    {
       "uid": "815503841e980c848f55e0271deacead",
       "css": "link",
       "code": 59403,
@@ -40,6 +46,18 @@
       "uid": "b08cfe8039de2ce815686aced2caef06",
       "css": "download",
       "code": 59404,
+      "src": "entypo"
+    },
+    {
+      "uid": "cb13afd4722a849d48056540bb74c47e",
+      "css": "play",
+      "code": 59396,
+      "src": "entypo"
+    },
+    {
+      "uid": "d8d378d0ce413f231dfa37592e39c227",
+      "css": "pause",
+      "code": 59397,
       "src": "entypo"
     },
     {
@@ -67,21 +85,9 @@
       "src": "elusive"
     },
     {
-      "uid": "20370af73ca90f73b4bda366d92303d9",
-      "css": "play-1",
-      "code": 59396,
-      "src": "elusive"
-    },
-    {
       "uid": "fc006ff27e50163bdec3a7588226171b",
       "css": "play-circled",
       "code": 59398,
-      "src": "elusive"
-    },
-    {
-      "uid": "4f805cf4ac0dd68ab439dc36859b85d3",
-      "css": "pause",
-      "code": 59397,
       "src": "elusive"
     }
   ]

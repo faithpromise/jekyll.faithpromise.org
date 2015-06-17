@@ -14,36 +14,17 @@
     <title>The Journey Continued - Faith Promise Church</title>
     <meta name="description" content="A contemporary church with locations in Knoxville, Maryville, Clinton, and La Follette, TN">
     
+    <meta property="og:description" content="The Journey Continued">
+    
 
-<link type="text/css" rel="stylesheet" href="/build/main.min.css?3222f7682a3c82ec" />
+<link type="text/css" rel="stylesheet" href="/build/main.min.css?66241d2ab9fa49be" />
 
     <link rel="canonical" href="http://faithpromise.org/series/the-journey-continued/">
   </head>
 
-  <body class="navStyle--transparent">
+  <body class="navStyle--transparent" ng-controller="page">
 
-    <!-- TODO: Include by default, but make conditional if we don't need it on some pages -->
-    <div id="fb-root"></div>
-    <script>
-      window.fbAsyncInit = function () {
-        FB.init({
-          appId: '1592691894327442', // TODO: Switch to production: 1592675454329086
-          xfbml: true,
-          version: 'v2.3'
-        });
-      };
-
-      (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {
-          return;
-        }
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
+    <!--{//% include facebook-sdk.html %}-->
 
     <div class="Layout">
 
@@ -189,7 +170,7 @@
         <div class="MobileBar">
           <span class="MobileBar-navToggle"><i class="icon-navicon" fp-nav-toggle></i></span>
           <a class="MobileBar-logoWrap" href="/">
-            <svg role="img" title="Faith Promise Logo">
+            <svg class="MobileBar-logo" role="img" title="Faith Promise Logo">
               <use xlink:href="/build/images/general.svg#logo-faith-promise"></use>
             </svg>
             <!--<img class="MobileBar-logo" src="/build/images/logo-faith-promise.svg">-->
@@ -210,7 +191,7 @@
 
 
 <style type="text/css" scoped>
-  .Hero--series-the-journey-continued { background-image: url(/build/images/series/the-journey-continued-square.jpg); }
+  .Hero--series-the-journey-continued { background-image: url(/build/images/series/the-journey-continued-square.jpg?81cdefb08f4b96b2); }
   @media (min-aspect-ratio: 5/8) {
     .Hero--series-the-journey-continued { background-image: url(/build/images/series/the-journey-continued-wide.jpg); }
   }
@@ -224,7 +205,7 @@
 
     <div class="PageHeader">
       <div class="PageHeader-container">
-        <img class="PageHeader-thumb" src="/build/images/series/the-journey-continued-square.jpg">
+        <img class="PageHeader-thumb" src="/build/images/series/the-journey-continued-square.jpg?81cdefb08f4b96b2">
         <div class="PageHeader-titles">
           <h1 class="PageHeader-title">The Journey Continued</h1>
           <!--<h2 class="PageHeader-subtitle">The Journey is our two-year faith and building program with the goal of expanding our ministry influence locally to reach the seven surrounding counties and the world for Christ.</h2>-->
@@ -235,8 +216,6 @@
     <table class="Playlist">
   <thead>
     <tr>
-      <th></th>
-      <th></th>
       <th class="Playlist-title">Title</th>
       <th class="Playlist-speaker">Speaker</th>
       <th class="Playlist-date">Date</th>
@@ -247,18 +226,6 @@
   <tbody>
     
     <tr class="">
-      <td class="Playlist-iconColumn">
-        <a class="PlayList-iconLink" href="/series/the-journey-continued/no-room/" title="Watch the video" video-link>
-          <i class="Playlist-playIcon"></i>
-        </a>
-      </td>
-      <td class="Playlist-iconColumn">
-        
-        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20091024-25.mp3.mp3" title="Listen to the audio version">
-          <i class="Playlist-listenIcon"></i>
-        </a>
-        
-      </td>
       <td><a href="/series/the-journey-continued/no-room/" title="Learn more">No Room</a></td>
       <td>Dr. Chris Stephens</td>
       <td>Oct 25, 2009</td>
@@ -323,7 +290,7 @@
       })(angular);
     </script>
 
-<script type="text/javascript" src="/build/main.min.js?113a5e636061a017"></script>
+<script type="text/javascript" src="/build/main.min.js?2c5879d8a6d8a2ed"></script>
 
     <!--[if gte IE 9]>
     <script src="/build/svg4everybody.min.js?41c890046ffef9f1"></script>

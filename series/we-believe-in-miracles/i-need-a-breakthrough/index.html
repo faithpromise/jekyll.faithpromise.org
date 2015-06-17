@@ -14,36 +14,17 @@
     <title>I Need A Breakthrough - Faith Promise Church</title>
     <meta name="description" content="A contemporary church with locations in Knoxville, Maryville, Clinton, and La Follette, TN">
     
+    <meta property="og:description" content="I Need A Breakthrough">
+    
 
-<link type="text/css" rel="stylesheet" href="/build/main.min.css?3222f7682a3c82ec" />
+<link type="text/css" rel="stylesheet" href="/build/main.min.css?66241d2ab9fa49be" />
 
     <link rel="canonical" href="http://faithpromise.org/series/we-believe-in-miracles/i-need-a-breakthrough/">
   </head>
 
-  <body class="navStyle--solid">
+  <body class="navStyle--solid" ng-controller="page">
 
-    <!-- TODO: Include by default, but make conditional if we don't need it on some pages -->
-    <div id="fb-root"></div>
-    <script>
-      window.fbAsyncInit = function () {
-        FB.init({
-          appId: '1592691894327442', // TODO: Switch to production: 1592675454329086
-          xfbml: true,
-          version: 'v2.3'
-        });
-      };
-
-      (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {
-          return;
-        }
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
+    <!--{//% include facebook-sdk.html %}-->
 
     <div class="Layout">
 
@@ -189,7 +170,7 @@
         <div class="MobileBar">
           <span class="MobileBar-navToggle"><i class="icon-navicon" fp-nav-toggle></i></span>
           <a class="MobileBar-logoWrap" href="/">
-            <svg role="img" title="Faith Promise Logo">
+            <svg class="MobileBar-logo" role="img" title="Faith Promise Logo">
               <use xlink:href="/build/images/general.svg#logo-faith-promise"></use>
             </svg>
             <!--<img class="MobileBar-logo" src="/build/images/logo-faith-promise.svg">-->
@@ -197,6 +178,8 @@
         </div>
         <!--<div class="Hero-shim"></div>-->
         
+
+
 
 
 
@@ -212,29 +195,38 @@
 
 
 
-<style type="text/css" scoped>
-  /*.HeroVideo {*/
-  /*background-image: url();*/
-  /*}*/
 
-  /*@media (min-aspect-ratio: 5/8) {*/
-    /*.HeroVideo-imageWrap {*/
-      /*background-image: url(/build/images/series/we-believe-in-miracles-fade-out.jpg);*/
-    /*}*/
-  /*}*/
+
+
+<!-- Permalink / Share URL -->
+
+
+
+
+
+<style type="text/css" scoped>
+  @media (max-width: 499px) {
+    .HeroVideo-imageWrap { background-image: url(/build/images/series/we-believe-in-miracles-square.jpg?376988e79ba78ed5); }
+  }
+  @media (min-width: 500px) {
+    .HeroVideo-imageWrap { background-image: url(/build/images/series/we-believe-in-miracles-tall.jpg); }
+  }
+  @media (min-width: 900px) {
+    .HeroVideo-imageWrap { background-image: url(/build/images/series/we-believe-in-miracles-fade-out.jpg); }
+  }
 </style>
 
-<div class="HeroVideo">
+<div class="HeroVideo" hero-video>
   <div class="HeroVideo-container">
 
-    <div class="HeroVideo-playWrap">
-      <svg class="HeroVideo-play" role="img" title="Play Video">
-        <use xlink:href="/build/images/video.svg#play-big"></use>
-      </svg>
-    </div>
+    <!--<div class="HeroVideo-playWrap">-->
+    <!--<svg class="HeroVideo-play" role="img" title="Play Video">-->
+    <!--<use xlink:href="/build/images/video.svg#play-big"></use>-->
+    <!--</svg>-->
+    <!--</div>-->
 
     <div class="HeroVideo-imageWrap">
-      <img class="HeroVideo-image" src="/build/images/series/we-believe-in-miracles-fade-out.jpg">
+      <!--<img class="HeroVideo-image" src="">-->
     </div>
 
     <div class="HeroVideo-info">
@@ -245,7 +237,7 @@
       <h3 class="HeroVideo-title">I Need A Breakthrough</h3>
 
       <div class="HeroVideo-meta">
-        <!--<img class="HeroVideo-thumb" src="/build/images/series/we-believe-in-miracles-square.jpg">-->
+        <!--<img class="HeroVideo-thumb" src="/build/images/series/we-believe-in-miracles-square.jpg?376988e79ba78ed5">-->
         <!--<img class="HeroVideo-thumb" src="/build/images/staff/chris-stephens-1.jpg">-->
         <div class="HeroVideo-metaText">
           
@@ -256,26 +248,38 @@
           <!--<span class="HeroVideo-series">&quot;We Believe in Miracles&quot; series</span>-->
         </div>
       </div>
+
+      <div class="HeroVideo-buttons">
+        <span class="HeroVideo-button" ng-click="openVideo(14148037)">
+          <i class="icon-play"></i> Watch
+        </span>
+        <span class="HeroVideo-button">
+          <i class="icon-headphones"></i> Listen
+        </span>
+      </div>
+
     </div>
 
     <div class="HeroVideo-actions">
-      <span class="HeroVideo-actionsItem">
-        <svg class="HeroVideo-action" role="img" title="Listen to audio">
-          <use xlink:href="/build/images/video.svg#listen"></use>
-        </svg>
-        <span class="HeroVideo-actionText">Listen</span>
-      </span>
-      <a class="HeroVideo-actionsItem">
+      <a class="HeroVideo-actionsItem" href="https://www.facebook.com/dialog/share?app_id=1592691894327442&display=popup&href=http://faithpromise.org/series/we-believe-in-miracles/i-need-a-breakthrough/&redirect_uri=http://faithpromise.org">
         <svg class="HeroVideo-action" role="img" title="Share on Facebook">
           <use xlink:href="/build/images/video.svg#facebook"></use>
         </svg>
-        <span class="HeroVideo-actionText">Share</span>
+        <span class="HeroVideo-actionText">share</span>
       </a>
-      <span class="HeroVideo-actionsItem">
+      <!-- https://dev.twitter.com/web/intents -->
+      <!-- We are using the "Limited Dependencies" code -->
+      <a href="https://twitter.com/intent/tweet?text=Check+it+out&url=http://faithpromise.org/series/we-believe-in-miracles/i-need-a-breakthrough/" class="HeroVideo-actionsItem">
         <svg class="HeroVideo-action" role="img" title="Tweet it">
           <use xlink:href="/build/images/video.svg#twitter"></use>
         </svg>
-        <span class="HeroVideo-actionText">Tweet</span>
+        <span class="HeroVideo-actionText">tweet</span>
+      </a>
+      <span class="HeroVideo-actionsItem">
+        <svg class="HeroVideo-action" role="img" title="Email a friend">
+          <use xlink:href="/build/images/video.svg#email"></use>
+        </svg>
+        <span class="HeroVideo-actionText">email</span>
       </span>
       <span class="HeroVideo-actionsItem">
         <svg class="HeroVideo-action" role="img" title="More">
@@ -290,11 +294,14 @@
 <div class="Content" content-scroll>
   <div class="Container">
 
+    
+
     <div class="Section">
 
       <div class="PageHeader">
         <div class="PageHeader-container">
-          <a href="/series/we-believe-in-miracles/"><img class="PageHeader-thumb" src="/build/images/series/we-believe-in-miracles-square.jpg"></a>
+
+          <a href="/series/we-believe-in-miracles/"><img class="PageHeader-thumb" src="/build/images/series/we-believe-in-miracles-square.jpg?376988e79ba78ed5"></a>
 
           <div class="PageHeader-titles">
             <h1 class="PageHeader-title">
@@ -307,8 +314,6 @@
       <table class="Playlist">
   <thead>
     <tr>
-      <th></th>
-      <th></th>
       <th class="Playlist-title">Title</th>
       <th class="Playlist-speaker">Speaker</th>
       <th class="Playlist-date">Date</th>
@@ -319,14 +324,6 @@
   <tbody>
     
     <tr class="">
-      <td class="Playlist-iconColumn">
-        <a class="PlayList-iconLink" href="/series/we-believe-in-miracles/trailer/" title="Watch the video" video-link>
-          <i class="Playlist-playIcon"></i>
-        </a>
-      </td>
-      <td class="Playlist-iconColumn">
-        
-      </td>
       <td><a href="/series/we-believe-in-miracles/trailer/" title="Learn more">Series Promo</a></td>
       <td></td>
       <td></td>
@@ -361,18 +358,6 @@
     </tr>
     
     <tr class="">
-      <td class="Playlist-iconColumn">
-        <a class="PlayList-iconLink" href="/series/we-believe-in-miracles/preparing-for-a-miracle/" title="Watch the video" video-link>
-          <i class="Playlist-playIcon"></i>
-        </a>
-      </td>
-      <td class="Playlist-iconColumn">
-        
-        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20100807-08.mp3.mp3" title="Listen to the audio version">
-          <i class="Playlist-listenIcon"></i>
-        </a>
-        
-      </td>
       <td><a href="/series/we-believe-in-miracles/preparing-for-a-miracle/" title="Learn more">Preparing For A Miracle</a></td>
       <td>Dr. Chris Stephens</td>
       <td>Aug 08, 2010</td>
@@ -407,18 +392,6 @@
     </tr>
     
     <tr class="Playlist-selected">
-      <td class="Playlist-iconColumn">
-        <a class="PlayList-iconLink" href="/series/we-believe-in-miracles/i-need-a-breakthrough/" title="Watch the video" video-link>
-          <i class="Playlist-playIcon"></i>
-        </a>
-      </td>
-      <td class="Playlist-iconColumn">
-        
-        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20100814-15.mp3.mp3" title="Listen to the audio version">
-          <i class="Playlist-listenIcon"></i>
-        </a>
-        
-      </td>
       <td><a href="/series/we-believe-in-miracles/i-need-a-breakthrough/" title="Learn more">I Need A Breakthrough</a></td>
       <td>Dr. Chris Stephens</td>
       <td>Aug 15, 2010</td>
@@ -453,14 +426,6 @@
     </tr>
     
     <tr class="">
-      <td class="Playlist-iconColumn">
-        <a class="PlayList-iconLink" href="/series/we-believe-in-miracles/a-miracle-weekend/" title="Watch the video" video-link>
-          <i class="Playlist-playIcon"></i>
-        </a>
-      </td>
-      <td class="Playlist-iconColumn">
-        
-      </td>
       <td><a href="/series/we-believe-in-miracles/a-miracle-weekend/" title="Learn more">A Miracle Weekend</a></td>
       <td>Dr. Chris Stephens</td>
       <td>Aug 22, 2010</td>
@@ -498,7 +463,11 @@
 </table>
 
     </div>
+
+    
+
   </div>
+
 </div>
       </div>
 
@@ -526,7 +495,7 @@
       })(angular);
     </script>
 
-<script type="text/javascript" src="/build/main.min.js?113a5e636061a017"></script>
+<script type="text/javascript" src="/build/main.min.js?2c5879d8a6d8a2ed"></script>
 
     <!--[if gte IE 9]>
     <script src="/build/svg4everybody.min.js?41c890046ffef9f1"></script>

@@ -1,0 +1,11 @@
+angular.module('template-cache', ['templates/video-popup.html']);
+
+angular.module("templates/video-popup.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("templates/video-popup.html",
+    "<span class=\"modal-close\" title=\"Close Video\" ng-click=\"close();\"></span>\n" +
+    "<div class=\"VideoPopup\" style=\"background-color: #fff\">\n" +
+    "  <div class=\"VideoPopup-container\">\n" +
+    "    <vimeo id=\"{{ vimeo_id }}\" autoplay=\"false\"></vimeo>\n" +
+    "  </div>\n" +
+    "</div>");
+}]);

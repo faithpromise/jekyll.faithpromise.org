@@ -14,36 +14,17 @@
     <title>Intoxicated - Faith Promise Church</title>
     <meta name="description" content="A contemporary church with locations in Knoxville, Maryville, Clinton, and La Follette, TN">
     
+    <meta property="og:description" content="Intoxicated">
+    
 
-<link type="text/css" rel="stylesheet" href="/build/main.min.css?3222f7682a3c82ec" />
+<link type="text/css" rel="stylesheet" href="/build/main.min.css?66241d2ab9fa49be" />
 
     <link rel="canonical" href="http://faithpromise.org/series/intoxicated/">
   </head>
 
-  <body class="navStyle--transparent">
+  <body class="navStyle--transparent" ng-controller="page">
 
-    <!-- TODO: Include by default, but make conditional if we don't need it on some pages -->
-    <div id="fb-root"></div>
-    <script>
-      window.fbAsyncInit = function () {
-        FB.init({
-          appId: '1592691894327442', // TODO: Switch to production: 1592675454329086
-          xfbml: true,
-          version: 'v2.3'
-        });
-      };
-
-      (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {
-          return;
-        }
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
+    <!--{//% include facebook-sdk.html %}-->
 
     <div class="Layout">
 
@@ -189,7 +170,7 @@
         <div class="MobileBar">
           <span class="MobileBar-navToggle"><i class="icon-navicon" fp-nav-toggle></i></span>
           <a class="MobileBar-logoWrap" href="/">
-            <svg role="img" title="Faith Promise Logo">
+            <svg class="MobileBar-logo" role="img" title="Faith Promise Logo">
               <use xlink:href="/build/images/general.svg#logo-faith-promise"></use>
             </svg>
             <!--<img class="MobileBar-logo" src="/build/images/logo-faith-promise.svg">-->
@@ -210,7 +191,7 @@
 
 
 <style type="text/css" scoped>
-  .Hero--series-intoxicated { background-image: url(/build/images/series/intoxicated-square.jpg?d41d8cd98f00b204); }
+  .Hero--series-intoxicated { background-image: url(/build/images/series/intoxicated-square.jpg?5b413f66b2078bc7); }
   @media (min-aspect-ratio: 5/8) {
     .Hero--series-intoxicated { background-image: url(/build/images/series/intoxicated-wide.jpg); }
   }
@@ -224,7 +205,7 @@
 
     <div class="PageHeader">
       <div class="PageHeader-container">
-        <img class="PageHeader-thumb" src="/build/images/series/intoxicated-square.jpg?d41d8cd98f00b204">
+        <img class="PageHeader-thumb" src="/build/images/series/intoxicated-square.jpg?5b413f66b2078bc7">
         <div class="PageHeader-titles">
           <h1 class="PageHeader-title">Intoxicated</h1>
           <!--<h2 class="PageHeader-subtitle">What does it mean to be under the influence? Intoxication is an altered state of mind. Your judgment and behavior are different. You lack your normal inhibitions. Often the more you get, the more you want. Join us as we begin our new series: Intoxicated.</h2>-->
@@ -235,8 +216,6 @@
     <table class="Playlist">
   <thead>
     <tr>
-      <th></th>
-      <th></th>
       <th class="Playlist-title">Title</th>
       <th class="Playlist-speaker">Speaker</th>
       <th class="Playlist-date">Date</th>
@@ -247,14 +226,6 @@
   <tbody>
     
     <tr class="">
-      <td class="Playlist-iconColumn">
-        <a class="PlayList-iconLink" href="/series/intoxicated/trailer/" title="Watch the video" video-link>
-          <i class="Playlist-playIcon"></i>
-        </a>
-      </td>
-      <td class="Playlist-iconColumn">
-        
-      </td>
       <td><a href="/series/intoxicated/trailer/" title="Learn more">Series Promo</a></td>
       <td></td>
       <td></td>
@@ -289,18 +260,6 @@
     </tr>
     
     <tr class="">
-      <td class="Playlist-iconColumn">
-        <a class="PlayList-iconLink" href="/series/intoxicated/under-the-influence/" title="Watch the video" video-link>
-          <i class="Playlist-playIcon"></i>
-        </a>
-      </td>
-      <td class="Playlist-iconColumn">
-        
-        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20090815-16.mp3.mp3" title="Listen to the audio version">
-          <i class="Playlist-listenIcon"></i>
-        </a>
-        
-      </td>
       <td><a href="/series/intoxicated/under-the-influence/" title="Learn more">Under the Influence</a></td>
       <td>Dr. Chris Stephens</td>
       <td>Aug 16, 2009</td>
@@ -335,18 +294,6 @@
     </tr>
     
     <tr class="">
-      <td class="Playlist-iconColumn">
-        <a class="PlayList-iconLink" href="/series/intoxicated/shaken-not-stirred/" title="Watch the video" video-link>
-          <i class="Playlist-playIcon"></i>
-        </a>
-      </td>
-      <td class="Playlist-iconColumn">
-        
-        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20090822-23.mp3.mp3" title="Listen to the audio version">
-          <i class="Playlist-listenIcon"></i>
-        </a>
-        
-      </td>
       <td><a href="/series/intoxicated/shaken-not-stirred/" title="Learn more">Shaken Not Stirred</a></td>
       <td>Dr. Chris Stephens</td>
       <td>Aug 23, 2009</td>
@@ -381,18 +328,6 @@
     </tr>
     
     <tr class="">
-      <td class="Playlist-iconColumn">
-        <a class="PlayList-iconLink" href="/series/intoxicated/inebriated/" title="Watch the video" video-link>
-          <i class="Playlist-playIcon"></i>
-        </a>
-      </td>
-      <td class="Playlist-iconColumn">
-        
-        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20090829-30.mp3.mp3" title="Listen to the audio version">
-          <i class="Playlist-listenIcon"></i>
-        </a>
-        
-      </td>
       <td><a href="/series/intoxicated/inebriated/" title="Learn more">Inebriated</a></td>
       <td>Matt Grimes</td>
       <td>Aug 30, 2009</td>
@@ -427,18 +362,6 @@
     </tr>
     
     <tr class="">
-      <td class="Playlist-iconColumn">
-        <a class="PlayList-iconLink" href="/series/intoxicated/liquid-courage/" title="Watch the video" video-link>
-          <i class="Playlist-playIcon"></i>
-        </a>
-      </td>
-      <td class="Playlist-iconColumn">
-        
-        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/20090905-06.mp3.mp3" title="Listen to the audio version">
-          <i class="Playlist-listenIcon"></i>
-        </a>
-        
-      </td>
       <td><a href="/series/intoxicated/liquid-courage/" title="Learn more">Liquid Courage</a></td>
       <td>Dr. Chris Stephens</td>
       <td>Sep 06, 2009</td>
@@ -503,7 +426,7 @@
       })(angular);
     </script>
 
-<script type="text/javascript" src="/build/main.min.js?113a5e636061a017"></script>
+<script type="text/javascript" src="/build/main.min.js?2c5879d8a6d8a2ed"></script>
 
     <!--[if gte IE 9]>
     <script src="/build/svg4everybody.min.js?41c890046ffef9f1"></script>
