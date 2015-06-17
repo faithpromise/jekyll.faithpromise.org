@@ -1,8 +1,6 @@
 <table class="Playlist">
   <thead>
     <tr>
-      <th></th>
-      <th></th>
       <th class="Playlist-title">Title</th>
       <th class="Playlist-speaker">Speaker</th>
       <th class="Playlist-date">Date</th>
@@ -13,18 +11,6 @@
   <tbody>
     {% for v in include.playlist %}
     <tr class="{% if v.ident == include.selected %}Playlist-selected{% endif %}">
-      <td class="Playlist-iconColumn">
-        <a class="PlayList-iconLink" href="{{ v.url }}" title="Watch the video" video-link>
-          <i class="Playlist-playIcon"></i>
-        </a>
-      </td>
-      <td class="Playlist-iconColumn">
-        {% if v.audio_file_name %}
-        <a class="PlayList-iconLink" href="http://fpcresources.org/audio/{{ v.audio_file_name }}.mp3" title="Listen to the audio version">
-          <i class="Playlist-listenIcon"></i>
-        </a>
-        {% endif %}
-      </td>
       <td><a href="{{ v.url }}" title="Learn more">{{ v.title }}</a></td>
       <td>{{ v.speaker_name }}</td>
       <td>{{ v.sermon_date | date: "%b %d, %Y" }}</td>

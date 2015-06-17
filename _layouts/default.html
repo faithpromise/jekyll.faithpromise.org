@@ -19,6 +19,8 @@
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     {% if page.facebook_description %}
     <meta property="og:description" content="{{ page.facebook_description | xml_escape }}">
+    {% else %}
+    <meta property="og:description" content="{{ page.title | xml_escape }}">
     {% endif %}
 
     <!-- build:style main -->
@@ -75,7 +77,7 @@
         <div class="MobileBar">
           <span class="MobileBar-navToggle"><i class="icon-navicon" fp-nav-toggle></i></span>
           <a class="MobileBar-logoWrap" href="/">
-            <svg role="img" title="Faith Promise Logo">
+            <svg class="MobileBar-logo" role="img" title="Faith Promise Logo">
               <use xlink:href="/build/images/general.svg#logo-faith-promise"></use>
             </svg>
             <!--<img class="MobileBar-logo" src="{{ site.paths.images}}logo-faith-promise.svg">-->

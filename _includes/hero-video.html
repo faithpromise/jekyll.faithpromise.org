@@ -1,8 +1,33 @@
 <!-- Hero background image -->
-{% capture heroImage %}{{ site.paths.staff_images }}{{ include.video.speaker_ident }}-sermon.jpg{% endcapture %}
-{% if include.series.ident %}
-{% capture heroImage %}{{ site.paths.series_images }}{{ include.series.ident }}-fade-out.jpg{% endcapture %}
+{% capture heroImageDesktop %}{{ site.paths.staff_images }}{{ include.video.speaker_ident }}-sermon.jpg{% endcapture %}
+{% assign heroImageTablet = heroImageDesktop %}
+{% assign heroImageMobile = heroImageDesktop %}
+
+{% if include.series.is_official_series %}
+  {% capture heroImageDesktop %}{{ site.paths.series_images }}{{ include.series.ident }}-fade-out.jpg{% endcapture %}
+  {% capture heroImageTablet %}{{ site.paths.series_images }}{{ include.series.ident }}-tall.jpg{% endcapture %}
+  {% capture heroImageMobile %}{{ site.paths.series_images }}{{ include.series.ident }}-square.jpg{% endcapture %}
 {% endif %}
+
+<!-- Permalink / Share URL -->
+{% capture permalink %}{{ site.url }}/videos/{{ include.video.ident }}/{% endcapture %}
+
+{% if include.series.ident %}
+{% capture permalink %}{{ site.url }}/series/{{ include.series.ident }}/{{ include.video.ident }}/{% endcapture %}
+{% endif %}
+
+
+<style type="text/css" scoped>
+  @media (max-width: 499px) {
+    .HeroVideo-imageWrap { background-image: url({{ heroImageMobile }}); }
+  }
+  @media (min-width: 500px) {
+    .HeroVideo-imageWrap { background-image: url({{ heroImageTablet }}); }
+  }
+  @media (min-width: 900px) {
+    .HeroVideo-imageWrap { background-image: url({{ heroImageDesktop }}); }
+  }
+</style>
 
 <div class="HeroVideo" hero-video>
   <div class="HeroVideo-container">
@@ -14,7 +39,7 @@
     <!--</div>-->
 
     <div class="HeroVideo-imageWrap">
-      <img class="HeroVideo-image" src="{{ heroImage }}">
+      <!--<img class="HeroVideo-image" src="{{ heroImage }}">-->
     </div>
 
     <div class="HeroVideo-info">
@@ -49,18 +74,20 @@
     </div>
 
     <div class="HeroVideo-actions">
-      <a class="HeroVideo-actionsItem">
+      <a class="HeroVideo-actionsItem" href="https://www.facebook.com/dialog/share?app_id=1592691894327442&display=popup&href={{ permalink }}&redirect_uri={{ site.url }}">
         <svg class="HeroVideo-action" role="img" title="Share on Facebook">
           <use xlink:href="/build/images/video.svg#facebook"></use>
         </svg>
         <span class="HeroVideo-actionText">share</span>
       </a>
-      <span class="HeroVideo-actionsItem">
+      <!-- https://dev.twitter.com/web/intents -->
+      <!-- We are using the "Limited Dependencies" code -->
+      <a href="https://twitter.com/intent/tweet?text=Check+it+out&url={{ permalink }}" class="HeroVideo-actionsItem">
         <svg class="HeroVideo-action" role="img" title="Tweet it">
           <use xlink:href="/build/images/video.svg#twitter"></use>
         </svg>
         <span class="HeroVideo-actionText">tweet</span>
-      </span>
+      </a>
       <span class="HeroVideo-actionsItem">
         <svg class="HeroVideo-action" role="img" title="Email a friend">
           <use xlink:href="/build/images/video.svg#email"></use>

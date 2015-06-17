@@ -204,16 +204,16 @@
     }
   }
 
-}
+  .Nav-background {
+    position: fixed;
+    top:      0;
+    right:    0;
+    left:     0;
+    z-index:  @z-index-nav-background;
+    display:  block;
+    width:    100%;
+    height:   (@Nav-height-lg * 1.6);
+    #gradient> .vertical(rgba(0, 0, 0, 0.34), transparent, 0%, 100%); // Shows behind nav
+  }
 
-.Nav-background {
-  position: fixed;
-  top:      0;
-  right:    0;
-  left:     0;
-  z-index:  @z-index-nav-background;
-  display:  block;
-  width:    100%;
-  height:   (@Nav-height-lg * 1.6);
-  #gradient> .vertical(rgba(0, 0, 0, 0.34), transparent, 0%, 100%); // Shows behind nav
 }

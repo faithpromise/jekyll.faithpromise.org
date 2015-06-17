@@ -8,6 +8,10 @@ layout: default
 
 {% capture heading %}&quot;{{ series.title }}&quot; Series{% endcapture %}
 
+{% if series.is_official_series != true %}
+{% assign heading = null %}
+{% endif %}
+
 <style type="text/css" scoped>
   @media (min-width: 900px) {
     .Hero--series-{{ series.ident }} { background-image: url({{ site.paths.series_images}}{{ series.ident }}-wide-blur.jpg); }
@@ -19,10 +23,13 @@ layout: default
 <div class="Content" content-scroll>
   <div class="Container">
 
+    {% if series.is_official_series %}
+
     <div class="Section">
 
       <div class="PageHeader">
         <div class="PageHeader-container">
+
           <a href="{{ site.urls.series }}{{ series.ident }}/"><img class="PageHeader-thumb" src="{{ site.paths.series_images}}{{ series.ident }}-square.jpg"></a>
 
           <div class="PageHeader-titles">
@@ -36,5 +43,9 @@ layout: default
       {% include playlist.html playlist=playlist selected=video.ident %}
 
     </div>
+
+    {% endif %}
+
   </div>
+
 </div>
