@@ -6,7 +6,7 @@ nav_style: solid
 ---
 
 <!-- Series -->
-{% assign series = site.series | sort: 'publish_on' | reverse %}
+{% assign series = site.series | where:'is_official_series', true | sort: 'publish_on' | reverse %}
 {% assign current_series = series | first %}
 
 <!-- Latest sermon -->
