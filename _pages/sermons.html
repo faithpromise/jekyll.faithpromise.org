@@ -40,7 +40,7 @@ nav_style: solid
             <h4 class="SeriesGallery-subtitle">
 
               {% if item.begin_on > site.time or latest_sermon_series.ident == item.ident %}
-                <series-date starts="{{ item.begin_on }}" next-series-starts="{{ next_series_starts }}"></series-date>
+                <series-date starts="{{ item.starts_on }}" next-series-starts="{{ next_series_starts }}"></series-date>
               {% else %}
                 {{ item.begin_on | date: "%b, %Y" }}
               {% endif %}
