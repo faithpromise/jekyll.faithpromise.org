@@ -48,10 +48,12 @@
     display:        inline-block;
     line-height:    1.3;
     vertical-align: middle;
+
   }
 
   .SeriesGallery-title {
     .to-rem(font-size, @font-size);
+    .text-truncate();
     font-weight: @font-weight-regular;
   }
 
@@ -92,6 +94,7 @@
   .SeriesGallery-title {
     .to-rem(margin-bottom, 3);
     .to-rem(font-size, 16);
+    .text-truncate();
     display:        block;
     text-transform: uppercase;
     font-weight:    @font-weight-regular;

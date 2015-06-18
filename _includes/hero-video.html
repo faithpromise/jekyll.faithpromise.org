@@ -63,12 +63,16 @@
       </div>
 
       <div class="HeroVideo-buttons">
-        <span class="HeroVideo-button" ng-click="openVideo({{ include.video.vimeo_id }})">
-          <i class="icon-play"></i> Watch
-        </span>
-        <span class="HeroVideo-button">
-          <i class="icon-headphones"></i> Listen
-        </span>
+        {% if include.video.vimeo_id %}
+          <span class="HeroVideo-button" ng-click="openVideo({{ include.video.vimeo_id }})">
+            <i class="icon-play"></i> Watch
+          </span>
+        {% endif %}
+        {% if include.video.audio_file_name %}
+          <a class="HeroVideo-button" href="{{ site.urls.mp3 }}{{ include.video.audio_file_name }}" target="_blank">
+            <i class="icon-headphones"></i> Listen
+          </a>
+        {% endif %}
       </div>
 
     </div>

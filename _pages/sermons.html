@@ -47,13 +47,13 @@ nav_style: solid
               Current series
               {% endif %}
 
-              {% if item.ident != current_series.ident %}
-              {% assign videos = site.videos | where:"series", item.ident | sort:"publish_on" %}
+              {% assign videos = site.videos | where:"series", item.ident | where:"type", "sermon" | sort:"publish_on" %}
               {% assign first_video = videos | first %}
+              {% if item.ident != current_series.ident %}
               {{ first_video.publish_on | date: "%b, %Y" }}
-              {% if videos.size > 0 %}
-              &nbsp;&middot;&nbsp; {{ videos.size }} video{% if videos.size <> 1 %}s{% endif %}
               {% endif %}
+              {% if videos.size > 0 %}
+              &nbsp;&middot;&nbsp; {{ videos.size }} message{% if videos.size <> 1 %}s{% endif %}
               {% endif %}
             </h4>
           </div>
