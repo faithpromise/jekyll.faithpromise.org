@@ -41,6 +41,7 @@ urls:
   staff: /staff/
   events: /events/
   series: /series/
+  mp3: //fpcresources.org/audio/
 
 paths:
   images: /build/images/
