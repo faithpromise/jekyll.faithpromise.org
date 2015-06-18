@@ -15,12 +15,14 @@ layout: default
 {% capture imgUrl_wide %}{{ site.paths.series_images }}{{ series.ident }}-wide.jpg{% endcapture %}
 {% capture imgUrl_square %}{{ site.paths.series_images }}{{ series.ident }}-square.jpg{% endcapture %}
 
+{% if series.is_official_series %}
 <style type="text/css" scoped>
   .Hero--series-{{ series.ident }} { background-image: url({{ site.paths.series_images}}{{ series.ident }}-square.jpg); }
   @media (min-aspect-ratio: 5/8) {
     .Hero--series-{{ series.ident }} { background-image: url({{ site.paths.series_images}}{{ series.ident }}-wide.jpg); }
   }
 </style>
+{% endif %}
 
 <div class="Hero Hero--series-{{ series.ident }}"></div>
 
