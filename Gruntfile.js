@@ -135,6 +135,24 @@ module.exports = function (grunt) {
                             dest: 'build/fontello.css.tmp'
                         }
                     ]
+                },
+                facebook_id: {
+                    options: {
+                        patterns: [
+                            {
+                                match: '1592691894327442',
+                                replacement: '1592675454329086'
+                            }
+                        ],
+                        usePrefix: false
+                    },
+                    files: [
+                        {
+                            expand: false,
+                            src: ['public/**/*.html'],
+                            dest: './'
+                        }
+                    ]
                 }
             },
             htmlbuild: {
@@ -315,6 +333,7 @@ module.exports = function (grunt) {
         'css_production',
         'shell:jekyllClean',
         'shell:jekyllBuild',
+        'replace:facebook_id',
         'htmlbuild:production',
         'cacheBust:production'
     ]);
