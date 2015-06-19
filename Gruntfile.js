@@ -311,12 +311,16 @@ module.exports = function (grunt) {
     // Register tasks
     grunt.registerTask('default', ['build_dev']);
 
-    grunt.registerTask('build_dev', [
+    grunt.registerTask('build_common', [
         'clean:build',
         'optimize_images',
         'copy',
         'html2js',
         'svgstore:default',
+    ]);
+
+    grunt.registerTask('build_dev', [
+        'build_common',
         'css_dev',
         'concat:js_dev',
         'shell:jekyllClean',
@@ -324,16 +328,22 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('build_production', [
-        'clean:build',
-        'optimize_images',
-        'copy',
-        'html2js',
-        'svgstore:default',
+        'build_common',
         'js_production',
         'css_production',
         'shell:jekyllClean',
         'shell:jekyllBuild',
         'replace:facebook_id',
+        'htmlbuild:production',
+        'cacheBust:production'
+    ]);
+
+    grunt.registerTask('build_staging', [
+        'build_common',
+        'js_production',
+        'css_production',
+        'shell:jekyllClean',
+        'shell:jekyllBuild',
         'htmlbuild:production',
         'cacheBust:production'
     ]);
@@ -367,8 +377,14 @@ module.exports = function (grunt) {
         'serve'
     ]);
 
-    grunt.registerTask('deploy', [
+    grunt.registerTask('deploy_production', [
         'build_production',
+        'gh-pages',
+        'build_dev'
+    ]);
+
+    grunt.registerTask('deploy_staging', [
+        'build_staging',
         'gh-pages',
         'build_dev'
     ]);
