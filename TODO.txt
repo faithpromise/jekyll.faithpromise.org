@@ -1,4 +1,0 @@
-
-
-# TODO: Create robots.txt file and ignore /partials
-# TODO: Copy over PDF files etc from old sites /assets folder
