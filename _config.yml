@@ -32,6 +32,9 @@ collections:
     permalink: /series/:path/
   videos:
     output: true
+  topics:
+    output: true
+    permalink: /topics/:path/
   redirects:
     output: true
 
