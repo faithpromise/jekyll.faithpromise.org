@@ -26,6 +26,8 @@
       url: "/students/"
     - title: "Young Adults"
       url: "/youngadults/"
+    - title: "Adult Groups"
+      url: "/groups/"
     - title: "Men's Groups"
       url: "/men/"
     - title: "Women's Groups"
