@@ -191,8 +191,12 @@ module.exports = function (grunt) {
                     tasks: ['concat:js_dev', 'shell:jekyllBuild']
                 },
                 html: {
-                    files: ['**/*.html', '**/*.yml', '!bower_components/**/*.*', '!node_modules/**/*.*', '!public/**/*.*'],
+                    files: ['{_includes,_layouts,_pages,_posts}/**/*.html'],
                     tasks: ['shell:jekyllBuild']
+                },
+                collections: {
+                    files: ['{_campuses,_series,_staff,_topics,_videos}/**/*.html'],
+                    tasks: ['shell:jekyllClean','shell:jekyllBuild']
                 },
                 images: {
                     files: ['_images/**/*.{png,jpg,gif}'],
@@ -341,8 +345,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('startup', [
         'build_dev',
-        'serve',
-        'watch'
+        'serve'
     ]);
 
     grunt.registerTask('deploy', [
