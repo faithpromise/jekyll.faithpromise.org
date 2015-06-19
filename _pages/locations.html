@@ -1,0 +1,146 @@
+---
+layout: page
+title: Locations
+permalink: /locations/
+---
+
+<!--TODO: Add page content-->
+
+<div class="Content">
+
+  <div class="LocationFinder">
+    <div class="LocationFinder-listWrap">
+      <ul class="LocationList">
+        {% for location in site.campuses %}
+        {% if location.lat %}
+        <li class="LocationList-item" onclick="fpMap.openLocation('{{ location.ident }}');">
+          <h2 class="LocationList-title">{{ location.title }}</h2>
+
+          <p class="LocationList-location">{{ location.location }}</p>
+
+          <p class="LocationList-address">
+            {{ location.address }}<br>
+            {{ location.city }}, {{ location.state }} {{ location.zip }}
+          </p>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="LocationFinder-mapWrap">
+      <div id="LocationsMap" class="LocationFinder-map"></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  //@formatter:off
+  window.fp = window.fp || {};
+  window.fp.locations = {% include locations-markers-json.html %};
+  //@formatter:on
+</script>
+
+<script>
+
+  var fpMap = (function (window, locations) {
+
+    var map,
+        markers = {},
+        campusWindow;
+
+    window.initLocationsMap = initLocationsMap;
+    window.onload = loadScript;
+
+    return {
+      openLocation: openCampusWindow
+    };
+
+    function initLocationsMap() {
+
+      createMap();
+      createInfoWindow();
+      createCampusMarkers();
+
+      google.maps.event.addListener(map, "click", function () {
+        campusWindow.close();
+      });
+
+    };
+
+    function createMap() {
+      map = new google.maps.Map(document.getElementById('LocationsMap'), {
+        zoom: 10,
+        scrollwheel: false,
+        center: new google.maps.LatLng(36.0451505, -84.059758)
+      });
+    }
+
+    function createInfoWindow() {
+      campusWindow = new google.maps.InfoWindow({});
+    }
+
+    function createCampusMarkers() {
+      var campus_ident;
+      for (var campus in locations) {
+        if (locations.hasOwnProperty(campus)) {
+          campus_ident = locations[campus].ident;
+          markers[campus_ident] = createMarker(map, locations[campus]);
+        }
+      }
+    }
+
+    function createMarker(map, campus) {
+
+      var marker = new google.maps.Marker({
+        map: map,
+        position: new google.maps.LatLng(campus.lat, campus.lng)
+      });
+
+      google.maps.event.addListener(marker, 'click', function () {
+        openCampusWindow(campus.ident);
+      });
+
+      return marker;
+
+    }
+
+    function openCampusWindow(campus_ident) {
+
+      var campus = locations[campus_ident],
+          marker = markers[campus_ident],
+          content;
+
+      content =
+              '<div class="CampusPopup">' +
+              '<h1 class="CampusPopup-title">' +
+              campus.title +
+              '</h1>' +
+              '<h2 class="CampusPopup-subtitle">Address</h2>' +
+              '<p class="CampusPopup-address">' +
+//              (campus.location.length ? (campus.location + '<br>') : '') +
+              campus.address + '<br>' +
+              campus.city + ', ' + campus.state + ' ' + campus.zip + '<br>' +
+              '<a href="">Get Directions</a>' +
+              '</p>' +
+              '<h2 class="CampusPopup-subtitle">Service Times</h2>' +
+              '<p>' +
+                      campus.times.join('<br>')
+              '</p>' +
+              '<h2 class="CampusPopup-subtitle">Contact</h2>' +
+              '</div>';
+
+      campusWindow.setContent(content);
+      campusWindow.open(map, marker);
+    }
+
+    function loadScript() {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
+      '&signed_in=true&callback=initLocationsMap';
+      document.body.appendChild(script);
+    }
+
+  }(window, window.fp.locations));
+</script>

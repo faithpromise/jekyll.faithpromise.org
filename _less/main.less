@@ -158,3 +158,63 @@ a {
 //.VideoPopup-container {
 //  &:extend(.Container);
 //}
+
+.LocationFinder {
+  font-size: 0;
+}
+
+.LocationFinder-listWrap,
+.LocationFinder-mapWrap {
+  .to-rem(font-size, @font-size);
+  display: inline-block;
+}
+
+.LocationFinder-listWrap {
+  width: 33%;
+}
+
+.LocationFinder-mapWrap {
+  width: 67%;
+}
+
+.LocationList {
+  background-color: #fff;
+  overflow:         auto;
+}
+
+.LocationList-item {
+  cursor:      pointer;
+  user-select: none;
+}
+
+.LocationList-location {
+  margin: 0;
+}
+
+.LocationFinder-map {
+  min-height: 700px;
+  width:      100%;
+}
+
+.LocationList-title {
+  .to-rem(font-size, 18);
+  margin: 0;
+}
+
+/* ---------- */
+
+@CampusPopup-font-size: 18;
+
+.CampusPopup {
+  .to-rem(font-size, 18);
+ }
+
+.CampusPopup-title {
+  .to-em(font-size, 28, @CampusPopup-font-size);
+  .to-em(margin, 10 0, @CampusPopup-font-size);
+}
+
+.CampusPopup-subtitle {
+  .to-em(font-size, 20, @CampusPopup-font-size);
+  .to-em(margin, 10 0 5, @CampusPopup-font-size);
+}

@@ -1,6 +1,3 @@
-- title: "Home"
-  url: "/"
-
 - title: "About"
   subnav:
     - title: "What to Expect"
@@ -15,6 +12,9 @@
       url: "/h4h/"
     - title: "Contact Us"
       url: "/contact/"
+
+- title: "Locations"
+  url: "/locations/"
 
 - title: "Ministries"
   subnav:

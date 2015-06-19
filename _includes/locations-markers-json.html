@@ -1,0 +1,21 @@
+{% assign counter = 0 %}
+
+{
+  {% for location in site.campuses %}
+    {% if location.lat %}
+      {% if counter > 0 %},{% endif %}
+      {{ location.ident }}: {
+        "ident": {{ location.ident | jsonify }},
+        "title": {{ location.title | jsonify }},
+        "location": {{ location.location | jsonify }},
+        "address": {{ location.address | jsonify }},
+        "city": {{ location.city | jsonify }},
+        "zip": {{ location.zip | jsonify }},
+        "lat": {{ location.lat | jsonify }},
+        "lng": {{ location.lng | jsonify }},
+        "times": {{ location.times | jsonify }}
+      }
+      {% assign counter = counter | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+}

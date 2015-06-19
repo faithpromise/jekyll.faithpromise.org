@@ -16,7 +16,8 @@ include: ['_pages']
 # Collections
 collections:
   campuses:
-    output: false
+    output: true
+    permalink: /locations/:path/
   teams:
     output: false
   missions:
