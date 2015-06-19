@@ -24,6 +24,9 @@ collections:
   staff:
     output: true
     permalink: /staff/:path/
+  ministries:
+    output: true
+    permalink: /:path/
   events:
     output: true
     permalink: /events/:path/
