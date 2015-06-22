@@ -41,19 +41,22 @@ permalink: /locations/
   //@formatter:on
 </script>
 
-<script>
+<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<script src="//google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js"></script>
 
+<script>
   var fpMap = (function (window, locations) {
 
     var map,
         markers = {},
         campusWindow;
 
-    window.initLocationsMap = initLocationsMap;
-    window.onload = loadScript;
+
+    google.maps.event.addDomListener(window, 'load', initLocationsMap);
 
     return {
-      openLocation: openCampusWindow
+      openLocation: openCampusWindow,
+      closeCampusWindow: closeCampusWindow
     };
 
     function initLocationsMap() {
@@ -63,10 +66,10 @@ permalink: /locations/
       createCampusMarkers();
 
       google.maps.event.addListener(map, "click", function () {
-        campusWindow.close();
+        closeCampusWindow();
       });
 
-    };
+    }
 
     function createMap() {
       map = new google.maps.Map(document.getElementById('LocationsMap'), {
@@ -77,7 +80,18 @@ permalink: /locations/
     }
 
     function createInfoWindow() {
-      campusWindow = new google.maps.InfoWindow({});
+      var firstCampus = locations[Object.keys(locations)[0]];
+      campusWindow = new InfoBox({
+        content: createCampusContent(firstCampus),
+        alignBottom: true,
+        infoBoxClearance: new google.maps.Size(20, 40),
+        enableEventPropagation: false,
+        maxWidth: 320,
+        pixelOffset: new google.maps.Size(-160, -55),
+        disableAutoPan: false,
+        closeBoxURL: ''
+      });
+      console.log(campusWindow);
     }
 
     function createCampusMarkers() {
@@ -111,35 +125,45 @@ permalink: /locations/
           marker = markers[campus_ident],
           content;
 
-      content =
-              '<div class="CampusPopup">' +
-              '<h1 class="CampusPopup-title">' +
-              campus.title +
-              '</h1>' +
-              '<h2 class="CampusPopup-subtitle">Address</h2>' +
-              '<p class="CampusPopup-address">' +
-//              (campus.location.length ? (campus.location + '<br>') : '') +
-              campus.address + '<br>' +
-              campus.city + ', ' + campus.state + ' ' + campus.zip + '<br>' +
-              '<a href="">Get Directions</a>' +
-              '</p>' +
-              '<h2 class="CampusPopup-subtitle">Service Times</h2>' +
-              '<p>' +
-                      campus.times.join('<br>')
-              '</p>' +
-              '<h2 class="CampusPopup-subtitle">Contact</h2>' +
-              '</div>';
+      content = createCampusContent(campus);
 
       campusWindow.setContent(content);
       campusWindow.open(map, marker);
     }
 
-    function loadScript() {
-      var script = document.createElement('script');
-      script.type = 'text/javascript';
-      script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
-      '&signed_in=true&callback=initLocationsMap';
-      document.body.appendChild(script);
+    function closeCampusWindow() {
+      campusWindow.close();
+    }
+
+    function createCampusContent(campus) {
+      var content =
+                  '<div class="LocationWindow">' +
+                  '<img class="LocationWindow-photo" src="/build/images/locations/' + campus.ident + '-wide.jpg">' +
+                  '<div class="LocationWindow-body">' +
+                  '<h1 class="LocationWindow-title">' +
+                  campus.title +
+                  '</h1>' +
+                  '<p class="LocationWindow-address">' +
+//              (campus.location.length ? (campus.location + '<br>') : '') +
+                  campus.address + '<br>' +
+                  campus.city + ', ' + campus.state + ' ' + campus.zip + '<br>' +
+                  '<a href="' + campus.directions_url + '">Get Directions</a>' +
+                  '</p>' +
+                  '<h2 class="LocationWindow-subtitle">Service Times</h2>' +
+                  '<p>' +
+                  campus.times.join('<br>') +
+                  '</p>' +
+                  '</div>' +
+                  '<div class="LocationWindow-footer">' +
+                  '<span class="LocationWindow-phone">865-555-1234</span>' +
+                  '<span class="LocationWindow-moreWrap">' +
+                  '<a class="LocationWindow-more" href="' + campus.url + '">More Details</a>' +
+                  '</span>' +
+                  '</div>' +
+                  '<span class="LocationWindow-close" onclick="fpMap.closeCampusWindow();"></span>' +
+                  '<span class="LocationWindow-arrow"></span>'
+      '</div>';
+      return content;
     }
 
   }(window, window.fp.locations));

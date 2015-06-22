@@ -10,10 +10,14 @@
         "location": {{ location.location | jsonify }},
         "address": {{ location.address | jsonify }},
         "city": {{ location.city | jsonify }},
+        "state": {{ location.state | jsonify }},
         "zip": {{ location.zip | jsonify }},
         "lat": {{ location.lat | jsonify }},
         "lng": {{ location.lng | jsonify }},
-        "times": {{ location.times | jsonify }}
+        "times": {{ location.times | jsonify }},
+        "url": {{ location.url | jsonify }},
+        "map_url": {{ location.map_url | jsonify }},
+        "directions_url": {{ location.directions_url | jsonify }}
       }
       {% assign counter = counter | plus: 1 %}
     {% endif %}
