@@ -17,7 +17,7 @@
     <meta property="og:description" content="Locations">
     
 
-<link type="text/css" rel="stylesheet" href="/build/main.min.css?b49ebd308d627c53" />
+<link type="text/css" rel="stylesheet" href="/build/main.min.css?432e4b06339c99fb" />
 
     <link rel="canonical" href="http://faithpromise.org/locations/">
   </head>
@@ -255,7 +255,7 @@
         
         
         
-        <li class="LocationList-item" onclick="fpMap.openLocation('pel');">
+        <li class="LocationList-item" onclick="fpMap.openLocation('pellissippi');">
           <h2 class="LocationList-title">Pellissippi Campus</h2>
 
           <p class="LocationList-location">West Knoxville, TN</p>
@@ -291,10 +291,14 @@
         "location": "Clinton, TN",
         "address": "96 Mariner Point Dr",
         "city": "Clinton",
+        "state": "TN",
         "zip": "37716",
         "lat": "36.07426",
         "lng": "-84.16326",
-        "times": ["Sundays at 10:30 am"]
+        "times": ["Sundays at 10:30 am"],
+        "url": "/locations/anderson/",
+        "map_url": "https://goo.gl/maps/Vntqq",
+        "directions_url": "https://goo.gl/maps/8PjfC"
       }
       
     
@@ -307,10 +311,14 @@
         "location": "Maryville, TN",
         "address": "539 North Foothills Plaza Drive",
         "city": "Maryville",
+        "state": "TN",
         "zip": "37801",
         "lat": "35.74338",
         "lng": "-83.99434",
-        "times": ["Sundays at 9:00, 10:15, & 11:30 am"]
+        "times": ["Sundays at 9:00, 10:15, & 11:30 am"],
+        "url": "/locations/blount/",
+        "map_url": "https://goo.gl/maps/bgo00",
+        "directions_url": "https://goo.gl/maps/JPeuK"
       }
       
     
@@ -323,10 +331,14 @@
         "location": "LaFollette, TN",
         "address": "2301 Jacksboro Pike Suite 3",
         "city": "LaFollette",
+        "state": "TN",
         "zip": "37766",
         "lat": "36.34477",
         "lng": "-84.16185",
-        "times": ["Sundays at 10:30 am"]
+        "times": ["Sundays at 10:30 am"],
+        "url": "/locations/campbell/",
+        "map_url": "https://goo.gl/maps/ypsrw",
+        "directions_url": "https://goo.gl/maps/gWW6y"
       }
       
     
@@ -339,10 +351,14 @@
         "location": "North Knoxville, TN",
         "address": "5830 Haynes-Sterchi Road",
         "city": "Knoxville",
+        "state": "TN",
         "zip": "37912",
         "lat": "36.02564",
         "lng": "-83.96852",
-        "times": ["Sundays at 9:30 & 11:00 am"]
+        "times": ["Sundays at 9:30 & 11:00 am"],
+        "url": "/locations/north/",
+        "map_url": "https://goo.gl/maps/khSGr",
+        "directions_url": "https://goo.gl/maps/cFj4L"
       }
       
     
@@ -351,16 +367,20 @@
   
     
       ,
-      pel: {
-        "ident": "pel",
+      pellissippi: {
+        "ident": "pellissippi",
         "title": "Pellissippi Campus",
         "location": "West Knoxville, TN",
         "address": "10740 Faith Promise Lane",
         "city": "Knoxville",
+        "state": "TN",
         "zip": "37931",
         "lat": "35.96411",
         "lng": "-84.16774",
-        "times": ["Saturdays at 6:00 pm","Sundays at 8:45, 10:00, & 11:30 am"]
+        "times": ["Saturdays at 6:00 pm","Sundays at 8:45, 10:00, & 11:30 am"],
+        "url": "/locations/pellissippi/",
+        "map_url": "https://goo.gl/maps/0uDbp",
+        "directions_url": "https://goo.gl/maps/SQgvq"
       }
       
     
@@ -369,19 +389,22 @@
   //@formatter:on
 </script>
 
-<script>
+<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<script src="//google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js"></script>
 
+<script>
   var fpMap = (function (window, locations) {
 
     var map,
         markers = {},
         campusWindow;
 
-    window.initLocationsMap = initLocationsMap;
-    window.onload = loadScript;
+
+    google.maps.event.addDomListener(window, 'load', initLocationsMap);
 
     return {
-      openLocation: openCampusWindow
+      openLocation: openCampusWindow,
+      closeCampusWindow: closeCampusWindow
     };
 
     function initLocationsMap() {
@@ -391,10 +414,10 @@
       createCampusMarkers();
 
       google.maps.event.addListener(map, "click", function () {
-        campusWindow.close();
+        closeCampusWindow();
       });
 
-    };
+    }
 
     function createMap() {
       map = new google.maps.Map(document.getElementById('LocationsMap'), {
@@ -405,7 +428,18 @@
     }
 
     function createInfoWindow() {
-      campusWindow = new google.maps.InfoWindow({});
+      var firstCampus = locations[Object.keys(locations)[0]];
+      campusWindow = new InfoBox({
+        content: createCampusContent(firstCampus),
+        alignBottom: true,
+        infoBoxClearance: new google.maps.Size(20, 40),
+        enableEventPropagation: false,
+        maxWidth: 320,
+        pixelOffset: new google.maps.Size(-160, -55),
+        disableAutoPan: false,
+        closeBoxURL: ''
+      });
+      console.log(campusWindow);
     }
 
     function createCampusMarkers() {
@@ -439,35 +473,45 @@
           marker = markers[campus_ident],
           content;
 
-      content =
-              '<div class="CampusPopup">' +
-              '<h1 class="CampusPopup-title">' +
-              campus.title +
-              '</h1>' +
-              '<h2 class="CampusPopup-subtitle">Address</h2>' +
-              '<p class="CampusPopup-address">' +
-//              (campus.location.length ? (campus.location + '<br>') : '') +
-              campus.address + '<br>' +
-              campus.city + ', ' + campus.state + ' ' + campus.zip + '<br>' +
-              '<a href="">Get Directions</a>' +
-              '</p>' +
-              '<h2 class="CampusPopup-subtitle">Service Times</h2>' +
-              '<p>' +
-                      campus.times.join('<br>')
-              '</p>' +
-              '<h2 class="CampusPopup-subtitle">Contact</h2>' +
-              '</div>';
+      content = createCampusContent(campus);
 
       campusWindow.setContent(content);
       campusWindow.open(map, marker);
     }
 
-    function loadScript() {
-      var script = document.createElement('script');
-      script.type = 'text/javascript';
-      script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
-      '&signed_in=true&callback=initLocationsMap';
-      document.body.appendChild(script);
+    function closeCampusWindow() {
+      campusWindow.close();
+    }
+
+    function createCampusContent(campus) {
+      var content =
+                  '<div class="LocationWindow">' +
+                  '<img class="LocationWindow-photo" src="/build/images/locations/' + campus.ident + '-wide.jpg">' +
+                  '<div class="LocationWindow-body">' +
+                  '<h1 class="LocationWindow-title">' +
+                  campus.title +
+                  '</h1>' +
+                  '<p class="LocationWindow-address">' +
+//              (campus.location.length ? (campus.location + '<br>') : '') +
+                  campus.address + '<br>' +
+                  campus.city + ', ' + campus.state + ' ' + campus.zip + '<br>' +
+                  '<a href="' + campus.directions_url + '">Get Directions</a>' +
+                  '</p>' +
+                  '<h2 class="LocationWindow-subtitle">Service Times</h2>' +
+                  '<p>' +
+                  campus.times.join('<br>') +
+                  '</p>' +
+                  '</div>' +
+                  '<div class="LocationWindow-footer">' +
+                  '<span class="LocationWindow-phone">865-555-1234</span>' +
+                  '<span class="LocationWindow-moreWrap">' +
+                  '<a class="LocationWindow-more" href="' + campus.url + '">More Details</a>' +
+                  '</span>' +
+                  '</div>' +
+                  '<span class="LocationWindow-close" onclick="fpMap.closeCampusWindow();"></span>' +
+                  '<span class="LocationWindow-arrow"></span>'
+      '</div>';
+      return content;
     }
 
   }(window, window.fp.locations));
