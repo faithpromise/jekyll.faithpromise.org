@@ -1,0 +1,18 @@
+<div class="Faq">
+  <div class="Faq-container">
+    <h2 class="Faq-title">Common Questions</h2>
+
+    <ul class="Faq-list">
+      {% for faq in include.faq %}
+      <li class="Faq-item">
+        <h3 class="Faq-question">{{ faq.q }}</h3>
+
+        <div class="Faq-answer">
+          {{ faq.a }}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+
+  </div>
+</div>

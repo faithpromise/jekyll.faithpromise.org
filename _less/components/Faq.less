@@ -1,0 +1,37 @@
+
+.Faq {
+  &:extend(.Section);
+}
+
+.Faq-container {
+  &:extend(.Section-container);
+  .to-rem(padding-right, 60);
+  .to-rem(padding-left, 60);
+}
+
+.Faq-title {
+  &:extend(.h2);
+  .to-em(margin-bottom, (@line-height * 3), @Section-title-font-size);
+  text-align: center;
+}
+
+.Faq-list {
+  &:extend(.grid);
+  .to-rem(margin-left, -@grid-gutter-double);
+}
+
+.Faq-item {
+  &:extend(.grid-item);
+  .to-rem(font-size, @Card-font-size);
+  .to-rem(padding-left, @grid-gutter-double);
+  .to-rem(margin-bottom, (@grid-gutter-base * 1.5));
+
+  @media (min-width: 64rem) {
+    width: 50%;
+  }
+
+}
+
+.Faq-question {
+  &:extend(.h4);
+}

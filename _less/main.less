@@ -15,19 +15,27 @@
   Variables
 */
 @import "variables/colors";
+@import "variables/headings";
 @import "variables/modals";
 @import "variables/z-index";
 /*
   Mixins
 */
+@import "mixins/box-shadow-helper";
 @import "mixins/link-color";
 @import "mixins/to-em";
 /*
+  Base
+*/
+@import "components/headings";
+/*
   Components
 */
+@import "components/Card";
 @import "components/Container";
 @import "components/Content";
 //@import "components/Featured";
+@import "components/Faq";
 @import "components/Hero";
 @import "components/HeroVideo";
 @import "components/Layout";
@@ -42,6 +50,7 @@
 @import "components/PageFilters";
 @import "components/PageHeader";
 @import "components/Playlist";
+@import "components/Section";
 @import "components/SeriesGallery";
 @import "components/StaffGallery";
 @import "components/StaffHeader";
@@ -59,7 +68,7 @@ html {
   font-size: 100%; // 16px
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 760px) {
   html {
     font-size: 93.75%; // 14px
   }
@@ -81,42 +90,28 @@ a {
   }
 }
 
-@root-text-color: #555;
+.max-sentence-width {
+  .to-em(max-width, 700, @Section-font-size);
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+@root-text-color: #444;
+@anchor-text-color: #2176a9;
 
 @font-weight-light: 300;
 @font-weight-regular: 400;
-@font-weight-bold: 600;
-@font-weight-heavy: 600;
-
-@Section-vertical-padding: 48;
+@font-weight-bold: 500;
+@font-weight-heavy: 500;
 
 .PageTitles {
   .to-rem(margin, 43 0);
 }
 
-.Section-title {
-  .to-rem(font-size, 28);
-  .to-rem(margin, @Section-vertical-padding 0);
-  font-weight: @font-weight-light;
-
-  .Section-titles > & {
-    margin:      0;
-    line-height: 1.3;
-  }
-}
-
-.Section-subtitle {
-  .to-rem(font-size, 16);
-  line-height: 1;
-  font-weight: @font-weight-light;
-}
-
 .HeroPlayer {
   box-shadow: 0 0 16px rgba(0, 0, 0, .4);
-}
-
-.Section {
-  .to-rem(padding, 60 0);
 }
 
 /*
@@ -161,8 +156,6 @@ a {
 //.VideoPopup-container {
 //  &:extend(.Container);
 //}
-
-
 
 /* ---------- */
 
