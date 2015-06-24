@@ -67,9 +67,9 @@
 @media (min-width: 600px) {
 
   .SeriesGallery {
-    max-width: @ContainerMaxWidth;
+    .to-rem(max-width, @ContainerMaxWidth);
+    .to-rem(padding, @ContainerHorizontalPadding);
     margin:    0 auto;
-    padding:   0 @ContainerHorizontalPadding;
   }
 
   .SeriesGallery-list {

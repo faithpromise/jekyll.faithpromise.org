@@ -1,9 +1,9 @@
-@ContainerMaxWidth: 1340px;
-@ContainerHorizontalPadding: 20px;
+@ContainerMaxWidth: 1340;
+@ContainerHorizontalPadding: (@grid-gutter-base * 1.5);
 @ContainerMaxInnerWidth: (@ContainerMaxWidth - (@ContainerHorizontalPadding * 2));
 
 .Container {
-  max-width: @ContainerMaxWidth;
-  margin:    0 auto;
-  padding:   0 @ContainerHorizontalPadding;
+  .to-rem(max-width, @ContainerMaxWidth);
+  .to-rem(padding, 0 @ContainerHorizontalPadding);
+  margin: 0 auto;
 }

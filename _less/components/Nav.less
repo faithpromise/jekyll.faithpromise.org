@@ -158,10 +158,10 @@
   }
 
   .Nav-container {
-    position:  relative;
-    max-width: @ContainerMaxWidth;
-    margin:    0 auto;
-    padding:   0 @ContainerHorizontalPadding;
+    .to-rem(max-width, @ContainerMaxWidth);
+    .to-rem(padding, 0 @ContainerHorizontalPadding);
+    position: relative;
+    margin:   0 auto;
   }
 
   .Nav-logoWrap {
