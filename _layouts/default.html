@@ -30,7 +30,7 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   </head>
 
-  <body class="navStyle--{{ nav_style }}" ng-controller="page">
+  <body class="navStyle--{{ nav_style }} {{ page.body_class }}" ng-controller="page">
 
     <!--{//% include facebook-sdk.html %}-->
 

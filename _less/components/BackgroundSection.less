@@ -1,0 +1,44 @@
+.BackgroundSection {
+  .to-rem(font-size, @Section-font-size);
+  .to-em(padding, 120 120 60, @Section-font-size);
+  position:            relative;
+  background-position: top center;
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  color:               #fff;
+
+  &:after {
+    content:    '';
+    position:   absolute;
+    bottom:     0;
+    left:       0;
+    width:      90%;
+    height:     100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 10%, transparent 90%);
+  }
+
+  &--right {
+    text-align: right;
+    &:after {
+      left:       auto;
+      right:      0;
+      background: linear-gradient(to left, rgba(0, 0, 0, 0.9) 10%, transparent 90%);
+    }
+  }
+
+  @media (max-width: 760px) {
+    &:after {
+      width:            100%;
+      background:       rgba(0, 0, 0, .65);
+      background-image: none;
+    }
+  }
+}
+
+.BackgroundSection-container {
+  .to-em(max-width, 390, @Section-font-size);
+  position:   relative;
+  z-index:    1;
+  display:    inline-block;
+  text-align: left;
+}
