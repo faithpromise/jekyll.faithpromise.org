@@ -2163,23 +2163,23 @@ angular.module("template/modal/window.html", []).run(["$templateCache", function
         var i,
             paragraph,
             heighest = 0,
-            textParagraphs = angular.element(elem).find('p');
+            cardBodies = angular.element(elem).find('div');
 
-        for(i = 0; i < textParagraphs.length; i++) {
+        for(i = 0; i < cardBodies.length; i++) {
 
-            paragraph = angular.element(textParagraphs[i]);
+            paragraph = angular.element(cardBodies[i]);
 
-            if (paragraph.hasClass('Card-text')) {
-                heighest = Math.max(textParagraphs[i].offsetHeight, heighest);
+            if (paragraph.hasClass('Card-body')) {
+                heighest = Math.max(cardBodies[i].offsetHeight, heighest);
             }
 
         }
 
-        for(i = 0; i < textParagraphs.length; i++) {
+        for(i = 0; i < cardBodies.length; i++) {
 
-            paragraph = angular.element(textParagraphs[i]);
+            paragraph = angular.element(cardBodies[i]);
 
-            if (paragraph.hasClass('Card-text')) {
+            if (paragraph.hasClass('Card-body')) {
                 paragraph.css('min-height', heighest + 'px');
             }
 
@@ -2245,6 +2245,34 @@ angular.module("template/modal/window.html", []).run(["$templateCache", function
 
 })(angular.module('app'), window.Waypoint);
 
+;(function (module, moment) {
+    'use strict';
+
+    module.directive('expireOn', directive);
+
+    function directive() {
+        return {
+            restrict: 'A',
+            link: Link
+        };
+    }
+
+    function Link(scope, elem, attr) {
+
+        var dateFormat = 'YYYY-MM-DD HH:mm:ss ZZ',
+            now = moment().utc(),
+            expire_date = moment(attr.expireOn, dateFormat).utc();
+
+        
+        
+
+        if (expire_date.isAfter(now)) {
+            elem.addClass('expire-on-show');
+        }
+
+    }
+
+})(angular.module('app'), moment);
 ;(function (module) {
     'use strict';
 
