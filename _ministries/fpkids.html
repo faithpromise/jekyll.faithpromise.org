@@ -1,7 +1,7 @@
 ---
 layout: page
 title: fpKids
-banner_image: /build/images/general/fpkids-wide.jpg
+hero_image: /build/images/general/fpkids-wide.jpg
 body_class: fpkids
 cards:
   - title: Kids Camp
@@ -21,6 +21,19 @@ cards:
     text: "Our overall mission and purpose of the Worship Ministry of Faith Promise Church is to provide tools for engaging the hearts of men and women to the heart of God."
     url_text: Details
     url: /worship/
+
+faq:
+  - q: 'I''m new. What do I do?'
+    a: 'First, we''re so glad to have you join us. There''s a special place at Faith Promise for your child to worship and grow in Christ. Please see our "Welcome to fpKids" page for an overview of what to expect when you visit.'
+
+  - q: 'When will my child move from one room to the next?'
+    a: '<p><strong>Nursery / Crawlers / Walkers</strong> - Generally these room transitions are based upon whether or not your baby is proficiently crawling/walking. For example, a toddler will remain in the Crawler room until he/she is walking the majority of the time without assistance.</p><p><strong>2 Years to PreK</strong> - Once your child turns 2 years old, their room transitions are based upon age. For example, the day your child turns 3 years old he/she will move to the 3 year old room.</p><p><strong>Kindergarten to 5th grade</strong> - Transitions change in elementary and follow the Knox County School calendar. When the new school year begins for Knox County, then we transition all our elementary students from one grade to the next.</p>'
+
+  - q: 'I want to serve in Kid''s Ministry! What do I do?'
+    a: '<p>We''d love to explore the best fit for you within in fpKIDS. To apply to serve in fpKIDS, contact <span class="#campusClass(''pel online'')#"><a href="mailto:fpKids@faithpromise.org">the fpKids office</a></span><span class="#campusClass(''blount'')#"><a href="mailto:AimeeF@faithpromise.org">Aimee Fair</a></span>.</p>'
+
+  - q: 'I still have questions. Where can I get more information?'
+    a: '<p>If you still have questions about fpKids, please contact <a href="mailto:fpkids@faithpromise.org">fpkids@faithpromise.org</a>.</p>'
 ---
 
 <div class="Content">
@@ -64,47 +77,6 @@ cards:
     </div>
   </div>
 
-  <div class="Faq Section--lightGrey">
-    <div class="Faq-container">
-      <h2 class="Faq-title">Common Questions</h2>
-      <ul class="Faq-list">
-        <li class="Faq-item">
-          <h3 class="Faq-question">When will my child move from one room to the next?</h3>
-
-          <div class="Faq-answer">
-            <p><strong>Nursery / Crawlers / Walkers</strong><br>
-              Generally these room transitions are based upon whether or not your baby is proficiently crawling/walking. For example, a toddler will remain in the Crawler room until he/she is walking the majority of the time without assistance.
-            </p>
-
-            <p><strong>2 Years to PreK</strong><br>
-              Once your child turns 2 years old, their room transitions are based upon age. For example, the day your child turns 3 years old he/she will move to the 3 year old room.
-            </p>
-
-            <p><strong>Kindergarten to 5th grade</strong><br>
-              Transitions change in elementary and follow the Knox County School calendar. When the new school year begins for Knox County, then we transition all our elementary students from one grade to the next.
-            </p>
-          </div>
-        </li>
-        <li class="Faq-item">
-          <h3 class="Faq-question">I want to serve in Kid's Ministry! What do I do?</h3>
-
-          <div class="Faq-answer">
-            <p>We'd love to explore the best fit for you within in fpKIDS. To apply to serve in fpKIDS, contact
-              <span class="#campusClass('pel online')#"><a href="mailto:fpKids@faithpromise.org">the fpKids office</a></span><span class="#campusClass('blount')#"><a href="mailto:AimeeF@faithpromise.org">Aimee Fair</a></span>.
-            </p>
-          </div>
-        </li>
-        <li class="Faq-item">
-          <h3 class="Faq-question">I still have questions. Where can I get more information?</h3>
-
-          <div class="Faq-answer">
-            <p>If you still have questions about fpKids, please contact
-              <a href="mailto:fpkids@faithpromise.org">fpkids@faithpromise.org</a>.</p>
-          </div>
-        </li>
-        <ul>
-    </div>
-  </div>
-
+  {% include faq.html faq=page.faq class='Section--lightGrey' %}
 
 </div>

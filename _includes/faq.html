@@ -1,7 +1,12 @@
-<div class="Faq">
-  <div class="Faq-container">
-    <h2 class="Faq-title">Common Questions</h2>
 
+{% assign faq_title = 'Common Questions' %}
+{% if include.title %}
+{% assign faq_title = include.title %}
+{% endif %}
+
+<div class="Faq {{ include.class }}">
+  <div class="Faq-container">
+    <h2 class="Faq-title">{{ faq_title }}</h2>
     <ul class="Faq-list">
       {% for faq in include.faq %}
       <li class="Faq-item">
@@ -13,6 +18,5 @@
       </li>
       {% endfor %}
     </ul>
-
   </div>
 </div>

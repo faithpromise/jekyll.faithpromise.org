@@ -1,3 +1,4 @@
+@Faq-font-size: 18;
 
 .Faq {
   &:extend(.Section);
@@ -22,7 +23,7 @@
 
 .Faq-item {
   &:extend(.grid-item);
-  .to-rem(font-size, @Card-font-size);
+  .to-rem(font-size, @Faq-font-size);
   .to-rem(padding-left, @grid-gutter-double);
   .to-rem(margin-bottom, (@grid-gutter-base * 1.5));
 

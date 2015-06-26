@@ -25,6 +25,10 @@
 @import "mixins/link-color";
 @import "mixins/to-em";
 /*
+  Utilities
+*/
+@import "utilities/text-alignment";
+/*
   Base
 */
 @import "components/headings";
@@ -99,6 +103,10 @@ li {
 
 p {
   .to-rem(margin-bottom, 30);
+}
+
+.clickable {
+  cursor: pointer;
 }
 
 @max-text-width: 39em;

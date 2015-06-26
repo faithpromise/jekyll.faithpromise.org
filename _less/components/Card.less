@@ -10,6 +10,7 @@
 .Card-item {
   &:extend(.grid-item);
   .to-rem(padding-left, @Card-gutter);
+  .to-rem(font-size, @Card-font-size);
 
   @media (min-width: 42rem) {
     width: 50%;
@@ -25,14 +26,16 @@
   background-color: #fff;
 
   .box-shadow-helper(1);
-  transition:       all 250ms;
 
-  &:hover {
+  &.clickable {
+    transition: all 250ms;
+    cursor:     pointer;
+  }
+
+  &.clickable:hover {
     .box-shadow-helper(3);
     transform: translateY(-3px);
   }
-
-  cursor:           pointer;
 }
 
 .Card-image {

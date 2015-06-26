@@ -2,21 +2,26 @@
 layout: default
 ---
 
-{% if page.banner_image != null %}
+{% if page.hero_image != null %}
 
 <style type="text/css" scoped>
-  .Hero--series-{{ series.ident }} { background-image: url({{ page.banner_image_square }}); }
-  @media (min-aspect-ratio: 5/8) {
-    .Hero--series-{{ series.ident }} { background-image: url({{ page.banner_image }}); }
+  .hero_image { background-image: url({{ page.hero_image | replace: '-wide.jpg', '-square.jpg' }}); }
+
+  @media (min-width: 47.5rem) {
+    .hero_image { background-image: url({{ page.hero_image }}); }
   }
+
 </style>
+
 {% else %}
+
 <style type="text/css" scoped>
-  .Hero--series-{{ series.ident }} { background-image: url(/build/images/temp/banner-placeholder.png); }
+  .hero_image { background-image: url(/build/images/temp/hero-placeholder.png); }
 </style>
+
 {% endif %}
 
-<div class="Hero" style="background-image: url('{{ page.banner_image }}');">
+<div class="Hero hero_image">
 
 </div>
 
