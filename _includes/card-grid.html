@@ -1,24 +1,13 @@
 <ul class="Card-grid" card-grid>
   {% for card in include.cards %}
   <li class="Card-item">
-    <div class="Card" link-to="{{ card.url }}">
-      {% if card.url %}
-      <a class="Card-image" href="{{ card.url }}" style="background-image: url({{ card.image }});"></a>
-      {% else %}
-      <span class="Card-image" style="background-image: url({{ card.image }});"></span>
-      {% endif %}
-      <div class="Card-body">
-        {% if card.url %}
-        <h3 class="Card-title"><a href="{{ card.url }}">{{ card.title }}</a></h3>
-        {% else %}
-        <h3 class="Card-title">{{ card.title }}</h3>
-        {% endif %}
-        <p class="Card-text">{{ card.text }}</p>
-        {% if card.url %}
-        <a class="Card-link" href="{{ card.url }}">{{ card.url_text }} <i class="icon-right-open-big"></i></a>
-        {% endif %}
-      </div>
-    </div>
+    {% include card.html
+    title=card.title
+    text=card.text
+    image=card.image
+    url=card.url
+    url_text=card.url_text
+    %}
   </li>
   {% endfor %}
 </ul>

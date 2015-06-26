@@ -18,6 +18,9 @@ collections:
   campuses:
     output: true
     permalink: /locations/:path/
+  events:
+    output: true
+    permalink: /events/:path/
   teams:
     output: false
   missions:

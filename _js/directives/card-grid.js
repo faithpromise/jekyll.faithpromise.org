@@ -16,23 +16,23 @@
         var i,
             paragraph,
             heighest = 0,
-            textParagraphs = angular.element(elem).find('p');
+            cardBodies = angular.element(elem).find('div');
 
-        for(i = 0; i < textParagraphs.length; i++) {
+        for(i = 0; i < cardBodies.length; i++) {
 
-            paragraph = angular.element(textParagraphs[i]);
+            paragraph = angular.element(cardBodies[i]);
 
-            if (paragraph.hasClass('Card-text')) {
-                heighest = Math.max(textParagraphs[i].offsetHeight, heighest);
+            if (paragraph.hasClass('Card-body')) {
+                heighest = Math.max(cardBodies[i].offsetHeight, heighest);
             }
 
         }
 
-        for(i = 0; i < textParagraphs.length; i++) {
+        for(i = 0; i < cardBodies.length; i++) {
 
-            paragraph = angular.element(textParagraphs[i]);
+            paragraph = angular.element(cardBodies[i]);
 
-            if (paragraph.hasClass('Card-text')) {
+            if (paragraph.hasClass('Card-body')) {
                 paragraph.css('min-height', heighest + 'px');
             }
 

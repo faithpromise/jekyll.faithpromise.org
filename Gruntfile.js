@@ -213,7 +213,7 @@ module.exports = function (grunt) {
                     tasks: ['shell:jekyllBuild']
                 },
                 collections: {
-                    files: ['{_campuses,_ministries,_series,_staff,_topics,_videos}/**/*.html'],
+                    files: ['{_campuses_events,_ministries,_series,_staff,_topics,_videos}/**/*.html'],
                     tasks: ['shell:jekyllClean','shell:jekyllBuild']
                 },
                 images: {

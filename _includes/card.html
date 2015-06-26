@@ -1,0 +1,23 @@
+<div class="Card" link-to="{{ include.url }}">
+  {% if include.url %}
+  <a class="Card-image" href="{{ include.url }}" style="background-image: url({{ include.image }});"></a>
+  {% else %}
+  <span class="Card-image" style="background-image: url({{ include.image }});"></span>
+  {% endif %}
+  <div class="Card-body">
+    {% if include.url %}
+    <h3 class="Card-title"><a href="{{ include.url }}">{{ include.title }}</a></h3>
+    {% else %}
+    <h3 class="Card-title">{{ include.title }}</h3>
+    {% endif %}
+    {% if include.subtitle %}
+    <h4 class="Card-subtitle">{{ include.subtitle }}</h4>
+    {% endif %}
+    <p class="Card-text">{{ include.text }}</p>
+  </div>
+  {% if include.url %}
+  <div class="Card-footer">
+    <a class="Card-link" href="{{ include.url }}">{{ include.url_text }} <i class="icon-right-open-big"></i></a>
+  </div>
+  {% endif %}
+</div>
