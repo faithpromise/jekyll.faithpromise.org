@@ -42,13 +42,18 @@
   display:             block;
   height:              0;
   overflow:            hidden;
-  padding-bottom:      50%;
+  padding-bottom:      56.25%;
   background-size:     cover;
   background-position: top center;
 }
 
 .Card-body {
-  .to-em(padding, 36 30, @Card-font-size);
+  .to-em(padding, 36 30 0, @Card-font-size);
+  text-align: center;
+}
+
+.Card-footer {
+  .to-em(padding, 0 30 36, @Card-font-size);
   text-align: center;
 }
 
@@ -63,6 +68,12 @@
       text-decoration: none;
     }
   }
+}
+
+.Card-subtitle {
+  .to-em(font-size, @Card-font-size, @Card-font-size);
+  .to-em(margin, -20 0 20, @font-size-heading-4);
+  font-weight: @font-weight-bold;
 }
 
 .Card-link {
