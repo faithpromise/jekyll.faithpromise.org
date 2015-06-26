@@ -17,12 +17,12 @@
     <meta property="og:description" content="What to Expect">
     
 
-<link type="text/css" rel="stylesheet" href="/build/main.min.css?432e4b06339c99fb" />
+<link type="text/css" rel="stylesheet" href="/build/main.min.css?ae8a5c907b3a8b17" />
 
     <link rel="canonical" href="http://faithpromise.org/what-to-expect/">
   </head>
 
-  <body class="navStyle--transparent" ng-controller="page">
+  <body class="navStyle--transparent " ng-controller="page">
 
     <!--{//% include facebook-sdk.html %}-->
 
@@ -184,14 +184,17 @@
         
 
 <style type="text/css" scoped>
-  .Hero--series- { background-image: url(); }
-  @media (min-aspect-ratio: 5/8) {
-    .Hero--series- { background-image: url(http://faithpromise.org/assets/banners/what-to-expect.jpg); }
+  .hero_image { background-image: url(http://faithpromise.org/assets/banners/what-to-expect.jpg); }
+
+  @media (min-width: 47.5rem) {
+    .hero_image { background-image: url(http://faithpromise.org/assets/banners/what-to-expect.jpg); }
   }
+
 </style>
 
 
-<div class="Hero" style="background-image: url('http://faithpromise.org/assets/banners/what-to-expect.jpg');">
+
+<div class="Hero hero_image">
 
 </div>
 
@@ -200,22 +203,22 @@
 
 <div class="Content">
 
-  <div class="Section">
-    <div class="Section-container">
-      <div class="Section-text Section-text--center">
-        <h2 class="Section-title">What To Expect</h2>
-        <p>When you come, the only thing we ask of you is simple... relax. You're with friends. Whether you've never been to church before or you're a seasoned church veteran, you can anticipate an encouraging and enlightening experience.</p>
-      </div>
+  <div class="TextSection TextSection--center TextSection--compact">
+    <div class="TextSection-container">
+      <h2 class="TextSection-title">What To Expect</h2>
+      <p>When you come, the only thing we ask of you is simple... relax. You're with friends. Whether you've never been to church before or you're a seasoned church veteran, you can anticipate an encouraging and enlightening experience.</p>
     </div>
   </div>
 
   <div class="Section Section--lightGrey">
     <div class="Section-container">
-      <ul class="Card-grid">
+      <ul class="Card-grid" card-grid>
   
   <li class="Card-item">
-    <div class="Card">
-      <a class="Card-image" href="/" style="background-image: url(https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/newspring/fpo/baptism.hero.2to1_2000_1000_90_c1.jpg);"></a>
+    <div class="Card" link-to="/fpkids/">
+      
+      <a class="Card-image" href="/fpkids/" style="background-image: url(https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/newspring/fpo/baptism.hero.2to1_2000_1000_90_c1.jpg);"></a>
+      
       <div class="Card-body">
         
         <h3 class="Card-title"><a href="/fpkids/">Children</a></h3>
@@ -229,8 +232,10 @@
   </li>
   
   <li class="Card-item">
-    <div class="Card">
-      <a class="Card-image" href="/" style="background-image: url(https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/newspring/fpo/fpo.Fuse.Football2_2000_1000_90_c1.jpg);"></a>
+    <div class="Card" link-to="/students/">
+      
+      <a class="Card-image" href="/students/" style="background-image: url(https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/newspring/fpo/fpo.Fuse.Football2_2000_1000_90_c1.jpg);"></a>
+      
       <div class="Card-body">
         
         <h3 class="Card-title"><a href="/students/">Students</a></h3>
@@ -244,8 +249,10 @@
   </li>
   
   <li class="Card-item">
-    <div class="Card">
-      <a class="Card-image" href="/" style="background-image: url(https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/newspring/fpo/fpo.Music4_2000_1000_90_c1.jpg);"></a>
+    <div class="Card" link-to="/worship/">
+      
+      <a class="Card-image" href="/worship/" style="background-image: url(https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_s3.amazonaws.com/ns.images/newspring/fpo/fpo.Music4_2000_1000_90_c1.jpg);"></a>
+      
       <div class="Card-body">
         
         <h3 class="Card-title"><a href="/worship/">Worship</a></h3>
@@ -262,10 +269,13 @@
     </div>
   </div>
 
-  <div class="Faq">
+  
+
+
+
+<div class="Faq ">
   <div class="Faq-container">
     <h2 class="Faq-title">Common Questions</h2>
-
     <ul class="Faq-list">
       
       <li class="Faq-item">
@@ -301,7 +311,6 @@
       </li>
       
     </ul>
-
   </div>
 </div>
 
@@ -336,7 +345,7 @@
       })(angular);
     </script>
 
-<script type="text/javascript" src="/build/main.min.js?4b8ba294ce656c03"></script>
+<script type="text/javascript" src="/build/main.min.js?dc5ecda3c740b6cb"></script>
 
     <!--[if gte IE 9]>
     <script src="/build/svg4everybody.min.js?41c890046ffef9f1"></script>
