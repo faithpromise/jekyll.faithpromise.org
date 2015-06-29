@@ -19,6 +19,8 @@ faq:
     a: '<p>If you still have questions about fpKids, please contact <a href="mailto:fpkids@faithpromise.org">fpkids@faithpromise.org</a>.</p>'
 ---
 
+<!--TODO: Add page content-->
+
 {% assign events = site.events | where_contains: 'ministries', 'kids' | where_greater: 'expire_on', site.time | sort: 'starts_on' %}
 {% assign staff = site.staff | where_contains: 'ministries', 'kids' | sort: 'sort' %}
 
