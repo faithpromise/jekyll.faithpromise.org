@@ -42,7 +42,6 @@
 @import "components/Container";
 @import "components/Content";
 //@import "components/Featured";
-@import "components/Faq";
 @import "components/Hero";
 @import "components/HeroVideo";
 @import "components/Layout";
@@ -68,6 +67,8 @@
 @import "components/Section";
 @import "components/TextSection";
 @import "components/BackgroundSection";
+@import "components/GridSection";
+@import "components/Faq";
 
 [publish-on]:not(.publish-on-show) {
   display: none !important;
@@ -102,8 +103,16 @@ a {
   &:focus {
     outline: none !important;
   }
+}
 
-  .has-background & {
+.has-background {
+
+  background-position: top center;
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  color:               #fff;
+
+  a {
     .link-color(#fff);
     text-decoration: underline;
     &:hover {
@@ -124,14 +133,20 @@ p {
   cursor: pointer;
 }
 
-@max-text-width: 39em;
+@max-text-width: 38.2em;
 .sentence-width {
-  max-width: @max-text-width;
+  //  box-sizing:   content-box;
+  max-width:    @max-text-width;
+  margin-left:  auto;
+  margin-right: auto;
 }
 
 @max-text-width-compact: 24.5em;
 .sentence-width-compact {
-  max-width: @max-text-width-compact;
+  //  box-sizing:   content-box;
+  max-width:    @max-text-width-compact;
+  margin-left:  auto;
+  margin-right: auto;
 }
 
 .no-wrap {

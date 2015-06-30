@@ -1,20 +1,25 @@
-<ul class="Card-grid" card-grid>
-  {% for event in include.events %}
-  {% if event.ends_on >= site.time %}
-  {% assign dates = 'Dates go here' %}
-  {% capture image %}/build/images/events/{{ event.image }}{% endcapture %}
-  <li class="Card-item">
-    {% include card.html
-    title=event.title
-    subtitle=dates
-    image=image
-    text=event.excerpt
-    image=image
-    url=event.url
-    url_text='Learn More'
-    %}
-  </li>
-  {% endif %}
-  {% endfor %}
-</ul>
-<!-- expire-on="{{ event.ends_on }}"-->
+<div class="GridSection">
+  <div class="GridSection-container">
+    <h2 class="GridSection-title">{{ include.title }}</h2>
+    <ul class="Card-grid" card-grid>
+      {% for event in include.events %}
+      {% if event.ends_on >= site.time %}
+      {% assign dates = 'Dates go here' %}
+      {% capture image %}/build/images/events/{{ event.image }}{% endcapture %}
+      <li class="Card-item">
+        {% include card.html
+        title=event.title
+        subtitle=dates
+        image=image
+        text=event.excerpt
+        image=image
+        url=event.url
+        url_text='Learn More'
+        %}
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+

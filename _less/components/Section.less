@@ -6,22 +6,14 @@
 .Section {
   .to-rem(font-size, @Section-font-size);
   .to-em(padding, @Section-vertical-padding-top 0 @Section-vertical-padding-bottom, @Section-font-size);
-}
 
-//.Section-text p:last-child {
-//  margin-bottom: 0;
-//}
+  &--lightGrey {
+    background-color: #f9f9f9;
+  }
+}
 
 .Section--center {
   text-align: center;
-}
-
-.Section--lightGrey {
-  background-color: #f9f9f9;
-}
-
-.Section.has-background {
-  color: #fff;
 }
 
 .Section-text {
@@ -35,7 +27,7 @@
 }
 
 .Section-container {
-  &:extend(.Container);
+  &:extend(.Container all);
 }
 
 .Section-titles {
@@ -54,7 +46,8 @@
 }
 
 .Section-title--push {
-  .to-em(margin-bottom, (@line-height * 2), @Section-font-size);
+  .to-em(margin-top, 10, @Section-title-font-size);
+  .to-em(margin-bottom, 90, @Section-title-font-size);
 }
 
 .Section-subtitle {

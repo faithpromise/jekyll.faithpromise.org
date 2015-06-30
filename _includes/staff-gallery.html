@@ -1,17 +1,23 @@
-<ul class="StaffGallery">
-  {% for member in include.staff %}
+<div class="StaffSection {{ include.class }}">
+  <div class="StaffSection-container">
+    <h2 class="StaffSection-title">{{ include.title }}</h2>
+    <ul class="StaffSection-grid">
+      {% for member in include.staff %}
 
-  {% capture imgUrl %}{{ site.paths.staff_images}}{{ member.ident }}-1.jpg{% endcapture %}
-  {% if member.number_photos == null or member.number_photos == 0 %}
-  {% assign imgUrl = 'https://placekitten.com/g/200/300' %}
-  {% endif %}
+      {% capture imgUrl %}{{ site.paths.staff_images}}{{ member.ident }}-1.jpg{% endcapture %}
+      {% if member.number_photos == null or member.number_photos == 0 %}
+      {% assign imgUrl = 'https://placekitten.com/g/200/300' %}
+      {% endif %}
 
-  <li class="StaffGallery-item">
-    <a class="StaffGallery-infoWrap" href="/staff/{{ member.ident }}/">
-      <span class="StaffGallery-photo" style="background-image:url('{{ imgUrl }}');"></span>
-      <span class="StaffGallery-name">{{ member.display_name }}</span>
-      <span class="StaffGallery-title">{{ member.title }}</span> </a>
-  </li>
+      <li class="StaffSection-item">
+        <a class="StaffSection-card" href="/staff/{{ member.ident }}/">
+          <span class="StaffSection-photo" style="background-image:url('{{ imgUrl }}');"></span>
+          <span class="StaffSection-name">{{ member.display_name }}</span>
+          <span class="StaffSection-staffTitle">{{ member.title }}</span>
+        </a>
+      </li>
 
-  {% endfor %}
-</ul>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

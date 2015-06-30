@@ -1,31 +1,34 @@
-@Faq-font-size: 18;
-
 .Faq {
   &:extend(.Section all);
+  &:extend(.Section--center all);
+  .to-em(padding-bottom, (@Section-vertical-padding-top - (@grid-gutter-base * 4)), @Section-font-size);
 }
 
 .Faq-container {
-  &:extend(.Section-container);
-  .to-rem(padding-right, 60);
-  .to-rem(padding-left, 60);
+  &:extend(.Container all);
+  &:extend(.Container--wide all);
 }
 
 .Faq-title {
-  &:extend(.h2);
-  .to-em(margin-bottom, (@line-height * 3), @Section-title-font-size);
+  &:extend(.Section-title all);
+  &:extend(.Section-title--push all);
   text-align: center;
 }
 
-.Faq-list {
+// Grid
+.Faq-grid {
   &:extend(.grid);
   .to-rem(margin-left, -@grid-gutter-double);
 }
 
+// Grid item
 .Faq-item {
   &:extend(.grid-item);
-  .to-rem(font-size, @Faq-font-size);
+  .to-rem(font-size, @Section-font-size);
   .to-rem(padding-left, @grid-gutter-double);
-  .to-rem(margin-bottom, (@grid-gutter-base * 1.5));
+  .to-rem(margin-bottom, (@grid-gutter-base * 4));
+
+  text-align: left;
 
   @media (min-width: 64rem) {
     width: 50%;
@@ -35,4 +38,8 @@
 
 .Faq-question {
   &:extend(.h4);
+}
+
+.Faq-answer {
+  .to-em(font-size, 20, @Section-font-size);
 }
