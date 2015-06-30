@@ -218,7 +218,7 @@ module.exports = function (grunt) {
                 },
                 images: {
                     files: ['_images/**/*.{png,jpg,gif}'],
-                    tasks: ['optimize_images', 'shell:jekyllBuild']
+                    tasks: ['optimize_images', 'shell:jekyllClean', 'shell:jekyllBuild']
                 },
                 svg: {
                     files: ['_images/**/*.svg'],
