@@ -202,7 +202,7 @@ module.exports = function (grunt) {
             watch: {
                 css: {
                     files: [lessDir + '/**/*.less', 'assets/fontello/**/*.*'],
-                    tasks: ['css_dev', 'shell:jekyllBuild']
+                    tasks: ['css_dev', 'copy:css_dev']
                 },
                 js: {
                     files: jsDir + '/**/*.js',
@@ -262,6 +262,10 @@ module.exports = function (grunt) {
                     cwd: '_js/',
                     src: 'directives/**/*.html',
                     dest: 'build/'
+                },
+                css_dev: {
+                    src: lessOutput_dev,
+                    dest: 'public/build/main.dev.css'
                 }
             },
             html2js: {
