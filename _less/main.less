@@ -20,6 +20,7 @@
 @import "variables/text";
 @import "variables/modals";
 @import "variables/z-index";
+@import "variables/Nav";
 /*
   Mixins
 */
@@ -100,6 +101,14 @@ a {
   }
   &:focus {
     outline: none !important;
+  }
+
+  .has-background & {
+    .link-color(#fff);
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
@@ -204,13 +213,15 @@ p {
     text-decoration: none;
   }
 
-  .overlay & {
+  .has-background & {
     border-color:     #fff;
     color:            #fff;
     background-color: rgba(0, 0, 0, 0.5);
+    text-decoration:  none;
 
     &:hover {
       background-color: rgba(0, 0, 0, 0.9);
+      text-decoration:  none;
     }
   }
 }
