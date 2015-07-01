@@ -22,23 +22,22 @@ faq:
 {% assign events = site.events | where_contains: 'ministries', 'kids' | where_greater: 'expire_on', site.time | sort: 'starts_on' %}
 {% assign staff = site.staff | where_contains: 'ministries', 'kids' | sort: 'sort' %}
 
-<div class="TextSection TextSection--center">
-  <div class="TextSection-container">
+<div class="IntroSection">
+  <div class="IntroSection-container">
 
-    <h1 class="TextSection-title TextSection-title--push">What is fpKids?</h1>
+    <h1 class="IntroSection-title IntroSection-title--push">What is fpKids?</h1>
 
-    <div class="TextSection-text">
+    <div class="IntroSection-text">
 
       <p>Welcome to the Children's Ministry of Faith Promise Church. fpKids is uniquely designed for kids birth through 5th grade, where our goal is to grab your child's attention so Jesus can change their heart.</p>
 
       <p>We do this through engaging environments and creative biblical teaching. Using everyday people just like you, we work together to teach kids how to do the greatest thing they can possibly do with their lives... love Jesus with all their heart, mind, and strength.
-        <span class="ref">#bibleVerses("Mark 12:30")#</span>
-        <!--TODO: Fix bible verse-->
+        <a class="BibleRef" href="https://www.bible.com/bible/100/Mark.12.30" target="_blank">Mark 12:30</a>
       </p>
 
       <hr class="Section-hr">
 
-      <p>See what your kids are learning and stay current on fpKids events by following us on social media.</p>
+      <p class="sentence-width-compact text-center">See what your kids are learning and stay current on fpKids events by following us on social media.</p>
 
       {% include social-buttons.html
         facebook='//www.facebook.com/fpkids'
@@ -81,16 +80,11 @@ faq:
 
 {% include faq.html faq=page.faq class='has-background kids_faq' %}
 
-<div class="TextSection TextSection--center">
-  <div class="TextSection-container">
-    <h2 class="TextSection-title">Still have questions?</h2>
-    <div class="TextSection-text">
-      <p>If you still have questions about fpKids, please contact
-        <a href="mailto:fpkids@faithpromise.org">fpkids@faithpromise.org</a>.
-      </p>
-    </div>
-  </div>
-</div>
+{%
+include have-questions.html
+email='fpkids@faithpromise.org'
+text='If you still have questions about fpKids, please contact'
+%}
 
 {% include staff-gallery.html staff=staff title='Meet the fpKids Staff' class='Section--lightGrey' %}
 

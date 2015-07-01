@@ -66,10 +66,12 @@
   Section Components
 */
 @import "components/Section";
-@import "components/TextSection";
 @import "components/BackgroundSection";
-@import "components/GridSection";
 @import "components/Faq";
+@import "components/GridSection";
+@import "components/IntroSection";
+@import "components/TextSection";
+@import "components/VisitSection";
 
 [publish-on]:not(.publish-on-show) {
   display: none !important;
@@ -222,19 +224,23 @@ p {
   .to-rem(font-size, 20);
   .to-em(padding, 15 40, 22);
   .to-em(border-radius, 70, 22);
+  .link-color(@root-text-color);
   display:        inline-block;
   border:         2px solid @root-text-color;
   text-transform: uppercase;
 
-  transition:     all .15s ease-in-out;
+  transition:     all .2s ease-in-out;
 
   &:hover {
-    text-decoration: none;
+    background-color: @anchor-text-color;
+    border-color:     @anchor-text-color;
+    color:            #fff;
+    text-decoration:  none;
   }
 
   .has-background & {
+    .link-color(#fff);
     border-color:     #fff;
-    color:            #fff;
     background-color: rgba(0, 0, 0, 0.5);
     text-decoration:  none;
 

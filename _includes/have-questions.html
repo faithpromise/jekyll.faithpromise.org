@@ -1,0 +1,13 @@
+<div class="TextSection {{ include.class }}">
+  <div class="TextSection-container">
+    <h2 class="TextSection-title">
+      {% if include.title %}{{ include.title }}{% else %}Still have questions?{% endif %}
+    </h2>
+    <div class="TextSection-text">
+      <p>
+        {% if include.text %}{{ include.text }}{% else %}If you still have questions, please contact{% endif %}
+        <a href="mailto:{{ include.email }}">{{ include.email }}</a>.
+      </p>
+    </div>
+  </div>
+</div>
