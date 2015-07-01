@@ -13,8 +13,8 @@
       "src": "fontawesome"
     },
     {
-      "uid": "4c1ef492f1d2c39a2250ae457cee2a6e",
-      "css": "instagramm",
+      "uid": "47a1f80457068fbeab69fdb83d7d0817",
+      "css": "youtube-play",
       "code": 59394,
       "src": "fontawesome"
     },
@@ -79,6 +79,18 @@
       "src": "entypo"
     },
     {
+      "uid": "d94334f23acba022bfd68e49d76b31bb",
+      "css": "github",
+      "code": 59409,
+      "src": "entypo"
+    },
+    {
+      "uid": "538531af0e023b15882c505ee2297cbe",
+      "css": "vimeo",
+      "code": 59411,
+      "src": "entypo"
+    },
+    {
       "uid": "d090355c31f497b61d676416c1fd39fb",
       "css": "twitter",
       "code": 59393,
@@ -88,6 +100,18 @@
       "uid": "bc50457410acf467b8b5721240768742",
       "css": "facebook",
       "code": 59392,
+      "src": "entypo"
+    },
+    {
+      "uid": "689febe699d74bc8862965555503e445",
+      "css": "pinterest",
+      "code": 59408,
+      "src": "entypo"
+    },
+    {
+      "uid": "0fbfb1cd7a847c88ea4c141d0e1bbdb5",
+      "css": "instagram",
+      "code": 59410,
       "src": "entypo"
     },
     {
