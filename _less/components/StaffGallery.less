@@ -21,21 +21,18 @@
 }
 
 .StaffSection-grid {
-  .to-rem(margin, 0 0 0 -@StaffSection-grid-gutter);
-  padding:    0;
-  list-style: none;
-  font-size:  0;
+  &:extend(.grid all);
+  .to-rem(margin-left, -@StaffSection-grid-gutter);
+  text-align: center;
 }
 
 .StaffSection-item {
-  .to-rem(font-size, @font-size);
+  &:extend(.grid-item all);
   .to-rem(padding-left, @StaffSection-grid-gutter);
-  .to-rem(margin, 0 0 60);
+  .to-rem(margin-bottom, 60);
   .to-rem(max-width, 240);
-  display:        inline-block;
-  width:          50%;
-  vertical-align: top;
-  text-align:     center;
+  width:      50%;
+  text-align: center;
 }
 
 .StaffSection-card {
@@ -59,11 +56,21 @@
 }
 
 .StaffSection-name {
-  .h6();
+  .to-em(font-size, 24, @font-size);
   display:       block;
   margin-bottom: 0;
+
+  @media (max-width: 459px) {
+    .to-rem(font-size, 18);
+    font-weight: @font-weight-bold;
+  }
+
 }
 
 .StaffSection-staffTitle {
   display: block;
+
+  @media (max-width: 459px) {
+    .to-rem(font-size, 14);
+  }
 }

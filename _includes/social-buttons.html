@@ -1,0 +1,22 @@
+<ul class="SocialButtons">
+  {% if include.facebook %}
+  <li class="SocialButtons-item">
+    <a class="SocialButtons-link SocialButtons-link--facebook" href="{{ include.facebook }}" target="_blank"></a>
+  </li>
+  {% endif %}
+  {% if include.twitter %}
+  <li class="SocialButtons-item">
+    <a class="SocialButtons-link SocialButtons-link--twitter" href="{{ include.twitter }}" target="_blank"></a>
+  </li>
+  {% endif %}
+  {% if include.instagram %}
+  <li class="SocialButtons-item">
+    <a class="SocialButtons-link SocialButtons-link--instagram" href="{{ include.instagram }}" target="_blank"></a>
+  </li>
+  {% endif %}
+  {% if include.youtube %}
+  <li class="SocialButtons-item">
+    <a class="SocialButtons-link SocialButtons-link--youtube" href="{{ include.youtube }}" target="_blank"></a>
+  </li>
+  {% endif %}
+</ul>

@@ -19,8 +19,6 @@ faq:
     a: '<p>We''d love to explore the best fit for you within in fpKIDS. To apply to serve in fpKIDS, contact the <a href="mailto:fpKids@faithpromise.org">fpKids office</a>.</p>'
 ---
 
-<!--TODO: Add page content-->
-
 {% assign events = site.events | where_contains: 'ministries', 'kids' | where_greater: 'expire_on', site.time | sort: 'starts_on' %}
 {% assign staff = site.staff | where_contains: 'ministries', 'kids' | sort: 'sort' %}
 
@@ -37,6 +35,15 @@ faq:
         <span class="ref">#bibleVerses("Mark 12:30")#</span>
         <!--TODO: Fix bible verse-->
       </p>
+
+      <hr class="Section-hr">
+
+      <p>See what your kids are learning and stay current on fpKids events by following us on social media.</p>
+
+      {% include social-buttons.html
+        facebook='//www.facebook.com/fpkids'
+        twitter='//twitter.com/fp_kids'
+      %}
 
     </div>
   </div>
@@ -85,10 +92,5 @@ faq:
   </div>
 </div>
 
-<style type="text/css" scoped>
-  .fpkids_staff_bg {
-    background-image: url(/build/images/general/fpkids-pattern.png);
-  }
-</style>
-{% include staff-gallery.html staff=staff title='Meet the fpKids Staff' class='has-background fpkids_staff_bg' %}
+{% include staff-gallery.html staff=staff title='Meet the fpKids Staff' class='Section--lightGrey' %}
 
