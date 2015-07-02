@@ -1,6 +1,7 @@
-<div class="GridSection">
+<div class="GridSection {{ include.class }}">
   <div class="GridSection-container">
     <h2 class="GridSection-title">{{ include.title }}</h2>
+    <div class="GridSection-text">{{ include.text }}</div>
     <ul class="Card-grid" card-grid>
       {% for event in include.events %}
       {% if event.ends_on >= site.time %}

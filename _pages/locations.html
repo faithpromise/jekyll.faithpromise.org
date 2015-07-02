@@ -1,37 +1,36 @@
 ---
 layout: page
-title: Locations
 permalink: /locations/
+title: Locations
+hero_image: /build/images/general/pellissippi-wide.jpg
 ---
 
 <!--TODO: Add page content-->
 
-<div class="Content">
 
-  <div class="LocationFinder">
-    <div class="LocationFinder-listWrap">
-      <ul class="LocationList">
-        {% for location in site.campuses %}
-        {% if location.lat %}
-        <li class="LocationList-item" onclick="fpMap.openLocation('{{ location.ident }}');">
-          <h2 class="LocationList-title">{{ location.title }}</h2>
 
-          <p class="LocationList-location">{{ location.location }}</p>
+<div class="LocationFinder">
+  <div class="LocationFinder-listWrap">
+    <ul class="LocationList">
+      {% for location in site.campuses %}
+      {% if location.lat %}
+      <li class="LocationList-item" onclick="fpMap.openLocation('{{ location.ident }}');">
+        <h2 class="LocationList-title">{{ location.title }}</h2>
 
-          <p class="LocationList-address">
-            {{ location.address }}<br>
-            {{ location.city }}, {{ location.state }} {{ location.zip }}
-          </p>
-        </li>
-        {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
-    <div class="LocationFinder-mapWrap">
-      <div id="LocationsMap" class="LocationFinder-map"></div>
-    </div>
+        <p class="LocationList-location">{{ location.location }}</p>
+
+        <p class="LocationList-address">
+          {{ location.address }}<br>
+          {{ location.city }}, {{ location.state }} {{ location.zip }}
+        </p>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
   </div>
-
+  <div class="LocationFinder-mapWrap">
+    <div id="LocationsMap" class="LocationFinder-map"></div>
+  </div>
 </div>
 
 <script>
@@ -176,4 +175,5 @@ permalink: /locations/
     }
 
   }(window, window.fp.locations));
+
 </script>

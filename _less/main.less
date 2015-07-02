@@ -70,6 +70,7 @@
 @import "components/Faq";
 @import "components/GridSection";
 @import "components/IntroSection";
+@import "components/StorySection";
 @import "components/TextSection";
 @import "components/VisitSection";
 
@@ -79,6 +80,10 @@
 
 [expire-on]:not(.expire-on-show) {
   display: none !important;
+}
+
+.clearfix {
+  .clearfix();
 }
 
 html {
@@ -140,19 +145,17 @@ p {
 }
 
 @max-text-width: 38.2em;
-.sentence-width {
-  //  box-sizing:   content-box;
+.text-constrain {
   max-width:    @max-text-width;
-  margin-left:  auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 @max-text-width-compact: 24.5em;
-.sentence-width-compact {
-  //  box-sizing:   content-box;
+.text-constrain-compact {
   max-width:    @max-text-width-compact;
-  margin-left:  auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 .no-wrap {
