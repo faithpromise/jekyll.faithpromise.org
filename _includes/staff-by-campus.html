@@ -1,9 +1,17 @@
+{% assign grey = 0 %}
+
 {% for campus in site.campuses %}
 
 {% assign staff = site.staff | where_contains: 'campuses', campus.ident | sort: 'sort' %}
 
-<h2 class="Section-title">{{ campus.title }}</h2>
+{% if grey == 1 %}
+{% assign class = 'StaffSection--square Section--lightGrey' %}
+{% else %}
+{% assign class = 'StaffSection--square' %}
+{% endif %}
 
-{% include staff-gallery.html staff=staff %}
+{% include staff-gallery.html staff=staff title=campus.title class=class %}
+
+{% assign grey = 1 | minus: grey %}
 
 {% endfor %}

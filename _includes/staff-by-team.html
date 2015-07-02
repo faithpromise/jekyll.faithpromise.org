@@ -1,9 +1,18 @@
+
+{% assign grey = 0 %}
+
 {% for team in site.data.teams %}
 
 {% assign staff = site.staff | where_contains: 'teams', team.slug | sort: 'sort' %}
 
-<h2 class="Section-title">{{ team.title }}</h2>
+{% if grey == 1 %}
+{% assign class = 'StaffSection--square Section--lightGrey' %}
+{% else %}
+{% assign class = 'StaffSection--square' %}
+{% endif %}
 
-{% include staff-gallery.html staff=staff %}
+{% include staff-gallery.html staff=staff title=team.title class=class %}
+
+{% assign grey = 1 | minus: grey %}
 
 {% endfor %}
