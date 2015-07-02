@@ -49,8 +49,16 @@ permalink: /locations/
 
     var map,
         markers = {},
-        campusWindow;
-
+        campusWindow,
+        map_styles = [
+          {featureType: "road", elementType: "geometry", stylers: [{visibility: "on"}, {lightness: 70}]},
+          {featureType: "poi", elementType: "geometry", stylers: [{visibility: "off"}]},
+          {featureType: "landscape", elementType: "geometry", stylers: [{color: "#fffffa"}]},
+          {featureType: "water", stylers: [{lightness: 0}]},
+          {featureType: "road", elementType: "labels", stylers: [{visibility: "on"}]},
+          {featureType: "transit", stylers: [{visibility: "off"}]},
+          {featureType: "administrative", elementType: "geometry", stylers: [{lightness: 0}]}
+        ];
 
     google.maps.event.addDomListener(window, 'load', initLocationsMap);
 
@@ -75,7 +83,8 @@ permalink: /locations/
       map = new google.maps.Map(document.getElementById('LocationsMap'), {
         zoom: 10,
         scrollwheel: false,
-        center: new google.maps.LatLng(36.0451505, -84.059758)
+        center: new google.maps.LatLng(36.0451505, -84.059758),
+        styles: map_styles
       });
     }
 
