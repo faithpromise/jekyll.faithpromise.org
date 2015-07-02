@@ -13,24 +13,24 @@
  * ==========================================================
  */
 
-@media (max-width: (@Nav-showDesktopVersion - 1)) {
+@media (max-width: @Nav-mobile-max) {
 
   // TODO: Mobile nav styles
   .Nav {
-    position:                    absolute;
-    top:                         0;
-    left:                        0;
-    z-index:                     @z-index-mobile-nav;
-    width:                       17em;
-    min-height:                  100%;
-    padding-bottom:              70px;
-    background-color:            #2e2e2e;
-    color:                       #cac9c9;
+    position:           absolute;
+    top:                0;
+    left:               0;
+    z-index:            @z-index-mobile-nav;
+    width:              17em;
+    min-height:         100%;
+    padding-bottom:     70px;
+    background-color:   #2e2e2e;
+    color:              #cac9c9;
 
     // Transition
-    -webkit-transform:           scale(1.1);
-    -webkit-transition:          -webkit-transform 350ms ease;
-//    -webkit-backface-visibility: hidden;
+    -webkit-transform:  scale(1.1);
+    -webkit-transition: -webkit-transform 350ms ease;
+    //    -webkit-backface-visibility: hidden;
 
     body.is-navOpen & {
       -webkit-transform: scale(1);
@@ -66,6 +66,7 @@
   }
 
   .is-navOpen .MobileNav-dismiss {
+    display:  block;
     position: fixed;
     z-index:  @z-index-mobile-nav-dismiss;
     top:      0;
@@ -108,7 +109,7 @@
  * ==========================================================
  */
 
-@media (min-width: @Nav-showDesktopVersion) {
+@media (min-width: @Nav-desktop-min) {
 
   // Solid nav
   body.navStyle--solid {
@@ -127,7 +128,7 @@
   }
 
   .Nav {
-    position: fixed;
+    position: absolute;
     z-index:  @z-index-nav;
     left:     0;
     right:    0;
@@ -188,7 +189,7 @@
   }
 
   .Nav-background {
-    position: fixed;
+    position: absolute;
     top:      0;
     right:    0;
     left:     0;

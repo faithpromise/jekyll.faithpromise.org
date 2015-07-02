@@ -70,18 +70,18 @@
       </div>
 
       <div class="MobileNav-background"></div>
-      <div class="MobileNav-dismiss"></div>
+      <div class="MobileNav-dismiss" nav-toggle></div>
 
       <div class="Layout-contentWrap">
         <!--<div class="MobileBar-background"></div>-->
         <div class="MobileBar">
-          <span class="MobileBar-navToggle"><i class="icon-navicon" fp-nav-toggle></i></span>
           <a class="MobileBar-logoWrap" href="/">
             <svg class="MobileBar-logo" role="img" title="Faith Promise Logo">
               <use xlink:href="/build/images/general.svg#logo-faith-promise"></use>
             </svg>
             <!--<img class="MobileBar-logo" src="{{ site.paths.images}}logo-faith-promise.svg">-->
           </a>
+          <span class="MobileBar-navToggle"><i class="icon-menu" nav-toggle></i></span>
         </div>
         <!--<div class="Hero-shim"></div>-->
         {{ content }}

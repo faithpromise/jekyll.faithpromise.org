@@ -1,5 +1,5 @@
 
-@media (min-width: @Nav-showDesktopVersion) {
+@media (min-width: @Nav-desktop-min) {
 
   body.navStyle--solid .Layout-contentWrap {
     padding-top: @Nav-height-lg;
@@ -7,7 +7,7 @@
 
 }
 
-@media (max-width: (@Nav-showDesktopVersion - 1)) {
+@media (max-width: @Nav-mobile-max) {
 
   .Layout {
     overflow-x: hidden;

@@ -2,7 +2,7 @@
   margin-left: 0;
 }
 
-@media (max-width: (@Nav-showDesktopVersion - 1)) {
+@media (max-width: @Nav-mobile-max) {
 
   .NavDropdown {
     display:          none;
@@ -42,7 +42,7 @@
 
 }
 
-@media (min-width: @Nav-showDesktopVersion) {
+@media (min-width: @Nav-desktop-min) {
 
   .NavDropdown {
     display:          none;
