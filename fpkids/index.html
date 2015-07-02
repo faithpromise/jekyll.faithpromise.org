@@ -17,7 +17,7 @@
     <meta property="og:description" content="fpKids">
     
 
-<link type="text/css" rel="stylesheet" href="/build/main.min.css?0080c5a652d2b653" />
+<link type="text/css" rel="stylesheet" href="/build/main.min.css?4cb3ff9b5efa7a4a" />
 
     <link rel="canonical" href="http://faithpromise.org/fpkids/">
   </head>
@@ -155,27 +155,27 @@
       </div>
 
       <div class="MobileNav-background"></div>
-      <div class="MobileNav-dismiss"></div>
+      <div class="MobileNav-dismiss" nav-toggle></div>
 
       <div class="Layout-contentWrap">
         <!--<div class="MobileBar-background"></div>-->
         <div class="MobileBar">
-          <span class="MobileBar-navToggle"><i class="icon-navicon" fp-nav-toggle></i></span>
           <a class="MobileBar-logoWrap" href="/">
             <svg class="MobileBar-logo" role="img" title="Faith Promise Logo">
               <use xlink:href="/build/images/general.svg#logo-faith-promise"></use>
             </svg>
             <!--<img class="MobileBar-logo" src="/build/images/logo-faith-promise.svg">-->
           </a>
+          <span class="MobileBar-navToggle"><i class="icon-menu" nav-toggle></i></span>
         </div>
         <!--<div class="Hero-shim"></div>-->
         
 
 <style type="text/css" scoped>
-  .hero_image { background-image: url(/build/images/general/fpkids-square.jpg); }
+  .hero_image { background-image: url(/build/images/kids/fpkids-square.jpg); }
 
   @media (min-width: 47.5rem) {
-    .hero_image { background-image: url(/build/images/general/fpkids-wide.jpg); }
+    .hero_image { background-image: url(/build/images/kids/fpkids-wide.jpg); }
   }
 
 </style>
@@ -186,7 +186,7 @@
 
 </div>
 
-<div class="Content" content-scroll>
+<div class="Content">
   
 
 
@@ -197,15 +197,12 @@
 
     <div class="IntroSection-text">
 
-      <p>Welcome to the Children's Ministry of Faith Promise Church. fpKids is uniquely designed for kids birth through 5th grade, where our goal is to grab your child's attention so Jesus can change their heart.</p>
-
-      <p>We do this through engaging environments and creative biblical teaching. Using everyday people just like you, we work together to teach kids how to do the greatest thing they can possibly do with their lives... love Jesus with all their heart, mind, and strength.
-        <a class="BibleRef" href="https://www.bible.com/bible/100/Mark.12.30" target="_blank">Mark 12:30</a>
-      </p>
+      <p>Each weekend at Faith Promise hundreds of children (birth through 5th grade) are having a blast learning about Christ in safe, age-appropriate environments. Through creative biblical teaching, we work together to teach kids how to do the greatest thing they can possibly do with their lives... love Jesus with all their heart, mind, and strength. <a class="BibleRef" href="https://www.bible.com/bible/100/Mark.12.30" target="_blank">Mark 12:30</a></p>
+      <p>We'd love to see you and your family this weekend as we discover all God has for us in an exciting new way.</p>
 
       <hr class="Section-hr">
 
-      <p class="sentence-width-compact text-center">See what your kids are learning and stay current on fpKids events by following us on social media.</p>
+      <p class="text-constrain-compact text-center">See what your kids are learning and stay current on fpKids events by following us on social media.</p>
 
       <ul class="SocialButtons">
   
@@ -229,7 +226,7 @@
 <!--TODO: Resize / optimize image for this section-->
 <style type="text/css" scoped>
   .im_new_bg {
-    background-image: url(/build/images/general/rocket-wide.jpg);
+    background-image: url(/build/images/kids/rocket-wide.jpg);
   }
 </style>
 
@@ -243,9 +240,10 @@
   </div>
 </div>
 
-<div class="GridSection">
+<div class="GridSection ">
   <div class="GridSection-container">
     <h2 class="GridSection-title">Upcoming Events</h2>
+    <div class="GridSection-text"></div>
     <ul class="Card-grid" card-grid>
       
       
@@ -308,7 +306,7 @@
 
 <style type="text/css" scoped>
   .kids_faq {
-    background-image: url(/build/images/general/fpkids-pattern.png);
+    background-image: url(/build/images/kids/pattern.png);
   }
 
   .kids_faq a:hover {
@@ -330,7 +328,7 @@
         <h3 class="Faq-question">I'm new. What do I do?</h3>
 
         <div class="Faq-answer">
-          First, we're so glad to have you join us. There's a special place at Faith Promise for your child to worship and grow in Christ. Please see our <a href="/fpkids/welcome/">welcome page</a> for an overview of what to expect when you visit.
+          <p>First, we're so glad to have you join us. There's a special place at Faith Promise for your child to worship and grow in Christ. Please see our <a href="/fpkids/welcome/">welcome page</a> for an overview of what to expect when you visit.</p>
         </div>
       </li>
       
@@ -338,7 +336,7 @@
         <h3 class="Faq-question">Where can I get more information about child dedications?</h3>
 
         <div class="Faq-answer">
-          Please visit out our <a href="/dedications/">child dedications</a> page for more information.
+          <p>Please visit out our <a href="/dedications/">child dedications</a> page for more information.</p>
         </div>
       </li>
       
@@ -362,11 +360,14 @@
   </div>
 </div>
 
-<div class="IntroSection">
-  <div class="IntroSection-container">
-    <h2 class="IntroSection-title">Still have questions?</h2>
-    <div class="IntroSection-text">
-      <p>If you still have questions about fpKids, please contact
+<div class="TextSection TextSection--center ">
+  <div class="TextSection-container">
+    <h2 class="TextSection-title">
+      Still have questions?
+    </h2>
+    <div class="TextSection-text">
+      <p>
+        If you still have questions about fpKids, please contact
         <a href="mailto:fpkids@faithpromise.org">fpkids@faithpromise.org</a>.
       </p>
     </div>
@@ -542,7 +543,7 @@
       })(angular);
     </script>
 
-<script type="text/javascript" src="/build/main.min.js?c2b0df6298e90a1b"></script>
+<script type="text/javascript" src="/build/main.min.js?36c232b1e95eff67"></script>
 
     <!--[if gte IE 9]>
     <script src="/build/svg4everybody.min.js?41c890046ffef9f1"></script>
