@@ -5,7 +5,7 @@ layout: default
 {% if page.hero_image != null %}
 
 <style type="text/css" scoped>
-  .hero_image { background-image: url({{ page.hero_image | replace: '-wide.jpg', '-square.jpg' }}); }
+  .hero_image { background-image: url({{ page.hero_image | replace: '-wide.jpg', '-tall.jpg' }}); }
 
   @media (min-width: 47.5rem) {
     .hero_image { background-image: url({{ page.hero_image }}); }
